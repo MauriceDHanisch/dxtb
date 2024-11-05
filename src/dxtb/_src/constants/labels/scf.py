@@ -35,6 +35,8 @@ __all__ = [
     "SCF_MODE_IMPLICIT_NON_PURE_STRS",
     "SCF_MODE_EXPERIMENTAL",
     "SCF_MODE_EXPERIMENTAL_STRS",
+    "SCF_MODE_RECONNECT",
+    "SCF_MODE_RECONNECT_STRS",
     "SCF_MODE_MAP",
     "SCP_MODE_FOCK",
     "SCP_MODE_FOCK_STRS",
@@ -106,6 +108,12 @@ SCF_MODE_EXPERIMENTAL_STRS = (
     "single_shot",
 )
 """String codes for SCF with single-shot gradient."""
+
+SCF_MODE_RECONNECT = 4
+"""Integer code for SCF with reconnection of the graph."""
+
+SCF_MODE_RECONNECT_STRS = ("reconnect", "reconnect-implicit")
+"""String codes for SCF with reconnection of the graph."""
 
 SCF_MODE_MAP = [
     "Full Tracking (unrolling)",

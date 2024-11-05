@@ -70,6 +70,16 @@ def scf_pure(
     # NOTE: This leads to not entering xitorch._RootFinder.backward() at all
     # during a loss.backward() call. However, then the position tensor does
     # receive gradient.
+    
+    if cfg.scf_mode == labels.SCF_MODE_RECONNECT:
+        if cfg.scp_mode == labels.SCP_MODE_CHARGE:
+            # need explicit final cycle if SCP_MODE_CHARGE else handled by converged_to_charges
+            mixer = Simple({**cfg.fwd_options, "damp": 1e-4})
+            q_new = fcn(guess, data, cfg, interactions)
+            guess = mixer.iter(q_new, guess)
+
+        return converged_to_charges(guess, data, cfg)
+    
     guess = guess.detach()
 
     q_converged = xto.equilibrium(

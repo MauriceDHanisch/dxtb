@@ -153,12 +153,15 @@ class ConfigSCF:
                 self.scf_mode = labels.SCF_MODE_FULL
             elif scf_mode.casefold() in labels.SCF_MODE_EXPERIMENTAL_STRS:
                 self.scf_mode = labels.SCF_MODE_EXPERIMENTAL
+            elif scf_mode.casefold() in labels.SCF_MODE_RECONNECT_STRS:
+                self.scf_mode = labels.SCF_MODE_RECONNECT
             else:
                 scf_mode_labels = (
                     labels.SCF_MODE_IMPLICIT_STRS
                     + labels.SCF_MODE_IMPLICIT_NON_PURE_STRS
                     + labels.SCF_MODE_FULL_STRS
                     + labels.SCF_MODE_EXPERIMENTAL_STRS
+                    + labels.SCF_MODE_RECONNECT_STRS
                 )
                 raise ValueError(
                     f"Unknown SCF mode '{scf_mode}'. "
@@ -170,12 +173,14 @@ class ConfigSCF:
                 labels.SCF_MODE_IMPLICIT_NON_PURE,
                 labels.SCF_MODE_FULL,
                 labels.SCF_MODE_EXPERIMENTAL,
+                labels.SCF_MODE_RECONNECT,
             ):
                 scf_mode_labels = (
                     labels.SCF_MODE_IMPLICIT_STRS
                     + labels.SCF_MODE_IMPLICIT_NON_PURE_STRS
                     + labels.SCF_MODE_FULL_STRS
                     + labels.SCF_MODE_EXPERIMENTAL_STRS
+                    + labels.SCF_MODE_RECONNECT_STRS
                 )
                 raise ValueError(
                     f"Unknown SCF mode '{scf_mode}'. "
