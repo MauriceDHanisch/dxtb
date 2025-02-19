@@ -41,7 +41,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-12, macos-13]
+        os: [macos-13]
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
         # only test oldest and newest version of torch
         torch-version: ["1.11.0", "2.2.2"]
@@ -55,7 +55,10 @@ jobs:
           #
           # Wheels for macOS x86_64 are deprecated since 2.3.0
           #
-          # PyTorch<2.2 does only support Python<3.12 (all platforms)
+          # Starting with macOS 14, runners are based on ARM.
+          # The macOS 12 runner image is removed on December 3rd.
+          #
+          # PyTorch<2.2.0 does only support Python<3.12 (all platforms)
           - python-version: "3.12"
             torch-version: "1.11.0"
           - python-version: "3.12"
@@ -66,7 +69,7 @@ jobs:
             torch-version: "2.0.1"
           - python-version: "3.12"
             torch-version: "2.1.2"
-          # PyTorch<2.0 does only support Python<3.11 (macOS and Windows)
+          # PyTorch<2.0.0 does only support Python<3.11 (macOS and Windows)
           - python-version: "3.11"
             torch-version: "1.11.0"
           - python-version: "3.11"
@@ -82,7 +85,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
@@ -98,7 +103,11 @@ jobs:
         run: echo "TOXENV=py$(echo ${{ matrix.python-version }} | tr -d '.')-torch$(echo ${{ matrix.torch-version }} | tr -d '.')-nolibcint" >> $GITHUB_ENV
 
       - name: Print TOXENV
-        run: echo "TOXENV is set to '${{ env.TOXENV }}'."
+        run: echo "TOXENV is set to '${TOXENV}'."
+        env:
+          TOXENV: ${{ env.TOXENV }}
 
       - name: Unittests with tox
-        run: EXTRAS=pyscf tox -e ${{ env.TOXENV }}
+        run: EXTRAS=pyscf tox -e $TOXENV
+        env:
+          TOXENV: ${{ env.TOXENV }}

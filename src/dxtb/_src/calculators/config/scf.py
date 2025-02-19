@@ -110,7 +110,7 @@ class ConfigSCF:
         # Fermi
         fermi_etemp: float = defaults.FERMI_ETEMP,
         fermi_maxiter: int = defaults.FERMI_MAXITER,
-        fermi_thresh: dict = defaults.FERMI_THRESH,
+        fermi_thresh: float | int | None = defaults.FERMI_THRESH,
         fermi_partition: str | int = defaults.FERMI_PARTITION,
         # PyTorch
         device: torch.device = get_default_device(),
@@ -319,7 +319,7 @@ class ConfigSCF:
             }
         }
 
-    def __str__(self):
+    def __str__(self):  # pragma: no cover
         config_str = [
             f"Configuration for SCF:",
             f"  Guess Method: {self.guess}",
@@ -337,7 +337,7 @@ class ConfigSCF:
         ]
         return "\n".join(config_str)
 
-    def __repr__(self) -> str:
+    def __repr__(self) -> str:  # pragma: no cover
         return str(self)
 
 
@@ -381,7 +381,7 @@ class ConfigFermi:
     maxiter: int
     """Maximum number of iterations for Fermi smearing."""
 
-    thresh: dict
+    thresh: float | int | None
     """Float data type dependent threshold for Fermi iterations."""
 
     partition: int
@@ -400,7 +400,7 @@ class ConfigFermi:
         *,
         etemp: float | int = defaults.FERMI_ETEMP,
         maxiter: int = defaults.FERMI_MAXITER,
-        thresh: dict = defaults.FERMI_THRESH,
+        thresh: float | int | None = defaults.FERMI_THRESH,
         partition: str | int = defaults.FERMI_PARTITION,
         # PyTorch
         device: torch.device = get_default_device(),
@@ -449,7 +449,7 @@ class ConfigFermi:
                 f"'{type(partition)}' was given."
             )
 
-    def info(self) -> dict[str, dict[str, float | int | str]]:
+    def info(self) -> dict[str, dict[str, None | float | int | str]]:
         """
         Return a dictionary with the Fermi smearing configuration.
 
@@ -462,15 +462,15 @@ class ConfigFermi:
             "Fermi Smearing": {
                 "Temperature": self.etemp,
                 "Maxiter": self.maxiter,
-                "Threshold": self.thresh[self.dtype].item(),
+                "Threshold": self.thresh,
                 "Partioning": labels.FERMI_PARTITION_MAP[self.partition],
             }
         }
 
-    def __str__(self) -> str:
+    def __str__(self) -> str:  # pragma: no cover
         info = self.info()["Fermi Smearing"]
         info_str = ", ".join(f"{key}={value}" for key, value in info.items())
         return f"{self.__class__.__name__}({info_str})"
 
-    def __repr__(self) -> str:
+    def __repr__(self) -> str:  # pragma: no cover
         return str(self)

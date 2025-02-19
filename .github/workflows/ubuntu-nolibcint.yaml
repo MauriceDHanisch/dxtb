@@ -42,21 +42,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
-        torch-version: ["2.4.1"]
-        exclude:
-          # Check latest versions here: https://download.pytorch.org/whl/torch/
-          #
-          # PyTorch issues:
-          # 3.11: https://github.com/pytorch/pytorch/issues/86566
-          # 3.12: https://github.com/pytorch/pytorch/issues/110436
-          # 3.13: https://github.com/pytorch/pytorch/issues/130249
-          #
-          # PyTorch<2.2.0 does only support Python<3.12 (all platforms)
-          - python-version: "3.12"
-            torch-version: "2.0.1"
-          - python-version: "3.12"
-            torch-version: "2.1.2"
+        # PyTorch>=2.5.0 does not support Python<3.9
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        torch-version: ["2.5.1"]
 
     runs-on: ${{ matrix.os }}
 
@@ -66,7 +54,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
@@ -82,18 +72,11 @@ jobs:
         run: echo "TOXENV=py$(echo ${{ matrix.python-version }} | tr -d '.')-torch$(echo ${{ matrix.torch-version }} | tr -d '.')-nolibcint" >> $GITHUB_ENV
 
       - name: Print TOXENV
-        run: echo "TOXENV is set to '${{ env.TOXENV }}'."
+        run: echo "TOXENV is set to '${TOXENV}'."
+        env:
+          TOXENV: ${{ env.TOXENV }}
 
       - name: Unittests with tox
-        run: EXTRAS=pyscf tox -e ${{ env.TOXENV }}
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        if: >
-          matrix.python-version == '3.11' &&
-          matrix.torch-version == '2.2.2' &&
-          matrix.os == 'ubuntu-latest'
-        with:
-          files: ./coverage.xml # optional
-          token: ${{ secrets.CODECOV_TOKEN }} # required
-          verbose: true # optional (default = false)
+        run: EXTRAS=pyscf tox -e $TOXENV
+        env:
+          TOXENV: ${{ env.TOXENV }}

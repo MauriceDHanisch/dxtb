@@ -31,16 +31,22 @@
    Installation <03_for_developers/installation>
    Testing <03_for_developers/testing>
    Style <03_for_developers/style>
-   Common Errors <03_for_developers/errors>
+
+.. toctree::
+    :hidden:
+    :caption: Help
+    :maxdepth: 2
+
+    Common Errors <04_help/errors>
 
 .. toctree::
     :hidden:
     :caption: About
     :maxdepth: 2
 
-    Literature <04_about/literature>
-    Related Works <04_about/related>
-    License <04_about/license>
+    Literature <05_about/literature>
+    Related Works <05_about/related>
+    License <05_about/license>
 
 .. toctree::
     :hidden:
@@ -64,7 +70,7 @@ With *dxtb*, we provide a re-implementation of the xTB methods in PyTorch, which
 
 If you use *dxtb* in your research, please cite the following paper:
 
-- M. Friede, C. Hölzer, S. Ehlert, S. Grimme, *dxtb -- An Efficient and Fully Differentiable Framework for Extended Tight-Binding*, *J. Chem. Phys.*, **2024**
+- M. Friede, C. Hölzer, S. Ehlert, S. Grimme, *dxtb -- An Efficient and Fully Differentiable Framework for Extended Tight-Binding*, *J. Chem. Phys.*, **2024**, 161, 062501. (`DOI: 10.1063/5.0216715 <https://doi.org/10.1063/5.0216715>`__)
 
 .. admonition:: BibTeX
    :class: toggle

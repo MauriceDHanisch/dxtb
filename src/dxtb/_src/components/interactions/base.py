@@ -254,7 +254,8 @@ class Interaction(Component):
         self, charges: Charges, cache: InteractionCache, ihelp: IndexHelper
     ) -> Tensor:
         """
-        Compute the energy from the charges, all quantities are orbital-resolved.
+        Compute the energy from the charges, all quantities are
+        orbital-resolved.
 
         Parameters
         ----------
@@ -273,9 +274,9 @@ class Interaction(Component):
 
         Note
         ----
-        The subclasses of `Interaction` should implement the `get_<type>_energy`
-        methods. If they are not implemented in the subclass, they will
-        evaluate to zero.
+        The subclasses of :class:`dxtb.components.base.Interaction` should
+        implement the `get_<type>_energy` methods. If they are not implemented
+        in the subclass, they will evaluate to zero.
         """
         if charges.mono is None:
             raise RuntimeError(

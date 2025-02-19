@@ -149,7 +149,8 @@ class Driver:
 
         # setup config and write to output
         config = Config.from_args(args)
-        io.OutputHandler.write(config.info())
+        io.OutputHandler.write(config.info(), v=5)
+        io.OutputHandler.write_stdout("", v=5)
 
         # Broyden is not supported in full SCF mode
         if (
@@ -192,7 +193,8 @@ class Driver:
             # pylint: disable=import-outside-toplevel
             from dxtb import GFN1_XTB as par
         elif config.method == labels.GFN2_XTB:
-            raise NotImplementedError("GFN2-xTB is not implemented yet.")
+            # pylint: disable=import-outside-toplevel
+            from dxtb import GFN2_XTB as par
         else:
             raise ValueError(f"Unknown method '{args.method}'.")
 
@@ -367,6 +369,10 @@ class Driver:
 
         raise RuntimeError("No calculation was performed.")
 
-    def __repr__(self) -> str:  # pragma: no cover
+    def __str__(self) -> str:  # pragma: no cover
         """Custom print representation of class."""
         return f"{self.__class__.__name__}({self.args})"
+
+    def __repr__(self) -> str:  # pragma: no cover
+        """Custom print representation of class."""
+        return str(self)
