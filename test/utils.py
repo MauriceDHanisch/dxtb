@@ -31,6 +31,11 @@ coordfile = Path(
 ).resolve()
 """Path to coord file of H2."""
 
+coordfile_lih = Path(
+    Path(__file__).parent, "test_singlepoint/mols/LiH/coord"
+).resolve()
+"""Path to coord file of LiH."""
+
 
 def load_from_npz(
     npzfile: Any,
@@ -58,6 +63,64 @@ def load_from_npz(
     """
     name = name.replace("-", "").replace("+", "").lower()
     return torch.from_numpy(npzfile[name]).to(device=device, dtype=dtype)
+
+
+def load_from_tblite_grad(
+    file: Path,
+    dtype: torch.dtype,
+    device: torch.device | None = None,
+) -> dict[str, Tensor]:
+    tensor_dict = {}
+    current_key = None
+    current_shape = ""
+    current_data = []
+
+    with open(file) as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            # Identify header lines by checking for ":real:"
+            if ":real:" in line:
+                # If processing a previous field, convert collected data into a tensor.
+                if current_key is not None:
+                    flat_vals = [float(x) for x in current_data]
+                    tensor = torch.tensor(flat_vals, device=device, dtype=dtype)
+                    if current_shape:
+                        # Convert shape string (e.g. "3,39") to a tuple of ints.
+                        shape = tuple(int(s) for s in current_shape.split(","))
+                        # Invert the shape if there is more than one dimension.
+                        if len(shape) > 1:
+                            shape = tuple(reversed(shape))
+                        tensor = tensor.view(shape)
+                    tensor_dict[current_key] = tensor
+
+                # Parse header using simple splitting.
+                # Format is: key :real:dim:shape
+                parts = line.split()
+                current_key = parts[0]
+                header_parts = line.split(":")
+                # header_parts[3] is the shape information (if any)
+                current_shape = (
+                    header_parts[3].strip() if len(header_parts) > 3 else ""
+                )
+                current_data = []
+            else:
+                # Append data values from non-header lines.
+                current_data.extend(line.split())
+
+        # Process the final block after file ends.
+        if current_key is not None:
+            flat_vals = [float(x) for x in current_data]
+            tensor = torch.tensor(flat_vals, dtype=torch.float32)
+            if current_shape:
+                shape = tuple(int(s) for s in current_shape.split(","))
+                if len(shape) > 1:
+                    shape = tuple(reversed(shape))
+                tensor = tensor.view(shape)
+            tensor_dict[current_key] = tensor
+
+    return tensor_dict
 
 
 def nth_derivative(f: Tensor, x: Tensor, n: int = 1) -> Tensor:

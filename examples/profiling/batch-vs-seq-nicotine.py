@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This file is part of dxtb.
 #
 # SPDX-Identifier: Apache-2.0
@@ -20,7 +21,7 @@ Comparing sequential and batched execution.
 from pathlib import Path
 
 import torch
-from tad_mctc.io import read
+from tad_mctc import read, read_chrg
 
 import dxtb
 from dxtb.typing import DD
@@ -37,8 +38,8 @@ if "molecules" not in [x.name for x in p.iterdir()]:
 f = p / "molecules" / "nicotine.xyz"
 
 
-numbers, positions = read.read_from_path(f, **dd)
-charge = read.read_chrg_from_path(f, **dd)
+numbers, positions = read(f, **dd)
+charge = read_chrg(f, **dd)
 
 # create batched input
 BATCH = 16

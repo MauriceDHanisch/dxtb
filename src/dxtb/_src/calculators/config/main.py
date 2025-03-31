@@ -104,11 +104,19 @@ class Config:
         # SCF
         maxiter: int = defaults.MAXITER,
         mixer: str | int = defaults.MIXER,
+        mix_guess: bool = defaults.MIX_GUESS,
         damp: float = defaults.DAMP,
+        damp_init: float = defaults.DAMP_INIT,
+        damp_dynamic: bool = defaults.DAMP_DYNAMIC,
+        damp_dynamic_factor: float = defaults.DAMP_DYNAMIC_FACTOR,
+        damp_soft_start: bool = defaults.DAMP_SOFT_START,
+        damp_generations: int = defaults.DAMP_GENERATIONS,
+        damp_diagonal_offset: float = defaults.DAMP_DIAGONAL_OFFSET,
         guess: str | int = defaults.GUESS,
         scf_mode: str | int = defaults.SCF_MODE,
         scp_mode: str | int = defaults.SCP_MODE,
         x_atol: float = defaults.X_ATOL,
+        x_atol_max: float = defaults.X_ATOL_MAX,
         f_atol: float = defaults.F_ATOL,
         force_convergence: bool = False,
         fermi_etemp: float = defaults.FERMI_ETEMP,
@@ -131,6 +139,7 @@ class Config:
         cache_potential: bool = defaults.CACHE_STORE_POTENTIAL,
         # misc
         max_element: int = defaults.MAX_ELEMENT,
+        skip_compat_checks: bool = False,
     ) -> None:
         self.file = file
         self.strict = strict
@@ -191,13 +200,22 @@ class Config:
 
         self.scf = ConfigSCF(
             strict=strict,
+            method=self.method,
             guess=guess,
             maxiter=maxiter,
             mixer=mixer,
+            mix_guess=mix_guess,
             damp=damp,
+            damp_init=damp_init,
+            damp_dynamic=damp_dynamic,
+            damp_dynamic_factor=damp_dynamic_factor,
+            damp_soft_start=damp_soft_start,
+            damp_generations=damp_generations,
+            damp_diagonal_offset=damp_diagonal_offset,
             scf_mode=scf_mode,
             scp_mode=scp_mode,
             x_atol=x_atol,
+            x_atol_max=x_atol_max,
             f_atol=f_atol,
             force_convergence=force_convergence,
             batch_mode=batch_mode,
@@ -211,15 +229,16 @@ class Config:
             dtype=dtype,
         )
 
-        # compatibility checks
-        if (
-            self.method == labels.GFN2_XTB
-            and self.ints.driver != labels.INTDRIVER_LIBCINT
-        ):
-            raise RuntimeError(
-                "Multipole integrals not available in PyTorch integral drivers."
-                " Use `libcint` as backend."
-            )
+        # compatibility checks (only need to be skipped for some tests)
+        if skip_compat_checks is False:
+            if (
+                self.method == labels.GFN2_XTB
+                and self.ints.driver != labels.INTDRIVER_LIBCINT
+            ):
+                raise RuntimeError(
+                    "Multipole integrals not available in PyTorch integral "
+                    "drivers. Use `libcint` as backend."
+                )
 
     @classmethod
     def from_args(cls, args: Namespace) -> Self:

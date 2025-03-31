@@ -26,6 +26,8 @@ import functools
 
 import torch
 
+from dxtb import OutputHandler
+from dxtb._src.constants import defaults
 from dxtb._src.exlibs.xitorch._impls.optimize.root._jacobian import (
     Anderson,
     BroydenFirst,
@@ -56,7 +58,7 @@ def _nonlin_solver(
     line_search=True,
     # misc parameters
     verbose=False,
-    **unused
+    **unused,
 ):
     """
     Keyword arguments
@@ -128,6 +130,7 @@ def _nonlin_solver(
     func = lambda x: _ravel(fcn(_pack(x), *params))
     x = _ravel(x0)
 
+    # Guess is evaluated here (effectively, 1st iteration)
     y = func(x)
     y_norm = y.norm()
     assert isinstance(y_norm, torch.Tensor)
@@ -150,6 +153,22 @@ def _nonlin_solver(
     best_x = x
     best_dxnorm = x.norm()
     best_iter = 0
+
+    # Above, we fed the guess to `func`, making it the first iteration.
+    if OutputHandler.verbosity >= 3:
+        OutputHandler.write_row(
+            "SCF Iterations",
+            f"{1:3}",
+            [
+                f"{'------':<22}",
+                f"{'------':<12}",
+                f"{best_ynorm: .6E}",
+                f"{best_dxnorm: .6E}",
+            ],
+        )
+
+    damp = unused.get("damp", defaults.DAMP)
+
     for i in range(maxiter):
         tol = min(eta, eta * y_norm)
         dx = -jacobian.solve(y, tol=tol)
@@ -162,16 +181,38 @@ def _nonlin_solver(
                 "approximation."
             )
 
+        # Since we already passed the guess into `func` one, we are in the
+        # second iteration for i=0. Energy evaluation is not possible here,
+        # because the SCF class is not passed to the root solver.
+        if OutputHandler.verbosity >= 3:
+            OutputHandler.write_row(
+                "SCF Iterations",
+                f"{i+2:3}",
+                [
+                    f"{'------':<22}",
+                    f"{'------':<12}",
+                    f"{y_norm: .6E}",
+                    f"{dx_norm: .6E}",
+                ],
+            )
+
         if line_search:
             s, xnew, ynew, y_norm_new = _nonline_line_search(
                 func, x, y, dx, search_type=line_search
             )
         else:
-            s = 0.95  # modified!!
-            xnew = x + s * dx
+            xnew = x + damp * dx
             ynew = func(xnew)
             y_norm_new = torch.norm(ynew)
             assert isinstance(y_norm_new, torch.Tensor)
+
+            # Switch off damping if change is small
+            if unused.get("damp_dynamic", defaults.DAMP_DYNAMIC) is True:
+                if dx_norm < 0.1 or y_norm_new < 0.1:
+                    damp = unused.get(
+                        "damp_dynamic_factor",
+                        defaults.DAMP_DYNAMIC_FACTOR,
+                    )
 
         # save the best results
         if y_norm_new < best_ynorm:
@@ -202,17 +243,16 @@ def _nonlin_solver(
         y_norm = y_norm_new
         x = xnew
         y = ynew
+
     if not converge:
         msg = (
             "The rootfinder does not converge after %d iterations. "
             "Best |dx|=%.3e, |f|=%.3e at iter %d"
         ) % (maxiter, best_dxnorm, best_ynorm, best_iter)
 
-        # pylint: disable=import-outside-toplevel
-        from dxtb import OutputHandler
-
         OutputHandler.warn(msg, ConvergenceWarning)
         x = best_x
+
     return _pack(x)
 
 
@@ -280,7 +320,7 @@ def linearmixing(
     line_search=True,
     # misc parameters
     verbose=False,
-    **unused
+    **unused,
 ):
     """
     Solve the root finding problem by approximating the inverse of Jacobian

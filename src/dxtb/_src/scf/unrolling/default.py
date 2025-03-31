@@ -77,21 +77,52 @@ class SelfConsistentFieldFull(BaseTSCF):
         maxiter = self.config.maxiter
         batched = self.config.batch_mode
 
-        q = guess
+        # Evaluate initial guess outside of SCF loop to make maxiter=0 possible.
+        q_new = fcn(guess)
+        if OutputHandler.verbosity >= 3:  # pragma: no cover
+            charges = self.converged_to_charges(q_new)
+            energy = self.get_energy(charges)
+            self._print(charges, energy)
+
+        if maxiter == 0:
+            if return_charges is True:
+                return self.converged_to_charges(q_new)
+            return q_new
+
+        # Also mix the initial guess with the first SCF iteration
+        if self.config.mix_guess is True:
+            q = self.mixer.iter(q_new, guess)
+        else:
+            q = q_new
 
         # single-system (non-batched) case, which does not require culling
         if batched == 0:
             for _ in range(maxiter):
                 q_new = fcn(q)
+
+                # Important: Calculate energy with charges before mixing!
+                if OutputHandler.verbosity >= 3:  # pragma: no cover
+                    charges = self.converged_to_charges(q_new)
+                    energy = self.get_energy(charges)
+                    self._print(charges, energy)
+
                 q = self.mixer.iter(q_new, q)
 
                 if self.mixer.converged:
-                    q_converged = q
+                    # Do not return mixed charges here, but from last SCF call!
+                    q_converged = q_new
                     break
+
+                if self.config.damp_dynamic is True:
+                    # Switch off damping if the norm of the difference is small
+                    if self.mixer.delta_norm < 0.1:
+                        self.mixer.options["damp"] = (
+                            self.config.damp_dynamic_factor
+                        )
 
             else:
                 msg = (
-                    f"\nSCF does not converge after {maxiter} cycles using "
+                    f"SCF does not converge after {maxiter} cycles using "
                     f"{self.mixer.label} mixing with a damping factor of "
                     f"{self.mixer.options['damp']}."
                 )
@@ -100,7 +131,9 @@ class SelfConsistentFieldFull(BaseTSCF):
 
                 # only issue warning, return anyway
                 OutputHandler.warn(msg, exceptions.SCFConvergenceWarning)
-                q_converged = q
+
+                # Do not return mixed charges here, but from last SCF call!
+                q_converged = q_new
 
             if return_charges is True:
                 return self.converged_to_charges(q_converged)
@@ -156,7 +189,7 @@ class SelfConsistentFieldFull(BaseTSCF):
         # culling to work properly later. If we are converging the Fock
         # matrix, there is no such thing as multipole dimensions. However,
         # we will shamelessly use this as the second dimension of the Fock
-        # matrix even modify it in for the culling process.
+        # matrix even modify it for the culling process.
         mpdim = q.shape[1]
 
         # initialize slicers for culling
@@ -168,6 +201,13 @@ class SelfConsistentFieldFull(BaseTSCF):
 
         for _ in range(maxiter):
             q_new = fcn(q)
+
+            # Important: Calculate energy with charges before mixing!
+            if OutputHandler.verbosity >= 3:  # pragma: no cover
+                charges = self.converged_to_charges(q_new)
+                energy = self.get_energy(charges)
+                self._print(charges, energy)
+
             q = self.mixer.iter(q_new, q)
 
             conv = self.mixer.converged
@@ -175,14 +215,14 @@ class SelfConsistentFieldFull(BaseTSCF):
                 # Simultaneous convergence does not require culling.
                 # Occurs if batch size equals amount of True in `conv`.
                 if guess.shape[0] == conv.count_nonzero():
-                    q_converged = q
+                    q_converged = q_new
                     converged[:] = True
                     culled = False
                     break
 
                 # save all necessary variables for converged system
                 iconv = idxs[conv]
-                q_converged[iconv, :mpdim, :norb] = q[conv, ..., :]
+                q_converged[iconv, :mpdim, :norb] = q_new[conv, ..., :]
                 ch[iconv, :norb, :norb] = self._data.hamiltonian[conv, :, :]
                 cevecs[iconv, :norb, :norb] = self._data.evecs[conv, :, :]
                 cevals[iconv, :norb] = self._data.evals[conv, :]
@@ -247,6 +287,7 @@ class SelfConsistentFieldFull(BaseTSCF):
 
                 # cull local variables
                 q = q[~conv, :mpdim, :norb]
+                q_new = q_new[~conv, :mpdim, :norb]
                 idxs = idxs[~conv]
 
                 if self._data.charges["mono"] is not None:
@@ -282,7 +323,7 @@ class SelfConsistentFieldFull(BaseTSCF):
         # handle unconverged case (`maxiter` iterations)
         else:
             msg = (
-                f"\nSCF does not converge after '{maxiter}' cycles using "
+                f"SCF does not converge after '{maxiter}' cycles using "
                 f"'{self.mixer.label}' mixing with a damping factor of "
                 f"'{self.mixer.options['damp']}'."
             )
@@ -293,7 +334,7 @@ class SelfConsistentFieldFull(BaseTSCF):
             # are already culled, and hence, require no further indexing
             idxs = torch.arange(guess.size(0), device=self.device)
             iconv = idxs[~converged]
-            q_converged[iconv, ..., :norb] = q
+            q_converged[iconv, ..., :norb] = q_new
 
             # if nothing converged, skip culling
             if (~converged).all():

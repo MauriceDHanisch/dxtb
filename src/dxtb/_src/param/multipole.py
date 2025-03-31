@@ -26,9 +26,9 @@ from __future__ import annotations
 
 from typing import Union
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel
 
-from dxtb._src.typing import Tensor
+from .tensor import TensorPydantic
 
 __all__ = ["MultipoleDamped", "Multipole"]
 
@@ -39,18 +39,20 @@ class MultipoleDamped(BaseModel):
     for a parametrization.
     """
 
-    model_config = ConfigDict(arbitrary_types_allowed=True)
+    dmp3: Union[float, TensorPydantic]
+    """Damping function for inverse quadratic contributions."""
 
-    dmp3: Union[float, Tensor]
+    dmp5: Union[float, TensorPydantic]
+    """Damping function for inverse cubic contributions"""
 
-    dmp5: Union[float, Tensor]
+    kexp: Union[float, TensorPydantic]
+    """Exponent for the generation of the multipolar damping radii."""
 
-    kexp: Union[float, Tensor]
+    shift: Union[float, TensorPydantic]
+    """Shift for the generation of the multipolar damping radii."""
 
-    shift: Union[float, Tensor]
-
-    rmax: Union[float, Tensor]
-    """Maximum radius in damping function (Eq. 29)."""
+    rmax: Union[float, TensorPydantic]
+    """Maximum radius for the multipolar damping radii (Eq. 29)."""
 
 
 class Multipole(BaseModel):

@@ -47,7 +47,7 @@ from dxtb._src.components.classicals import (
 )
 from dxtb._src.components.interactions import Interaction, InteractionList
 from dxtb._src.components.interactions.container import Charges, Potential
-from dxtb._src.components.interactions.coulomb import new_es2, new_es3
+from dxtb._src.components.interactions.coulomb import new_aes2, new_es2, new_es3
 from dxtb._src.components.interactions.dispersion import new_d4sc
 from dxtb._src.components.interactions.field import efield as efield
 from dxtb._src.components.interactions.field import efieldgrad as efield_grad
@@ -487,7 +487,20 @@ class BaseCalculator(GetPropertiesMixin, TensorLike):
         dtype : torch.dtype | None, optional
             Data type of the tensor. If ``None`` (default), the data type is
             inferred.
+        kwargs : Any
+            Additional keyword arguments.
+            - ``auto_int_level``: Automatically set the integral level based on
+              the parametrization. Defaults to ``True``. This should only be
+              turned off for testing purposes.
+            - ``timer``: Enable the timer. Defaults to ``False``. The global
+              timer can also be enabled by setting the environment variable
+              ``DXTB_TIMER`` to ``1``.
         """
+        self.parameters = par
+
+        if not timer.enabled and kwargs.pop("timer", False):
+            timer.enable()
+
         timer.start("Calculator", parent_uid="Setup")
 
         # setup verbosity first
@@ -514,6 +527,13 @@ class BaseCalculator(GetPropertiesMixin, TensorLike):
         super().__init__(device, dtype)
         dd = {"device": self.device, "dtype": self.dtype}
 
+        # If method not explicitly set in options, we try to get it from the
+        # parametrization.
+        if isinstance(opts, dict) and "method" not in opts:
+            if par.meta is not None:
+                if par.meta.name is not None:
+                    opts["method"] = par.meta.name
+
         # setup calculator options
         if isinstance(opts, dict):
             opts = Config(**opts, **dd)
@@ -527,16 +547,15 @@ class BaseCalculator(GetPropertiesMixin, TensorLike):
         # If the user sets the level manually, we will still set it to the
         # maximum level required for the respective parametrization.
         if kwargs.pop("auto_int_level", True):
-            if par.meta is not None:
-                if par.meta.name is not None:
-                    if "gfn1" in par.meta.name.casefold():
-                        self.opts.ints.level = max(
-                            labels.INTLEVEL_HCORE, self.opts.ints.level
-                        )
-                    elif "gfn2" in par.meta.name.casefold():
-                        self.opts.ints.level = max(
-                            labels.INTLEVEL_QUADRUPOLE, self.opts.ints.level
-                        )
+            if par.meta is not None and par.meta.name is not None:
+                if "gfn1" in par.meta.name.casefold():
+                    self.opts.ints.level = max(
+                        labels.INTLEVEL_HCORE, self.opts.ints.level
+                    )
+                elif "gfn2" in par.meta.name.casefold():
+                    self.opts.ints.level = max(
+                        labels.INTLEVEL_QUADRUPOLE, self.opts.ints.level
+                    )
 
         # create cache
         self.cache = CalculatorCache(**dd) if cache is None else cache
@@ -570,6 +589,11 @@ class BaseCalculator(GetPropertiesMixin, TensorLike):
             if not {"all", "es2"} & set(self.opts.exclude)
             else None
         )
+        aes2 = (
+            new_aes2(numbers, par, **dd)
+            if not {"all", "aes2"} & set(self.opts.exclude)
+            else None
+        )
         es3 = (
             new_es3(numbers, par, **dd)
             if not {"all", "es3"} & set(self.opts.exclude)
@@ -582,14 +606,14 @@ class BaseCalculator(GetPropertiesMixin, TensorLike):
         )
 
         if interaction is None:
-            self.interactions = InteractionList(es2, es3, d4sc, **dd)
+            self.interactions = InteractionList(es2, aes2, es3, d4sc, **dd)
         elif isinstance(interaction, Interaction):
             self.interactions = InteractionList(
-                es2, es3, d4sc, interaction, **dd
+                es2, aes2, es3, d4sc, interaction, **dd
             )
         elif isinstance(interaction, (list, tuple)):
             self.interactions = InteractionList(
-                es2, es3, d4sc, *interaction, **dd
+                es2, aes2, es3, d4sc, *interaction, **dd
             )
         else:
             raise TypeError(

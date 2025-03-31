@@ -40,7 +40,7 @@ slist = ["LiH", "SiH4", "PbH4-BiH3", "C6H5I-CH3SH", "MB16_43_01"]
 opts = {
     "verbosity": 0,
     "maxiter": 50,
-    "exclude": ["es2", "es3"],
+    "exclude": ["aes2", "es2", "es3"],
     "scf_mode": labels.SCF_MODE_IMPLICIT_NON_PURE,
     "scp_mode": labels.SCP_MODE_POTENTIAL,
 }
@@ -59,13 +59,16 @@ def test_single(dtype: torch.dtype, name: str) -> None:
     ref = sample["edisp_d4sc"].to(**dd)
     charges = torch.tensor(0.0, **dd)
 
-    calc = Calculator(numbers, GFN2_XTB, opts=opts, **dd, auto_int_level=False)
+    options = {**opts, "skip_compat_checks": True}
+    calc = Calculator(
+        numbers, GFN2_XTB, opts=options, **dd, auto_int_level=False
+    )
 
     result = calc.singlepoint(positions, charges)
     d4sc = calc.interactions.get_interaction("DispersionD4SC")
     cache = d4sc.get_cache(numbers=numbers, positions=positions)
 
-    edisp = d4sc.get_energy(result.charges, cache, calc.ihelp)
+    edisp = d4sc.get_energy(cache, result.charges, calc.ihelp)
     assert pytest.approx(ref.cpu(), abs=10 * tol, rel=tol) == edisp.cpu()
 
 
@@ -97,13 +100,16 @@ def test_batch(dtype: torch.dtype, name1: str, name2: str) -> None:
         )
     )
 
-    calc = Calculator(numbers, GFN2_XTB, opts=opts, **dd, auto_int_level=False)
+    options = {**opts, "skip_compat_checks": True}
+    calc = Calculator(
+        numbers, GFN2_XTB, opts=options, **dd, auto_int_level=False
+    )
 
     result = calc.singlepoint(positions)
     d4sc = calc.interactions.get_interaction("DispersionD4SC")
     cache = d4sc.get_cache(numbers=numbers, positions=positions)
 
-    edisp = d4sc.get_energy(result.charges, cache, calc.ihelp)
+    edisp = d4sc.get_energy(cache, result.charges, calc.ihelp)
     assert pytest.approx(ref.cpu(), abs=10 * tol, rel=tol) == edisp.cpu()
 
 
