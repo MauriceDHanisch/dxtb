@@ -5923,3 +5923,1859 @@ Fin. energy                 0.001           0.01
 Sum                        31.147         555.13
 Total                       5.611         100.00
 Energy Sum: -969.6683349609375
+
+Running on cpu with 89 atoms, 29 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.072           0.26
+ - Repulsion                0.003           4.40
+ - DispersionD3             0.066          91.45
+ - Halogen                  0.003           4.04
+Integrals                   1.355           4.89
+ - Overlap                  1.311          96.75
+ - Core Hamiltonian         0.044           3.25
+SCF                        26.269          94.84
+ - Interaction Cache        0.009           0.03
+ - Potential               25.884          98.53
+ - Fock build               0.515           1.96
+ - Diagonalize             24.313          92.55
+ - Density                  0.441           1.68
+ - Charges                  0.314           1.20
+get_refocc                  0.000           0.00
+get_guess                   0.006           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.00
+scf_pure                   26.245          94.75
+xto.equi                   25.982          93.80
+_Rootfinder                25.982          93.80
+broyden1                   25.982          93.80
+1st iter                    0.260           0.94
+M Ops bef eigh              4.638          16.75
+Cholesky                    1.699           6.14
+L inv                       2.273           8.21
+Matmul                      0.665           2.40
+torch_eigh                 16.932          61.13
+M Ops aft eigh              0.370           1.34
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                25.722          92.86
+Jacobian solve              0.060           0.22
+mv                          0.123           0.45
+dx norm                     0.002           0.01
+Jacobian update             0.179           0.65
+rmv                         0.105           0.38
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       184.929         667.65
+Total                      27.698         100.00
+Energy Sum: -968.2151489257812
+
+#################### Molecule alkane_30_carbons: 92 atoms, 30 C atoms ####################
+
+Running on cuda:0 with 92 atoms, 30 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.22
+ - Repulsion                0.001           9.31
+ - DispersionD3             0.003          43.27
+ - Halogen                  0.003          46.85
+Integrals                   0.666          19.61
+ - Overlap                  0.664          99.69
+ - Core Hamiltonian         0.002           0.30
+SCF                         2.720          80.15
+ - Interaction Cache        0.001           0.03
+ - Potential                2.612          96.03
+ - Fock build               0.012           0.45
+ - Diagonalize              2.498          91.83
+ - Density                  0.017           0.64
+ - Charges                  0.017           0.62
+get_refocc                  0.000           0.01
+get_guess                   0.002           0.07
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.02
+scf_pure                    2.714          79.98
+xto.equi                    2.689          79.23
+_Rootfinder                 2.689          79.22
+broyden1                    2.688          79.22
+1st iter                    0.028           0.82
+M Ops bef eigh              0.278           8.20
+Cholesky                    0.028           0.82
+L inv                       0.236           6.96
+Matmul                      0.012           0.36
+cupy_eigh                   2.144          63.17
+M Ops aft eigh              0.008           0.24
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 2.660          78.39
+Jacobian solve              0.011           0.33
+mv                          0.017           0.51
+dx norm                     0.002           0.05
+Jacobian update             0.024           0.70
+rmv                         0.009           0.28
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        19.636         578.59
+Total                       3.394         100.00
+Energy Sum: -516.285400390625
+
+Running on cpu with 92 atoms, 30 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.029           0.19
+ - Halogen                  0.001           4.47
+ - DispersionD3             0.026          87.95
+ - Repulsion                0.002           7.39
+Integrals                   0.715           4.76
+ - Overlap                  0.699          97.66
+ - Core Hamiltonian         0.017           2.34
+SCF                        14.279          95.03
+ - Interaction Cache        0.005           0.03
+ - Potential               14.019          98.17
+ - Fock build               0.230           1.61
+ - Diagonalize             13.090          91.67
+ - Density                  0.250           1.75
+ - Charges                  0.175           1.23
+get_refocc                  0.000           0.00
+get_guess                   0.004           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                   14.266          94.94
+xto.equi                   14.120          93.98
+_Rootfinder                14.120          93.98
+broyden1                   14.120          93.98
+1st iter                    0.127           0.85
+M Ops bef eigh              2.851          18.97
+Cholesky                    0.923           6.14
+L inv                       1.414           9.41
+Matmul                      0.513           3.41
+torch_eigh                  9.055          60.26
+M Ops aft eigh              0.202           1.35
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                13.993          93.13
+Jacobian solve              0.032           0.21
+mv                          0.072           0.48
+dx norm                     0.001           0.01
+Jacobian update             0.115           0.77
+rmv                         0.067           0.45
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       101.024         672.35
+Total                      15.025         100.00
+Energy Sum: -515.51416015625
+
+Running on cuda:0 with 92 atoms, 30 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.20
+ - Repulsion                0.001           6.06
+ - DispersionD3             0.004          33.56
+ - Halogen                  0.007          60.01
+Integrals                   1.396          23.66
+ - Overlap                  1.393          99.80
+ - Core Hamiltonian         0.003           0.20
+SCF                         4.490          76.13
+ - Interaction Cache        0.001           0.02
+ - Potential                4.379          97.54
+ - Fock build               0.030           0.67
+ - Diagonalize              4.228          94.16
+ - Density                  0.024           0.54
+ - Charges                  0.027           0.60
+get_refocc                  0.000           0.01
+get_guess                   0.002           0.04
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    4.484          76.03
+xto.equi                    4.441          75.30
+_Rootfinder                 4.441          75.30
+broyden1                    4.441          75.30
+1st iter                    0.046           0.78
+M Ops bef eigh              0.370           6.27
+Cholesky                    0.039           0.67
+L inv                       0.306           5.19
+Matmul                      0.023           0.39
+cupy_eigh                   3.716          63.02
+M Ops aft eigh              0.014           0.24
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 4.395          74.51
+Jacobian solve              0.011           0.19
+mv                          0.017           0.29
+dx norm                     0.002           0.03
+Jacobian update             0.024           0.40
+rmv                         0.009           0.16
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        32.680         554.12
+Total                       5.898         100.00
+Energy Sum: -1032.576171875
+
+Running on cpu with 92 atoms, 30 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.077           0.26
+ - Repulsion                0.004           4.63
+ - DispersionD3             0.070          91.63
+ - Halogen                  0.003           3.63
+Integrals                   1.435           4.81
+ - Overlap                  1.386          96.58
+ - Core Hamiltonian         0.049           3.42
+SCF                        28.336          94.93
+ - Interaction Cache        0.009           0.03
+ - Potential               27.892          98.43
+ - Fock build               0.592           2.09
+ - Diagonalize             26.163          92.33
+ - Density                  0.493           1.74
+ - Charges                  0.330           1.17
+get_refocc                  0.000           0.00
+get_guess                   0.007           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.00
+scf_pure                   28.310          94.84
+xto.equi                   28.033          93.91
+_Rootfinder                28.033          93.91
+broyden1                   28.033          93.91
+1st iter                    0.280           0.94
+M Ops bef eigh              5.033          16.86
+Cholesky                    1.855           6.21
+L inv                       2.423           8.12
+Matmul                      0.755           2.53
+torch_eigh                 18.098          60.63
+M Ops aft eigh              0.439           1.47
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                27.753          92.98
+Jacobian solve              0.069           0.23
+mv                          0.155           0.52
+dx norm                     0.002           0.01
+Jacobian update             0.216           0.72
+rmv                         0.119           0.40
+Fin. energy                 0.002           0.01
+------------------------------------------------
+Sum                       199.466         668.23
+Total                      29.850         100.00
+Energy Sum: -1031.02880859375
+
+#################### Molecule alkane_31_carbons: 95 atoms, 31 C atoms ####################
+
+Running on cuda:0 with 95 atoms, 31 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.22
+ - DispersionD3             0.003          42.81
+ - Halogen                  0.004          48.41
+ - Repulsion                0.001           8.30
+Integrals                   0.692          19.94
+ - Overlap                  0.690          99.69
+ - Core Hamiltonian         0.002           0.31
+SCF                         2.771          79.82
+ - Interaction Cache        0.001           0.03
+ - Potential                2.659          95.94
+ - Fock build               0.013           0.47
+ - Diagonalize              2.525          91.12
+ - Density                  0.019           0.69
+ - Charges                  0.016           0.59
+get_refocc                  0.000           0.01
+get_guess                   0.002           0.07
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.02
+scf_pure                    2.765          79.65
+xto.equi                    2.739          78.88
+_Rootfinder                 2.739          78.88
+broyden1                    2.739          78.88
+1st iter                    0.029           0.84
+M Ops bef eigh              0.288           8.30
+Cholesky                    0.030           0.85
+L inv                       0.244           7.02
+Matmul                      0.013           0.37
+cupy_eigh                   2.155          62.06
+M Ops aft eigh              0.010           0.28
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 2.709          78.03
+Jacobian solve              0.012           0.34
+mv                          0.018           0.52
+dx norm                     0.002           0.05
+Jacobian update             0.025           0.72
+rmv                         0.010           0.28
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        20.001         576.05
+Total                       3.472         100.00
+Energy Sum: -524.0521850585938
+
+Running on cpu with 95 atoms, 31 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.036           0.22
+ - Repulsion                0.003           7.31
+ - Halogen                  0.002           5.09
+ - DispersionD3             0.032          87.43
+Integrals                   0.765           4.74
+ - Overlap                  0.745          97.39
+ - Core Hamiltonian         0.020           2.61
+SCF                        15.352          95.03
+ - Interaction Cache        0.006           0.04
+ - Potential               15.117          98.47
+ - Fock build               0.293           1.91
+ - Diagonalize             14.272          92.96
+ - Density                  0.279           1.81
+ - Charges                  0.148           0.96
+get_refocc                  0.000           0.00
+get_guess                   0.005           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                   15.337          94.94
+xto.equi                   15.188          94.01
+_Rootfinder                15.188          94.01
+broyden1                   15.188          94.01
+1st iter                    0.145           0.90
+M Ops bef eigh              3.184          19.71
+Cholesky                    1.067           6.60
+L inv                       1.559           9.65
+Matmul                      0.558           3.45
+torch_eigh                  9.815          60.76
+M Ops aft eigh              0.223           1.38
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                15.042          93.11
+Jacobian solve              0.030           0.19
+mv                          0.060           0.37
+dx norm                     0.001           0.01
+Jacobian update             0.097           0.60
+rmv                         0.060           0.37
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       108.904         674.12
+Total                      16.155         100.00
+Energy Sum: -523.27978515625
+
+Running on cuda:0 with 95 atoms, 31 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.013           0.21
+ - Halogen                  0.008          59.14
+ - Repulsion                0.001           7.06
+ - DispersionD3             0.004          33.49
+Integrals                   1.398          22.77
+ - Overlap                  1.395          99.79
+ - Core Hamiltonian         0.003           0.21
+SCF                         4.728          77.00
+ - Interaction Cache        0.001           0.02
+ - Potential                4.613          97.58
+ - Fock build               0.033           0.69
+ - Diagonalize              4.441          93.94
+ - Density                  0.025           0.53
+ - Charges                  0.027           0.57
+get_refocc                  0.000           0.01
+get_guess                   0.002           0.04
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    4.722          76.91
+xto.equi                    4.676          76.17
+_Rootfinder                 4.676          76.17
+broyden1                    4.676          76.16
+1st iter                    0.050           0.81
+M Ops bef eigh              0.384           6.26
+Cholesky                    0.041           0.67
+L inv                       0.318           5.17
+Matmul                      0.024           0.38
+cupy_eigh                   3.900          63.53
+M Ops aft eigh              0.017           0.27
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 4.626          75.35
+Jacobian solve              0.012           0.19
+mv                          0.018           0.29
+dx norm                     0.002           0.03
+Jacobian update             0.025           0.40
+rmv                         0.010           0.16
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        34.317         558.96
+Total                       6.139         100.00
+Energy Sum: -1048.106201171875
+
+Running on cpu with 95 atoms, 31 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.088           0.28
+ - DispersionD3             0.079          89.41
+ - Repulsion                0.006           6.34
+ - Halogen                  0.004           4.13
+Integrals                   1.490           4.67
+ - Overlap                  1.432          96.12
+ - Core Hamiltonian         0.058           3.88
+SCF                        30.351          95.05
+ - Interaction Cache        0.011           0.04
+ - Potential               29.930          98.61
+ - Fock build               0.629           2.07
+ - Diagonalize             27.978          92.18
+ - Density                  0.517           1.70
+ - Charges                  0.381           1.25
+get_refocc                  0.000           0.00
+get_guess                   0.008           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.00
+scf_pure                   30.322          94.96
+xto.equi                   30.029          94.04
+_Rootfinder                30.029          94.04
+broyden1                   30.029          94.04
+1st iter                    0.296           0.93
+M Ops bef eigh              5.140          16.10
+Cholesky                    1.922           6.02
+L inv                       2.396           7.50
+Matmul                      0.821           2.57
+torch_eigh                 19.535          61.18
+M Ops aft eigh              0.444           1.39
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                29.732          93.11
+Jacobian solve              0.068           0.21
+mv                          0.135           0.42
+dx norm                     0.002           0.01
+Jacobian update             0.189           0.59
+rmv                         0.112           0.35
+Fin. energy                 0.002           0.00
+------------------------------------------------
+Sum                       213.142         667.50
+Total                      31.931         100.00
+Energy Sum: -1046.561279296875
+
+#################### Molecule alkane_32_carbons: 98 atoms, 32 C atoms ####################
+
+Running on cuda:0 with 98 atoms, 32 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.19
+ - Repulsion                0.001           9.03
+ - DispersionD3             0.003          43.68
+ - Halogen                  0.004          46.71
+Integrals                   0.720          18.08
+ - Overlap                  0.717          99.70
+ - Core Hamiltonian         0.002           0.30
+SCF                         3.251          81.70
+ - Interaction Cache        0.001           0.02
+ - Potential                3.140          96.60
+ - Fock build               0.014           0.42
+ - Diagonalize              3.016          92.79
+ - Density                  0.024           0.72
+ - Charges                  0.017           0.51
+get_refocc                  0.000           0.01
+get_guess                   0.003           0.06
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    3.245          81.56
+xto.equi                    3.214          80.77
+_Rootfinder                 3.214          80.77
+broyden1                    3.213          80.77
+1st iter                    0.035           0.89
+M Ops bef eigh              0.331           8.31
+Cholesky                    0.033           0.82
+L inv                       0.273           6.85
+Matmul                      0.024           0.59
+cupy_eigh                   2.596          65.26
+M Ops aft eigh              0.014           0.36
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 3.178          79.88
+Jacobian solve              0.011           0.29
+mv                          0.018           0.45
+dx norm                     0.002           0.04
+Jacobian update             0.024           0.61
+rmv                         0.010           0.24
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        23.416         588.56
+Total                       3.979         100.00
+Energy Sum: -537.8016357421875
+
+Running on cpu with 98 atoms, 32 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.036           0.21
+ - Halogen                  0.001           3.71
+ - DispersionD3             0.032          88.91
+ - Repulsion                0.003           7.20
+Integrals                   0.787           4.64
+ - Overlap                  0.769          97.61
+ - Core Hamiltonian         0.019           2.39
+SCF                        16.140          95.14
+ - Interaction Cache        0.005           0.03
+ - Potential               15.905          98.54
+ - Fock build               0.297           1.84
+ - Diagonalize             14.915          92.41
+ - Density                  0.292           1.81
+ - Charges                  0.161           1.00
+get_refocc                  0.000           0.00
+get_guess                   0.005           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                   16.125          95.05
+xto.equi                   15.967          94.12
+_Rootfinder                15.967          94.12
+broyden1                   15.967          94.12
+1st iter                    0.147           0.87
+M Ops bef eigh              3.541          20.87
+Cholesky                    1.175           6.93
+L inv                       1.784          10.52
+Matmul                      0.581           3.42
+torch_eigh                 10.043          59.20
+M Ops aft eigh              0.252           1.49
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                15.820          93.25
+Jacobian solve              0.030           0.17
+mv                          0.060           0.36
+dx norm                     0.001           0.01
+Jacobian update             0.100           0.59
+rmv                         0.062           0.36
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       114.593         675.50
+Total                      16.964         100.00
+Energy Sum: -536.9684448242188
+
+Running on cuda:0 with 98 atoms, 32 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.16
+ - Halogen                  0.007          59.50
+ - Repulsion                0.001           5.83
+ - DispersionD3             0.004          34.32
+Integrals                   1.448          20.71
+ - Overlap                  1.445          99.79
+ - Core Hamiltonian         0.003           0.20
+SCF                         5.530          79.11
+ - Interaction Cache        0.001           0.02
+ - Potential                5.418          97.97
+ - Fock build               0.035           0.64
+ - Diagonalize              5.246          94.87
+ - Density                  0.035           0.63
+ - Charges                  0.029           0.52
+get_refocc                  0.000           0.01
+get_guess                   0.003           0.04
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    5.524          79.03
+xto.equi                    5.472          78.29
+_Rootfinder                 5.472          78.29
+broyden1                    5.472          78.28
+1st iter                    0.061           0.87
+M Ops bef eigh              0.450           6.43
+Cholesky                    0.045           0.65
+L inv                       0.360           5.16
+Matmul                      0.042           0.60
+cupy_eigh                   4.623          66.13
+M Ops aft eigh              0.024           0.34
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 5.411          77.41
+Jacobian solve              0.012           0.17
+mv                          0.017           0.25
+dx norm                     0.002           0.02
+Jacobian update             0.024           0.34
+rmv                         0.009           0.13
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        40.015         572.44
+Total                       6.990         100.00
+Energy Sum: -1075.59814453125
+
+Running on cpu with 98 atoms, 32 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.087           0.22
+ - DispersionD3             0.080          91.26
+ - Halogen                  0.003           3.20
+ - Repulsion                0.005           5.44
+Integrals                   1.542           3.94
+ - Overlap                  1.476          95.74
+ - Core Hamiltonian         0.066           4.26
+SCF                        37.472          95.83
+ - Interaction Cache        0.012           0.03
+ - Potential               36.949          98.60
+ - Fock build               1.368           3.65
+ - Diagonalize             33.410          89.16
+ - Density                  0.909           2.43
+ - Charges                  0.638           1.70
+get_refocc                  0.001           0.00
+get_guess                   0.008           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.00
+scf_pure                   37.441          95.74
+xto.equi                   37.091          94.85
+_Rootfinder                37.091          94.85
+broyden1                   37.091          94.85
+1st iter                    0.357           0.91
+M Ops bef eigh              6.473          16.55
+Cholesky                    2.356           6.02
+L inv                       3.002           7.68
+Matmul                      1.114           2.85
+torch_eigh                 19.429          49.68
+M Ops aft eigh              0.657           1.68
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                36.733          93.93
+Jacobian solve              0.104           0.27
+mv                          0.211           0.54
+dx norm                     0.002           0.00
+Jacobian update             0.252           0.64
+rmv                         0.126           0.32
+Fin. energy                 0.002           0.00
+------------------------------------------------
+Sum                       258.641         661.40
+Total                      39.105         100.00
+Energy Sum: -1073.9356689453125
+
+#################### Molecule alkane_33_carbons: 101 atoms, 33 C atoms ####################
+
+Running on cuda:0 with 101 atoms, 33 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.19
+ - Repulsion                0.001           9.08
+ - DispersionD3             0.003          43.88
+ - Halogen                  0.004          46.49
+Integrals                   0.738          18.20
+ - Overlap                  0.736          99.69
+ - Core Hamiltonian         0.002           0.31
+SCF                         3.308          81.59
+ - Interaction Cache        0.001           0.02
+ - Potential                3.198          96.67
+ - Fock build               0.015           0.45
+ - Diagonalize              3.072          92.86
+ - Density                  0.024           0.73
+ - Charges                  0.018           0.53
+get_refocc                  0.000           0.01
+get_guess                   0.003           0.06
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.02
+scf_pure                    3.303          81.44
+xto.equi                    3.271          80.67
+_Rootfinder                 3.271          80.67
+broyden1                    3.271          80.67
+1st iter                    0.035           0.87
+M Ops bef eigh              0.338           8.33
+Cholesky                    0.034           0.83
+L inv                       0.278           6.85
+Matmul                      0.024           0.60
+cupy_eigh                   2.640          65.10
+M Ops aft eigh              0.015           0.37
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 3.236          79.79
+Jacobian solve              0.011           0.28
+mv                          0.018           0.44
+dx norm                     0.002           0.04
+Jacobian update             0.024           0.60
+rmv                         0.010           0.23
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        23.839         587.87
+Total                       4.055         100.00
+Energy Sum: -567.9281005859375
+
+Running on cpu with 101 atoms, 33 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.035           0.20
+ - Halogen                  0.001           3.83
+ - Repulsion                0.003           7.35
+ - DispersionD3             0.031          88.63
+Integrals                   0.803           4.71
+ - Overlap                  0.784          97.56
+ - Core Hamiltonian         0.020           2.44
+SCF                        16.222          95.08
+ - Interaction Cache        0.005           0.03
+ - Potential               15.973          98.46
+ - Fock build               0.283           1.74
+ - Diagonalize             15.110          93.14
+ - Density                  0.310           1.91
+ - Charges                  0.154           0.95
+get_refocc                  0.000           0.00
+get_guess                   0.005           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                   16.206          94.99
+xto.equi                   16.040          94.01
+_Rootfinder                16.040          94.01
+broyden1                   16.040          94.01
+1st iter                    0.159           0.93
+M Ops bef eigh              3.472          20.35
+Cholesky                    1.188           6.96
+L inv                       1.675           9.81
+Matmul                      0.608           3.56
+torch_eigh                 10.272          60.20
+M Ops aft eigh              0.244           1.43
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                15.880          93.08
+Jacobian solve              0.031           0.18
+mv                          0.065           0.38
+dx norm                     0.001           0.01
+Jacobian update             0.106           0.62
+rmv                         0.065           0.38
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       115.159         674.95
+Total                      17.062         100.00
+Energy Sum: -567.063720703125
+
+Running on cuda:0 with 101 atoms, 33 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.15
+ - DispersionD3             0.004          34.63
+ - Halogen                  0.007          59.52
+ - Repulsion                0.001           5.53
+Integrals                   1.509          19.33
+ - Overlap                  1.506          99.80
+ - Core Hamiltonian         0.003           0.20
+SCF                         6.283          80.50
+ - Interaction Cache        0.001           0.01
+ - Potential                6.171          98.22
+ - Fock build               0.037           0.59
+ - Diagonalize              5.995          95.42
+ - Density                  0.036           0.57
+ - Charges                  0.032           0.51
+get_refocc                  0.000           0.00
+get_guess                   0.003           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    6.277          80.42
+xto.equi                    6.215          79.64
+_Rootfinder                 6.215          79.64
+broyden1                    6.215          79.64
+1st iter                    0.067           0.85
+M Ops bef eigh              0.463           5.93
+Cholesky                    0.046           0.59
+L inv                       0.369           4.73
+Matmul                      0.045           0.58
+cupy_eigh                   5.345          68.48
+M Ops aft eigh              0.025           0.32
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 6.149          78.78
+Jacobian solve              0.011           0.14
+mv                          0.017           0.22
+dx norm                     0.002           0.02
+Jacobian update             0.023           0.30
+rmv                         0.009           0.12
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        45.302         580.45
+Total                       7.805         100.00
+Energy Sum: -1135.8572998046875
+
+Running on cpu with 101 atoms, 33 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.094           0.23
+ - DispersionD3             0.086          91.07
+ - Halogen                  0.003           2.95
+ - Repulsion                0.006           5.88
+Integrals                   1.575           3.92
+ - Overlap                  1.507          95.70
+ - Core Hamiltonian         0.068           4.30
+SCF                        38.510          95.84
+ - Interaction Cache        0.012           0.03
+ - Potential               37.965          98.59
+ - Fock build               1.305           3.39
+ - Diagonalize             34.717          90.15
+ - Density                  0.807           2.10
+ - Charges                  0.464           1.20
+get_refocc                  0.000           0.00
+get_guess                   0.007           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.00
+scf_pure                   38.478          95.76
+xto.equi                   38.111          94.84
+_Rootfinder                38.111          94.84
+broyden1                   38.111          94.84
+1st iter                    0.370           0.92
+M Ops bef eigh              6.524          16.24
+Cholesky                    2.352           5.85
+L inv                       2.917           7.26
+Matmul                      1.253           3.12
+torch_eigh                 20.717          51.56
+M Ops aft eigh              0.744           1.85
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                37.740          93.92
+Jacobian solve              0.111           0.28
+mv                          0.217           0.54
+dx norm                     0.002           0.00
+Jacobian update             0.261           0.65
+rmv                         0.136           0.34
+Fin. energy                 0.002           0.00
+------------------------------------------------
+Sum                       266.344         662.84
+Total                      40.182         100.00
+Energy Sum: -1134.12841796875
+
+#################### Molecule alkane_34_carbons: 104 atoms, 34 C atoms ####################
+
+Running on cuda:0 with 104 atoms, 34 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.18
+ - Halogen                  0.004          47.14
+ - Repulsion                0.001           8.78
+ - DispersionD3             0.003          43.59
+Integrals                   0.805          18.86
+ - Overlap                  0.803          99.72
+ - Core Hamiltonian         0.002           0.28
+SCF                         3.456          80.94
+ - Interaction Cache        0.001           0.02
+ - Potential                3.345          96.80
+ - Fock build               0.016           0.47
+ - Diagonalize              3.216          93.06
+ - Density                  0.024           0.71
+ - Charges                  0.019           0.54
+get_refocc                  0.000           0.01
+get_guess                   0.003           0.06
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    3.450          80.80
+xto.equi                    3.417          80.03
+_Rootfinder                 3.417          80.03
+broyden1                    3.417          80.03
+1st iter                    0.035           0.83
+M Ops bef eigh              0.354           8.28
+Cholesky                    0.035           0.82
+L inv                       0.291           6.82
+Matmul                      0.025           0.59
+cupy_eigh                   2.762          64.69
+M Ops aft eigh              0.015           0.36
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 3.381          79.20
+Jacobian solve              0.012           0.27
+mv                          0.018           0.42
+dx norm                     0.002           0.04
+Jacobian update             0.024           0.57
+rmv                         0.010           0.22
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        24.937         584.09
+Total                       4.269         100.00
+Energy Sum: -588.6722412109375
+
+Running on cpu with 104 atoms, 34 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.050           0.27
+ - Repulsion                0.003           5.02
+ - DispersionD3             0.046          91.88
+ - Halogen                  0.001           2.97
+Integrals                   0.790           4.32
+ - Overlap                  0.769          97.38
+ - Core Hamiltonian         0.021           2.62
+SCF                        17.420          95.39
+ - Interaction Cache        0.006           0.03
+ - Potential               17.162          98.52
+ - Fock build               0.302           1.73
+ - Diagonalize             16.213          93.07
+ - Density                  0.319           1.83
+ - Charges                  0.198           1.14
+get_refocc                  0.000           0.00
+get_guess                   0.005           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                   17.403          95.30
+xto.equi                   17.237          94.39
+_Rootfinder                17.237          94.39
+broyden1                   17.237          94.39
+1st iter                    0.158           0.87
+M Ops bef eigh              3.665          20.07
+Cholesky                    1.215           6.65
+L inv                       1.814           9.93
+Matmul                      0.636           3.48
+torch_eigh                 11.066          60.60
+M Ops aft eigh              0.267           1.46
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                17.079          93.53
+Jacobian solve              0.032           0.18
+mv                          0.065           0.36
+dx norm                     0.001           0.01
+Jacobian update             0.107           0.58
+rmv                         0.066           0.36
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       123.553         676.58
+Total                      18.261         100.00
+Energy Sum: -587.7374267578125
+
+Running on cuda:0 with 104 atoms, 34 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.14
+ - DispersionD3             0.004          37.16
+ - Repulsion                0.001           5.70
+ - Halogen                  0.007          56.74
+Integrals                   1.602          18.42
+ - Overlap                  1.599          99.80
+ - Core Hamiltonian         0.003           0.20
+SCF                         7.080          81.43
+ - Interaction Cache        0.001           0.01
+ - Potential                6.968          98.41
+ - Fock build               0.039           0.56
+ - Diagonalize              6.785          95.82
+ - Density                  0.037           0.53
+ - Charges                  0.036           0.51
+get_refocc                  0.000           0.00
+get_guess                   0.003           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    7.074          81.36
+xto.equi                    7.005          80.56
+_Rootfinder                 7.005          80.56
+broyden1                    7.005          80.56
+1st iter                    0.074           0.85
+M Ops bef eigh              0.487           5.60
+Cholesky                    0.049           0.56
+L inv                       0.390           4.48
+Matmul                      0.047           0.54
+cupy_eigh                   6.095          70.10
+M Ops aft eigh              0.026           0.30
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 6.931          79.71
+Jacobian solve              0.011           0.13
+mv                          0.017           0.20
+dx norm                     0.002           0.02
+Jacobian update             0.023           0.27
+rmv                         0.009           0.11
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        50.951         585.95
+Total                       8.695         100.00
+Energy Sum: -1177.35546875
+
+Running on cpu with 104 atoms, 34 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.098           0.23
+ - Repulsion                0.005           5.05
+ - Halogen                  0.003           2.80
+ - DispersionD3             0.090          92.05
+Integrals                   1.651           3.83
+ - Overlap                  1.569          95.03
+ - Core Hamiltonian         0.082           4.97
+SCF                        41.394          95.94
+ - Interaction Cache        0.014           0.03
+ - Potential               40.855          98.70
+ - Fock build               1.529           3.69
+ - Diagonalize             36.906          89.16
+ - Density                  1.031           2.49
+ - Charges                  0.723           1.75
+get_refocc                  0.001           0.00
+get_guess                   0.009           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.002           0.00
+scf_pure                   41.358          95.85
+xto.equi                   40.975          94.96
+_Rootfinder                40.975          94.96
+broyden1                   40.974          94.96
+1st iter                    0.398           0.92
+M Ops bef eigh              6.657          15.43
+Cholesky                    2.422           5.61
+L inv                       2.938           6.81
+Matmul                      1.297           3.01
+torch_eigh                 21.765          50.44
+M Ops aft eigh              0.759           1.76
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                40.577          94.04
+Jacobian solve              0.111           0.26
+mv                          0.221           0.51
+dx norm                     0.002           0.00
+Jacobian update             0.255           0.59
+rmv                         0.126           0.29
+Fin. energy                 0.002           0.00
+------------------------------------------------
+Sum                       284.966         660.45
+Total                      43.147         100.00
+Energy Sum: -1175.4755859375
+
+#################### Molecule alkane_35_carbons: 107 atoms, 35 C atoms ####################
+
+Running on cuda:0 with 107 atoms, 35 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.18
+ - Halogen                  0.003          45.80
+ - Repulsion                0.001           8.72
+ - DispersionD3             0.003          44.96
+Integrals                   0.770          18.02
+ - Overlap                  0.768          99.70
+ - Core Hamiltonian         0.002           0.30
+SCF                         3.496          81.78
+ - Interaction Cache        0.001           0.02
+ - Potential                3.387          96.88
+ - Fock build               0.018           0.52
+ - Diagonalize              3.257          93.14
+ - Density                  0.025           0.71
+ - Charges                  0.019           0.54
+get_refocc                  0.000           0.01
+get_guess                   0.002           0.06
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    3.490          81.64
+xto.equi                    3.457          80.86
+_Rootfinder                 3.457          80.86
+broyden1                    3.457          80.86
+1st iter                    0.037           0.87
+M Ops bef eigh              0.361           8.44
+Cholesky                    0.036           0.84
+L inv                       0.296           6.93
+Matmul                      0.026           0.62
+cupy_eigh                   2.790          65.25
+M Ops aft eigh              0.016           0.37
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 3.419          79.98
+Jacobian solve              0.011           0.26
+mv                          0.018           0.41
+dx norm                     0.002           0.04
+Jacobian update             0.024           0.56
+rmv                         0.009           0.22
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        25.186         589.13
+Total                       4.275         100.00
+Energy Sum: -594.8211669921875
+
+Running on cpu with 107 atoms, 35 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.055           0.29
+ - Repulsion                0.003           5.16
+ - DispersionD3             0.050          91.23
+ - Halogen                  0.002           3.48
+Integrals                   0.862           4.50
+ - Overlap                  0.838          97.27
+ - Core Hamiltonian         0.023           2.72
+SCF                        18.215          95.20
+ - Interaction Cache        0.006           0.03
+ - Potential               17.948          98.54
+ - Fock build               0.338           1.86
+ - Diagonalize             16.911          92.84
+ - Density                  0.372           2.04
+ - Charges                  0.223           1.22
+get_refocc                  0.000           0.00
+get_guess                   0.005           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                   18.197          95.11
+xto.equi                   18.015          94.16
+_Rootfinder                18.015          94.16
+broyden1                   18.015          94.16
+1st iter                    0.201           1.05
+M Ops bef eigh              3.892          20.34
+Cholesky                    1.239           6.48
+L inv                       1.975          10.32
+Matmul                      0.677           3.54
+torch_eigh                 11.312          59.12
+M Ops aft eigh              0.311           1.63
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                17.814          93.11
+Jacobian solve              0.035           0.18
+mv                          0.071           0.37
+dx norm                     0.001           0.01
+Jacobian update             0.112           0.59
+rmv                         0.068           0.35
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       129.089         674.70
+Total                      19.133         100.00
+Energy Sum: -593.8193969726562
+
+Running on cuda:0 with 107 atoms, 35 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.13
+ - Halogen                  0.007          56.19
+ - DispersionD3             0.005          38.26
+ - Repulsion                0.001           5.23
+Integrals                   1.606          17.36
+ - Overlap                  1.602          99.79
+ - Core Hamiltonian         0.003           0.21
+SCF                         7.630          82.50
+ - Interaction Cache        0.001           0.01
+ - Potential                7.517          98.51
+ - Fock build               0.042           0.55
+ - Diagonalize              7.321          95.95
+ - Density                  0.042           0.55
+ - Charges                  0.038           0.50
+get_refocc                  0.000           0.00
+get_guess                   0.003           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    7.624          82.43
+xto.equi                    7.551          81.63
+_Rootfinder                 7.551          81.63
+broyden1                    7.551          81.63
+1st iter                    0.079           0.86
+M Ops bef eigh              0.506           5.47
+Cholesky                    0.051           0.55
+L inv                       0.405           4.37
+Matmul                      0.049           0.53
+cupy_eigh                   6.595          71.30
+M Ops aft eigh              0.028           0.30
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 7.471          80.77
+Jacobian solve              0.011           0.12
+mv                          0.017           0.19
+dx norm                     0.002           0.02
+Jacobian update             0.024           0.26
+rmv                         0.009           0.10
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        54.776         592.20
+Total                       9.250         100.00
+Energy Sum: -1189.6407470703125
+
+Running on cpu with 107 atoms, 35 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.116           0.26
+ - Halogen                  0.003           2.37
+ - DispersionD3             0.107          91.92
+ - Repulsion                0.007           5.62
+Integrals                   1.687           3.79
+ - Overlap                  1.605          95.12
+ - Core Hamiltonian         0.082           4.88
+SCF                        42.773          95.94
+ - Interaction Cache        0.015           0.04
+ - Potential               42.199          98.66
+ - Fock build               1.372           3.21
+ - Diagonalize             38.723          90.53
+ - Density                  0.917           2.14
+ - Charges                  0.465           1.09
+get_refocc                  0.001           0.00
+get_guess                   0.009           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.002           0.00
+scf_pure                   42.735          95.86
+xto.equi                   42.321          94.93
+_Rootfinder                42.321          94.93
+broyden1                   42.321          94.93
+1st iter                    0.418           0.94
+M Ops bef eigh              7.431          16.67
+Cholesky                    2.364           5.30
+L inv                       3.550           7.96
+Matmul                      1.516           3.40
+torch_eigh                 22.727          50.98
+M Ops aft eigh              0.876           1.96
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                41.903          93.99
+Jacobian solve              0.119           0.27
+mv                          0.235           0.53
+dx norm                     0.002           0.00
+Jacobian update             0.273           0.61
+rmv                         0.135           0.30
+Fin. energy                 0.002           0.00
+------------------------------------------------
+Sum                       295.836         663.58
+Total                      44.582         100.00
+Energy Sum: -1187.6396484375
+
+#################### Molecule alkane_36_carbons: 110 atoms, 36 C atoms ####################
+
+Running on cuda:0 with 110 atoms, 36 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.014           0.30
+ - Repulsion                0.001           5.22
+ - DispersionD3             0.010          69.96
+ - Halogen                  0.004          24.50
+Integrals                   0.844          17.41
+ - Overlap                  0.841          99.72
+ - Core Hamiltonian         0.002           0.28
+SCF                         3.988          82.28
+ - Interaction Cache        0.001           0.02
+ - Potential                3.880          97.29
+ - Fock build               0.019           0.49
+ - Diagonalize              3.747          93.96
+ - Density                  0.025           0.63
+ - Charges                  0.019           0.49
+get_refocc                  0.000           0.01
+get_guess                   0.003           0.05
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    3.982          82.15
+xto.equi                    3.944          81.37
+_Rootfinder                 3.944          81.37
+broyden1                    3.944          81.37
+1st iter                    0.043           0.88
+M Ops bef eigh              0.382           7.88
+Cholesky                    0.038           0.78
+L inv                       0.315           6.50
+Matmul                      0.027           0.56
+cupy_eigh                   3.253          67.11
+M Ops aft eigh              0.016           0.34
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 3.901          80.49
+Jacobian solve              0.011           0.23
+mv                          0.017           0.34
+dx norm                     0.002           0.03
+Jacobian update             0.023           0.48
+rmv                         0.009           0.19
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        28.701         592.14
+Total                       4.847         100.00
+Energy Sum: -575.764404296875
+
+Running on cpu with 110 atoms, 36 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.057           0.28
+ - DispersionD3             0.052          91.47
+ - Repulsion                0.003           5.84
+ - Halogen                  0.001           2.58
+Integrals                   0.868           4.22
+ - Overlap                  0.845          97.40
+ - Core Hamiltonian         0.023           2.60
+SCF                        19.651          95.50
+ - Interaction Cache        0.006           0.03
+ - Potential               19.383          98.64
+ - Fock build               0.376           1.91
+ - Diagonalize             18.076          91.99
+ - Density                  0.397           2.02
+ - Charges                  0.211           1.07
+get_refocc                  0.000           0.00
+get_guess                   0.006           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.00
+scf_pure                   19.632          95.41
+xto.equi                   19.421          94.38
+_Rootfinder                19.421          94.38
+broyden1                   19.421          94.38
+1st iter                    0.206           1.00
+M Ops bef eigh              4.146          20.15
+Cholesky                    1.448           7.04
+L inv                       1.987           9.66
+Matmul                      0.710           3.45
+torch_eigh                 12.068          58.65
+M Ops aft eigh              0.338           1.64
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                19.215          93.38
+Jacobian solve              0.033           0.16
+mv                          0.067           0.33
+dx norm                     0.001           0.01
+Jacobian update             0.110           0.53
+rmv                         0.068           0.33
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       138.877         674.92
+Total                      20.577         100.00
+Energy Sum: -574.6372680664062
+
+Running on cuda:0 with 110 atoms, 36 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.11
+ - DispersionD3             0.004          36.98
+ - Repulsion                0.001           5.64
+ - Halogen                  0.007          57.03
+Integrals                   1.620          15.49
+ - Overlap                  1.616          99.78
+ - Core Hamiltonian         0.004           0.22
+SCF                         8.822          84.39
+ - Interaction Cache        0.001           0.01
+ - Potential                8.713          98.76
+ - Fock build               0.044           0.50
+ - Diagonalize              8.515          96.51
+ - Density                  0.044           0.50
+ - Charges                  0.042           0.47
+get_refocc                  0.000           0.00
+get_guess                   0.003           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    8.816          84.32
+xto.equi                    8.731          83.51
+_Rootfinder                 8.731          83.51
+broyden1                    8.731          83.51
+1st iter                    0.092           0.88
+M Ops bef eigh              0.534           5.11
+Cholesky                    0.054           0.52
+L inv                       0.429           4.10
+Matmul                      0.049           0.47
+cupy_eigh                   7.745          74.08
+M Ops aft eigh              0.028           0.27
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 8.638          82.63
+Jacobian solve              0.011           0.10
+mv                          0.016           0.16
+dx norm                     0.002           0.02
+Jacobian update             0.023           0.22
+rmv                         0.009           0.08
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        63.097         603.53
+Total                      10.455         100.00
+Energy Sum: -1151.5267333984375
+
+Running on cpu with 110 atoms, 36 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.103           0.22
+ - Halogen                  0.003           2.63
+ - DispersionD3             0.096          92.73
+ - Repulsion                0.005           4.55
+Integrals                   1.755           3.74
+ - Overlap                  1.659          94.53
+ - Core Hamiltonian         0.096           5.47
+SCF                        45.019          96.03
+ - Interaction Cache        0.016           0.04
+ - Potential               44.457          98.75
+ - Fock build               1.469           3.26
+ - Diagonalize             40.494          89.95
+ - Density                  0.927           2.06
+ - Charges                  0.802           1.78
+get_refocc                  0.000           0.00
+get_guess                   0.009           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.002           0.00
+scf_pure                   44.979          95.94
+xto.equi                   44.551          95.03
+_Rootfinder                44.551          95.03
+broyden1                   44.551          95.03
+1st iter                    0.439           0.94
+M Ops bef eigh              7.832          16.71
+Cholesky                    2.778           5.93
+L inv                       3.543           7.56
+Matmul                      1.510           3.22
+torch_eigh                 23.664          50.48
+M Ops aft eigh              0.864           1.84
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                44.112          94.09
+Jacobian solve              0.114           0.24
+mv                          0.227           0.48
+dx norm                     0.002           0.00
+Jacobian update             0.262           0.56
+rmv                         0.131           0.28
+Fin. energy                 0.002           0.00
+------------------------------------------------
+Sum                       311.000         663.37
+Total                      46.882         100.00
+Energy Sum: -1149.2740478515625
+
+#################### Molecule alkane_37_carbons: 113 atoms, 37 C atoms ####################
+
+Running on cuda:0 with 113 atoms, 37 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.009           0.18
+ - Repulsion                0.001           8.87
+ - Halogen                  0.004          48.38
+ - DispersionD3             0.004          42.25
+Integrals                   0.842          17.31
+ - Overlap                  0.839          99.71
+ - Core Hamiltonian         0.002           0.28
+SCF                         4.012          82.49
+ - Interaction Cache        0.001           0.02
+ - Potential                3.902          97.25
+ - Fock build               0.021           0.52
+ - Diagonalize              3.755          93.60
+ - Density                  0.026           0.65
+ - Charges                  0.020           0.50
+get_refocc                  0.000           0.01
+get_guess                   0.003           0.05
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    4.006          82.37
+xto.equi                    3.968          81.58
+_Rootfinder                 3.968          81.58
+broyden1                    3.967          81.58
+1st iter                    0.043           0.88
+M Ops bef eigh              0.390           8.03
+Cholesky                    0.039           0.79
+L inv                       0.321           6.60
+Matmul                      0.029           0.59
+cupy_eigh                   3.247          66.77
+M Ops aft eigh              0.017           0.35
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 3.924          80.69
+Jacobian solve              0.011           0.23
+mv                          0.017           0.35
+dx norm                     0.002           0.03
+Jacobian update             0.023           0.48
+rmv                         0.009           0.19
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        28.848         593.20
+Total                       4.863         100.00
+Energy Sum: -597.9750366210938
+
+Running on cpu with 113 atoms, 37 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.059           0.27
+ - Repulsion                0.003           4.78
+ - Halogen                  0.001           2.35
+ - DispersionD3             0.055          92.75
+Integrals                   0.901           4.19
+ - Overlap                  0.874          96.97
+ - Core Hamiltonian         0.027           3.02
+SCF                        20.524          95.52
+ - Interaction Cache        0.007           0.03
+ - Potential               20.236          98.60
+ - Fock build               0.403           1.96
+ - Diagonalize             18.879          91.99
+ - Density                  0.437           2.13
+ - Charges                  0.231           1.13
+get_refocc                  0.000           0.00
+get_guess                   0.006           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                   20.503          95.43
+xto.equi                   20.286          94.42
+_Rootfinder                20.286          94.42
+broyden1                   20.286          94.42
+1st iter                    0.216           1.01
+M Ops bef eigh              4.311          20.06
+Cholesky                    1.479           6.88
+L inv                       2.073           9.65
+Matmul                      0.758           3.53
+torch_eigh                 12.426          57.84
+M Ops aft eigh              0.378           1.76
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                20.069          93.41
+Jacobian solve              0.040           0.19
+mv                          0.079           0.37
+dx norm                     0.001           0.01
+Jacobian update             0.120           0.56
+rmv                         0.072           0.34
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       144.876         674.30
+Total                      21.485         100.00
+Energy Sum: -596.8013916015625
+
+Running on cuda:0 with 113 atoms, 37 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.11
+ - Repulsion                0.001           5.97
+ - Halogen                  0.007          56.91
+ - DispersionD3             0.004          36.78
+Integrals                   1.759          16.10
+ - Overlap                  1.755          99.79
+ - Core Hamiltonian         0.004           0.21
+SCF                         9.153          83.78
+ - Interaction Cache        0.001           0.01
+ - Potential                9.040          98.77
+ - Fock build               0.047           0.51
+ - Diagonalize              8.819          96.35
+ - Density                  0.048           0.52
+ - Charges                  0.045           0.50
+get_refocc                  0.000           0.00
+get_guess                   0.003           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    9.147          83.72
+xto.equi                    9.058          82.91
+_Rootfinder                 9.058          82.91
+broyden1                    9.058          82.91
+1st iter                    0.096           0.87
+M Ops bef eigh              0.559           5.11
+Cholesky                    0.056           0.52
+L inv                       0.447           4.09
+Matmul                      0.053           0.49
+cupy_eigh                   8.008          73.30
+M Ops aft eigh              0.029           0.27
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 8.962          82.03
+Jacobian solve              0.011           0.10
+mv                          0.017           0.16
+dx norm                     0.002           0.02
+Jacobian update             0.024           0.22
+rmv                         0.009           0.08
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        65.523         599.74
+Total                      10.925         100.00
+Energy Sum: -1195.94921875
+
+Running on cpu with 113 atoms, 37 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.121           0.24
+ - Halogen                  0.003           2.26
+ - DispersionD3             0.111          91.86
+ - Repulsion                0.007           5.80
+Integrals                   1.785           3.54
+ - Overlap                  1.690          94.68
+ - Core Hamiltonian         0.095           5.32
+SCF                        48.482          96.21
+ - Interaction Cache        0.019           0.04
+ - Potential               47.940          98.88
+ - Fock build               1.857           3.83
+ - Diagonalize             43.119          88.94
+ - Density                  1.285           2.65
+ - Charges                  0.873           1.80
+get_refocc                  0.000           0.00
+get_guess                   0.010           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.002           0.00
+scf_pure                   48.438          96.12
+xto.equi                   47.990          95.23
+_Rootfinder                47.990          95.23
+broyden1                   47.990          95.23
+1st iter                    0.460           0.91
+M Ops bef eigh              8.355          16.58
+Cholesky                    2.947           5.85
+L inv                       3.673           7.29
+Matmul                      1.734           3.44
+torch_eigh                 24.447          48.51
+M Ops aft eigh              0.989           1.96
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                47.529          94.32
+Jacobian solve              0.105           0.21
+mv                          0.204           0.40
+dx norm                     0.002           0.00
+Jacobian update             0.247           0.49
+rmv                         0.130           0.26
+Fin. energy                 0.002           0.00
+------------------------------------------------
+Sum                       333.629         662.06
+Total                      50.393         100.00
+Energy Sum: -1193.6025390625
+
+#################### Molecule alkane_38_carbons: 116 atoms, 38 C atoms ####################
+
+Running on cuda:0 with 116 atoms, 38 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.15
+ - DispersionD3             0.004          46.51
+ - Halogen                  0.004          44.71
+ - Repulsion                0.001           8.29
+Integrals                   0.909          17.54
+ - Overlap                  0.907          99.73
+ - Core Hamiltonian         0.002           0.27
+SCF                         4.266          82.29
+ - Interaction Cache        0.001           0.02
+ - Potential                4.156          97.41
+ - Fock build               0.022           0.52
+ - Diagonalize              4.005          93.89
+ - Density                  0.027           0.63
+ - Charges                  0.021           0.49
+get_refocc                  0.000           0.01
+get_guess                   0.003           0.05
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    4.260          82.17
+xto.equi                    4.219          81.39
+_Rootfinder                 4.219          81.39
+broyden1                    4.219          81.39
+1st iter                    0.045           0.87
+M Ops bef eigh              0.403           7.78
+Cholesky                    0.040           0.78
+L inv                       0.331           6.39
+Matmul                      0.030           0.57
+cupy_eigh                   3.479          67.12
+M Ops aft eigh              0.018           0.34
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 4.174          80.52
+Jacobian solve              0.011           0.21
+mv                          0.017           0.33
+dx norm                     0.002           0.03
+Jacobian update             0.024           0.46
+rmv                         0.009           0.18
+Fin. energy                 0.001           0.02
+------------------------------------------------
+Sum                        30.689         591.98
+Total                       5.184         100.00
+Energy Sum: -638.1585693359375
+
+Running on cpu with 116 atoms, 38 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.033           0.15
+ - Repulsion                0.003           9.27
+ - Halogen                  0.001           4.21
+ - DispersionD3             0.028          86.28
+Integrals                   0.935           4.18
+ - Overlap                  0.905          96.86
+ - Core Hamiltonian         0.029           3.14
+SCF                        21.390          95.67
+ - Interaction Cache        0.007           0.03
+ - Potential               21.110          98.69
+ - Fock build               0.406           1.90
+ - Diagonalize             19.894          93.01
+ - Density                  0.441           2.06
+ - Charges                  0.245           1.14
+get_refocc                  0.000           0.00
+get_guess                   0.006           0.03
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.00
+scf_pure                   21.370          95.58
+xto.equi                   21.161          94.64
+_Rootfinder                21.161          94.64
+broyden1                   21.160          94.64
+1st iter                    0.195           0.87
+M Ops bef eigh              4.547          20.34
+Cholesky                    1.473           6.59
+L inv                       2.296          10.27
+Matmul                      0.778           3.48
+torch_eigh                 13.224          59.14
+M Ops aft eigh              0.352           1.58
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                20.965          93.77
+Jacobian solve              0.036           0.16
+mv                          0.072           0.32
+dx norm                     0.001           0.01
+Jacobian update             0.116           0.52
+rmv                         0.071           0.32
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                       151.344         676.89
+Total                      22.359         100.00
+Energy Sum: -636.9278564453125
+
+Running on cuda:0 with 116 atoms, 38 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.11
+ - DispersionD3             0.005          37.81
+ - Repulsion                0.001           5.59
+ - Halogen                  0.007          56.24
+Integrals                   1.749          15.02
+ - Overlap                  1.745          99.77
+ - Core Hamiltonian         0.004           0.23
+SCF                         9.883          84.86
+ - Interaction Cache        0.001           0.01
+ - Potential                9.769          98.85
+ - Fock build               0.050           0.50
+ - Diagonalize              9.542          96.55
+ - Density                  0.048           0.49
+ - Charges                  0.048           0.49
+get_refocc                  0.000           0.00
+get_guess                   0.003           0.02
+Chrg init                   0.000           0.00
+guess init scp              0.001           0.01
+scf_pure                    9.877          84.81
+xto.equi                    9.780          83.98
+_Rootfinder                 9.780          83.98
+broyden1                    9.780          83.98
+1st iter                    0.101           0.87
+M Ops bef eigh              0.579           4.97
+Cholesky                    0.060           0.51
+L inv                       0.464           3.99
+Matmul                      0.053           0.45
+cupy_eigh                   8.695          74.66
+M Ops aft eigh              0.030           0.26
+1st norm                    0.000           0.00
+Jacobian setup              0.000           0.00
+iter_nonlin                 9.679          83.11
+Jacobian solve              0.011           0.10
+mv                          0.017           0.15
+dx norm                     0.002           0.01
+Jacobian update             0.023           0.20
+rmv                         0.009           0.08
+Fin. energy                 0.001           0.01
+------------------------------------------------
+Sum                        70.590         606.15
+Total                      11.646         100.00
+Energy Sum: -1276.2979736328125
+
+Running on cpu with 116 atoms, 38 C atoms, and 128 batches.
