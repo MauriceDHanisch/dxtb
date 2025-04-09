@@ -212,6 +212,81 @@ def plot_curve_times(parsed_data, keyword="Total", dpi=1000):
     plt.grid(True, which='both', linestyle='--', linewidth=0.5)
     plt.show()
 
+def plot_time_vs_n_atoms_at_batch_size(results, batch_size, keyword="Total", dpi=300, highlight_intervals=None):
+    """
+    Plots computation time vs number of atoms at a fixed batch size for both CPU and GPU.
+    Optionally highlights regions between the curves and shows mean ratio of higher/lower in each region.
+
+    Parameters:
+    - results: List of dictionaries from parse_grid_log.
+    - batch_size: The batch size to filter computations by.
+    - keyword: Timing keyword to extract (e.g., "Total", "Forces").
+    - dpi: Figure resolution.
+    - highlight_intervals: List of [start_n, end_n] intervals to highlight (optional).
+    """
+    cpu_data, gpu_data = {}, {}
+
+    for entry in results:
+        n = entry["n"]
+        for comp in entry["computations"]:
+            if comp["n_batch"] != batch_size:
+                continue
+            time = next((t["time"] for t in comp["times"] if keyword in t["objective"]), None)
+            if time is None:
+                continue
+            if comp["device"] == "cpu":
+                cpu_data[n] = time
+            elif comp["device"] == "cuda:0":
+                gpu_data[n] = time
+
+    ns = sorted(set(cpu_data.keys()) | set(gpu_data.keys()))
+    cpu_times = [cpu_data.get(n, np.nan) for n in ns]
+    gpu_times = [gpu_data.get(n, np.nan) for n in ns]
+
+    plt.figure()
+    apply_formatting(dpi=dpi, one_column=True, font_size=12)
+    plt.plot(ns, cpu_times, "o-", label="CPU", color="navy", markersize=2)
+    plt.plot(ns, gpu_times, "o-", label="GPU", color="crimson", markersize=2)
+
+    if highlight_intervals:
+        for start, end in highlight_intervals:
+            mask = [(start <= n <= end) for n in ns]
+            xs = [n for i, n in enumerate(ns) if mask[i]]
+            c_vals = [cpu_times[i] for i in range(len(ns)) if mask[i]]
+            g_vals = [gpu_times[i] for i in range(len(ns)) if mask[i]]
+
+            if not xs:
+                continue  # skip empty interval
+
+            upper = np.maximum(c_vals, g_vals)
+            lower = np.minimum(c_vals, g_vals)
+            ratio = np.mean(np.array(upper) / np.array(lower))
+
+            plt.fill_between(xs, c_vals, g_vals, color="forestgreen", alpha=0.3)
+            mid_x = 0.5 * (start + end)
+            max_y = max(max(c_vals), max(g_vals))
+            offset = 0.005 * max_y  # 5% vertical offset
+            plt.text(
+                mid_x,
+                max_y + offset,
+                f"avg ratio \n{ratio:.2f}×", # 
+                ha="center",
+                va="bottom",
+                fontsize=10,
+                color="forestgreen",
+                bbox=dict(facecolor="white", alpha=0.6, edgecolor="none"),
+                
+            )
+
+    plt.xlabel("Number of Atoms")
+    plt.ylabel("Computation Time (s)")
+    plt.title(f"Time vs Atom Count @ Batch Size = {batch_size} ({keyword})")
+    plt.legend()
+    plt.grid(True, linestyle="--", linewidth=0.5)
+    plt.tight_layout()
+    plt.show()
+
+
 
 
 def plot_time_vs_batch_size_at_n_atoms(results, n_atoms, anchor_batch_size=2, keyword="Total", dpi=300):

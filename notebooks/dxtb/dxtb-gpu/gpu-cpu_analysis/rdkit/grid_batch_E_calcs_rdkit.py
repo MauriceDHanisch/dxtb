@@ -32,13 +32,13 @@ def create_batched_data(numbers, positions, n_batch):
 # Define the function to run the calculation and save output to log file
 def run_calculation(n, n_batch, numbers, positions, charges, device_dd, opts, log_file, n_carbons):
     # Move data to the specified device
-    numbers = numbers.to(device_dd["device"])
-    positions = positions.to(device_dd["device"]).requires_grad_(True)
-    charges = charges.to(device_dd["device"])
+    numbers = numbers.to(device_dd["device"], dtype=torch.int32)
+    positions = positions.to(**device_dd).requires_grad_(True)
+    charges = charges.to(**device_dd)
 
     # Warmup for CUDA
     if device_dd["device"].type == "cuda":
-        _ = torch.rand(100, 100, device=device_dd["device"], dtype=device_dd["dtype"])
+        _ = torch.rand(100, 100, **device_dd)
         del _
 
     # Redirect OutputHandler console_logger to StringIO buffer
@@ -49,10 +49,10 @@ def run_calculation(n, n_batch, numbers, positions, charges, device_dd, opts, lo
     # Run calculation and capture logs
     with open(log_file, "a") as f:
         print(f"\nRunning on {device_dd['device']} with {n} atoms, {n_carbons} C atoms, and {n_batch} batches.", file=f)
-        dxtb.timer.reset()
         
         # Run calculation
-        calc = dxtb.Calculator(numbers, dxtb.GFN1_XTB, **device_dd, charges=charges, opts=opts)
+        calc = dxtb.Calculator(numbers, dxtb.GFN1_XTB, **device_dd, charges=charges, opts=opts, timer=True)
+        dxtb.timer.reset()
         energy = calc.get_energy(positions, chrg=charges)
         calc.reset()
         
@@ -71,7 +71,7 @@ def run_calculation(n, n_batch, numbers, positions, charges, device_dd, opts, lo
 
 # Main function to iterate over HDF5 file and compute for given batch range
 def grid_computation(hdf5_file, nbatch, log_file=None):
-    opts = {"scf_mode": "implicit", "batch_mode": 1}
+    opts = {"scf_mode": "implicit", "batch_mode": 1, "int_driver": "libcint"}
     
     # Open the log file in write mode to clear previous content
     with open(log_file, "w") as f:
@@ -94,22 +94,24 @@ def grid_computation(hdf5_file, nbatch, log_file=None):
         # Run calculations for the specified batch range
         n_batch_range = np.unique(np.linspace(*nbatch, dtype=int))
 
+        n_batch_range = [64, 128]
+
         for n_batch in n_batch_range:
             # Create a batch of the same molecule duplicated `n_batch` times
             batched_numbers, batched_positions, charges = create_batched_data(numbers, positions, n_batch)
 
             # Run on GPU
-            dd_cuda = {"device": torch.device("cuda:0"), "dtype": torch.double}
+            dd_cuda = {"device": torch.device("cuda:0"), "dtype": torch.float32}
             run_calculation(n, n_batch, batched_numbers, batched_positions, charges, dd_cuda, opts, log_file, n_carbons)
 
             # Run on CPU
-            dd_cpu = {"device": torch.device("cpu"), "dtype": torch.double}
+            dd_cpu = {"device": torch.device("cpu"), "dtype": torch.float32}
             run_calculation(n, n_batch, batched_numbers, batched_positions, charges, dd_cpu, opts, log_file, n_carbons)
 
 # Define the HDF5 file and batch size range
 hdf5_file = "alkanes_data_500.hdf5"
 nbatch = [2, 128, 64]  # Range of batch sizes
-log_file = f"logs/alkane_chain_E_grid_batch.txt"
+log_file = f"logs/alkane_chain_E_grid_batch_CUPY2.txt"
 
 if __name__ == "__main__":
     grid_computation(hdf5_file, nbatch, log_file)

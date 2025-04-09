@@ -1,0 +1,4650 @@
+Grid Computation Log for molecules from alkanes_data_500.hdf5.
+============================================================
+
+#################### Molecule alkane_1_carbons: 5 atoms, 1 C atoms ####################
+
+Running on cuda:0 with 5 atoms, 1 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.041           6.01
+ - Repulsion                0.026          62.81
+ - Halogen                  0.005          12.59
+ - DispersionD3             0.010          24.26
+Integrals                   0.121          17.80
+ - Overlap                  0.118          97.48
+ - Core Hamiltonian         0.003           2.50
+SCF                         0.437          64.45
+ - Interaction Cache        0.001           0.19
+ - Potential                0.172          39.36
+ - Fock build               0.003           0.68
+ - Diagonalize              0.076          17.46
+ - Density                  0.014           3.12
+ - Charges                  0.014           3.15
+cupy_eigh                   0.026           3.86
+------------------------------------------------
+Sum                         0.624          92.12
+Total                       0.678         100.00
+Energy Sum: -121.91584014892578
+
+Running on cpu with 5 atoms, 1 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.009           3.74
+ - Repulsion                0.000           4.34
+ - DispersionD3             0.008          81.38
+ - Halogen                  0.001          13.91
+Integrals                   0.051          20.63
+ - Overlap                  0.050          98.08
+ - Core Hamiltonian         0.001           1.90
+SCF                         0.187          75.42
+ - Interaction Cache        0.000           0.23
+ - Potential                0.123          65.49
+ - Fock build               0.004           2.03
+ - Diagonalize              0.069          36.80
+ - Density                  0.012           6.39
+ - Charges                  0.011           5.93
+torch_eigh                  0.028          11.33
+------------------------------------------------
+Sum                         0.276         111.12
+Total                       0.248         100.00
+Energy Sum: -121.91547393798828
+
+Running on cuda:0 with 5 atoms, 1 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.010           2.22
+ - Repulsion                0.001           5.96
+ - Halogen                  0.007          65.71
+ - DispersionD3             0.003          27.90
+Integrals                   0.100          21.38
+ - Overlap                  0.099          98.46
+ - Core Hamiltonian         0.002           1.53
+SCF                         0.357          76.24
+ - Interaction Cache        0.001           0.19
+ - Potential                0.139          38.93
+ - Fock build               0.003           0.82
+ - Diagonalize              0.052          14.68
+ - Density                  0.014           3.79
+ - Charges                  0.014           3.83
+cupy_eigh                   0.010           2.03
+------------------------------------------------
+Sum                         0.477         101.87
+Total                       0.469         100.00
+Energy Sum: -243.83154296875
+
+Running on cpu with 5 atoms, 1 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.005           1.32
+ - DispersionD3             0.002          45.14
+ - Halogen                  0.002          46.48
+ - Repulsion                0.000           7.81
+Integrals                   0.140          35.72
+ - Overlap                  0.138          99.03
+ - Core Hamiltonian         0.001           0.97
+SCF                         0.245          62.77
+ - Interaction Cache        0.000           0.20
+ - Potential                0.176          71.65
+ - Fock build               0.005           2.20
+ - Diagonalize              0.114          46.43
+ - Density                  0.013           5.14
+ - Charges                  0.013           5.17
+torch_eigh                  0.053          13.67
+------------------------------------------------
+Sum                         0.444         113.49
+Total                       0.391         100.00
+Energy Sum: -243.83106994628906
+
+#################### Molecule alkane_2_carbons: 8 atoms, 2 C atoms ####################
+
+Running on cuda:0 with 8 atoms, 2 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           5.73
+ - Halogen                  0.004          47.38
+ - DispersionD3             0.003          44.17
+ - Repulsion                0.001           7.85
+Integrals                   0.071          54.12
+ - Overlap                  0.069          97.94
+ - Core Hamiltonian         0.001           2.05
+SCF                         0.052          39.54
+ - Interaction Cache        0.001           1.32
+ - Potential                0.032          62.45
+ - Fock build               0.001           1.03
+ - Diagonalize              0.017          32.58
+ - Density                  0.002           4.65
+ - Charges                  0.002           4.81
+cupy_eigh                   0.002           1.77
+------------------------------------------------
+Sum                         0.132         101.16
+Total                       0.130         100.00
+Energy Sum: -129.57843017578125
+
+Running on cpu with 8 atoms, 2 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.005           3.91
+ - Halogen                  0.001          25.62
+ - Repulsion                0.000           8.11
+ - DispersionD3             0.003          65.79
+Integrals                   0.071          56.36
+ - Overlap                  0.070          98.11
+ - Core Hamiltonian         0.001           1.88
+SCF                         0.050          39.23
+ - Interaction Cache        0.001           1.06
+ - Potential                0.041          83.35
+ - Fock build               0.001           2.54
+ - Diagonalize              0.030          60.60
+ - Density                  0.002           4.72
+ - Charges                  0.002           4.94
+torch_eigh                  0.012           9.71
+------------------------------------------------
+Sum                         0.138         109.21
+Total                       0.126         100.00
+Energy Sum: -129.57765197753906
+
+Running on cuda:0 with 8 atoms, 2 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           5.49
+ - DispersionD3             0.003          30.17
+ - Repulsion                0.001           5.58
+ - Halogen                  0.007          63.87
+Integrals                   0.139          70.71
+ - Overlap                  0.137          98.91
+ - Core Hamiltonian         0.002           1.08
+SCF                         0.046          23.45
+ - Interaction Cache        0.001           1.50
+ - Potential                0.027          58.36
+ - Fock build               0.001           1.43
+ - Diagonalize              0.011          24.63
+ - Density                  0.002           5.29
+ - Charges                  0.002           5.33
+cupy_eigh                   0.002           1.17
+------------------------------------------------
+Sum                         0.198         100.81
+Total                       0.197         100.00
+Energy Sum: -259.1567687988281
+
+Running on cpu with 8 atoms, 2 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.006           2.43
+ - DispersionD3             0.003          47.76
+ - Repulsion                0.000           8.42
+ - Halogen                  0.002          43.23
+Integrals                   0.142          61.67
+ - Overlap                  0.139          98.14
+ - Core Hamiltonian         0.003           1.85
+SCF                         0.082          35.60
+ - Interaction Cache        0.001           0.99
+ - Potential                0.072          87.75
+ - Fock build               0.002           2.43
+ - Diagonalize              0.058          70.45
+ - Density                  0.003           3.30
+ - Charges                  0.003           3.81
+torch_eigh                  0.024          10.60
+------------------------------------------------
+Sum                         0.254         110.30
+Total                       0.230         100.00
+Energy Sum: -259.1549987792969
+
+#################### Molecule alkane_3_carbons: 11 atoms, 3 C atoms ####################
+
+Running on cuda:0 with 11 atoms, 3 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           5.38
+ - DispersionD3             0.004          47.41
+ - Repulsion                0.001           7.57
+ - Halogen                  0.003          44.50
+Integrals                   0.090          62.02
+ - Overlap                  0.089          98.37
+ - Core Hamiltonian         0.001           1.62
+SCF                         0.047          32.10
+ - Interaction Cache        0.001           1.47
+ - Potential                0.027          59.00
+ - Fock build               0.001           1.14
+ - Diagonalize              0.012          25.87
+ - Density                  0.002           5.24
+ - Charges                  0.003           5.37
+cupy_eigh                   0.003           1.80
+------------------------------------------------
+Sum                         0.147         101.30
+Total                       0.145         100.00
+Energy Sum: -145.53512573242188
+
+Running on cpu with 11 atoms, 3 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.005           2.43
+ - DispersionD3             0.003          61.91
+ - Repulsion                0.000          10.11
+ - Halogen                  0.001          27.31
+Integrals                   0.092          49.41
+ - Overlap                  0.090          97.99
+ - Core Hamiltonian         0.002           2.01
+SCF                         0.089          47.81
+ - Interaction Cache        0.001           0.80
+ - Potential                0.080          89.79
+ - Fock build               0.001           1.64
+ - Diagonalize              0.067          75.43
+ - Density                  0.003           2.91
+ - Charges                  0.003           3.45
+torch_eigh                  0.041          22.24
+------------------------------------------------
+Sum                         0.226         121.89
+Total                       0.186         100.00
+Energy Sum: -145.5330810546875
+
+Running on cuda:0 with 11 atoms, 3 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           4.47
+ - DispersionD3             0.003          30.22
+ - Repulsion                0.001           5.47
+ - Halogen                  0.007          63.92
+Integrals                   0.180          75.45
+ - Overlap                  0.178          99.02
+ - Core Hamiltonian         0.002           0.97
+SCF                         0.047          19.77
+ - Interaction Cache        0.001           1.51
+ - Potential                0.028          59.02
+ - Fock build               0.001           1.15
+ - Diagonalize              0.012          26.17
+ - Density                  0.002           5.14
+ - Charges                  0.002           5.24
+cupy_eigh                   0.003           1.19
+------------------------------------------------
+Sum                         0.241         100.88
+Total                       0.239         100.00
+Energy Sum: -291.070068359375
+
+Running on cpu with 11 atoms, 3 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.006           1.76
+ - Repulsion                0.001           9.71
+ - DispersionD3             0.003          49.65
+ - Halogen                  0.002          40.09
+Integrals                   0.183          53.42
+ - Overlap                  0.180          98.16
+ - Core Hamiltonian         0.003           1.84
+SCF                         0.153          44.59
+ - Interaction Cache        0.001           0.79
+ - Potential                0.141          92.23
+ - Fock build               0.002           1.20
+ - Diagonalize              0.126          82.38
+ - Density                  0.003           1.98
+ - Charges                  0.003           2.10
+torch_eigh                  0.087          25.40
+------------------------------------------------
+Sum                         0.429         125.18
+Total                       0.342         100.00
+Energy Sum: -291.066162109375
+
+#################### Molecule alkane_4_carbons: 14 atoms, 4 C atoms ####################
+
+Running on cuda:0 with 14 atoms, 4 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           3.59
+ - Halogen                  0.004          42.75
+ - Repulsion                0.001           7.75
+ - DispersionD3             0.004          49.01
+Integrals                   0.149          64.61
+ - Overlap                  0.147          98.88
+ - Core Hamiltonian         0.002           1.11
+SCF                         0.072          31.45
+ - Interaction Cache        0.001           0.97
+ - Potential                0.048          66.74
+ - Fock build               0.001           0.89
+ - Diagonalize              0.030          40.76
+ - Density                  0.003           4.05
+ - Charges                  0.003           4.14
+cupy_eigh                   0.009           3.73
+------------------------------------------------
+Sum                         0.238         103.38
+Total                       0.230         100.00
+Energy Sum: -159.73719787597656
+
+Running on cpu with 14 atoms, 4 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.006           1.95
+ - DispersionD3             0.004          67.74
+ - Halogen                  0.001          22.49
+ - Repulsion                0.001           9.27
+Integrals                   0.112          39.40
+ - Overlap                  0.110          98.16
+ - Core Hamiltonian         0.002           1.83
+SCF                         0.166          58.40
+ - Interaction Cache        0.001           0.55
+ - Potential                0.153          91.79
+ - Fock build               0.002           1.41
+ - Diagonalize              0.134          80.70
+ - Density                  0.004           2.34
+ - Charges                  0.004           2.49
+torch_eigh                  0.094          33.09
+------------------------------------------------
+Sum                         0.378         132.84
+Total                       0.285         100.00
+Energy Sum: -159.73321533203125
+
+Running on cuda:0 with 14 atoms, 4 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.010           3.46
+ - Repulsion                0.001           6.07
+ - DispersionD3             0.003          27.66
+ - Halogen                  0.007          65.80
+Integrals                   0.221          73.95
+ - Overlap                  0.220          99.21
+ - Core Hamiltonian         0.002           0.79
+SCF                         0.067          22.33
+ - Interaction Cache        0.001           1.08
+ - Potential                0.044          65.63
+ - Fock build               0.001           1.03
+ - Diagonalize              0.026          38.48
+ - Density                  0.003           4.30
+ - Charges                  0.003           4.33
+cupy_eigh                   0.008           2.76
+------------------------------------------------
+Sum                         0.307         102.51
+Total                       0.299         100.00
+Energy Sum: -319.4732666015625
+
+Running on cpu with 14 atoms, 4 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.009           1.73
+ - Repulsion                0.001           8.10
+ - Halogen                  0.002          28.09
+ - DispersionD3             0.005          63.48
+Integrals                   0.223          45.24
+ - Overlap                  0.219          97.97
+ - Core Hamiltonian         0.005           2.03
+SCF                         0.260          52.78
+ - Interaction Cache        0.001           0.43
+ - Potential                0.246          94.40
+ - Fock build               0.002           0.87
+ - Diagonalize              0.227          87.19
+ - Density                  0.004           1.51
+ - Charges                  0.004           1.45
+torch_eigh                  0.170          34.45
+------------------------------------------------
+Sum                         0.662         134.20
+Total                       0.493         100.00
+Energy Sum: -319.4662780761719
+
+#################### Molecule alkane_5_carbons: 17 atoms, 5 C atoms ####################
+
+Running on cuda:0 with 17 atoms, 5 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           3.92
+ - Halogen                  0.004          42.36
+ - Repulsion                0.001           7.47
+ - DispersionD3             0.004          49.70
+Integrals                   0.130          61.13
+ - Overlap                  0.129          98.75
+ - Core Hamiltonian         0.002           1.24
+SCF                         0.074          34.58
+ - Interaction Cache        0.001           0.98
+ - Potential                0.049          66.63
+ - Fock build               0.001           0.90
+ - Diagonalize              0.030          40.74
+ - Density                  0.003           4.10
+ - Charges                  0.003           4.12
+cupy_eigh                   0.011           5.23
+------------------------------------------------
+Sum                         0.223         104.86
+Total                       0.213         100.00
+Energy Sum: -176.24713134765625
+
+Running on cpu with 17 atoms, 5 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.005           1.45
+ - DispersionD3             0.003          61.23
+ - Halogen                  0.001          26.36
+ - Repulsion                0.001          11.85
+Integrals                   0.132          40.15
+ - Overlap                  0.130          98.46
+ - Core Hamiltonian         0.002           1.53
+SCF                         0.191          58.18
+ - Interaction Cache        0.001           0.48
+ - Potential                0.178          93.12
+ - Fock build               0.002           0.99
+ - Diagonalize              0.160          83.79
+ - Density                  0.004           2.04
+ - Charges                  0.004           2.09
+torch_eigh                  0.112          34.11
+------------------------------------------------
+Sum                         0.440         133.89
+Total                       0.329         100.00
+Energy Sum: -176.24102783203125
+
+Running on cuda:0 with 17 atoms, 5 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           2.72
+ - Halogen                  0.007          65.05
+ - DispersionD3             0.003          28.92
+ - Repulsion                0.001           5.66
+Integrals                   0.297          75.60
+ - Overlap                  0.295          99.41
+ - Core Hamiltonian         0.002           0.58
+SCF                         0.084          21.48
+ - Interaction Cache        0.001           0.83
+ - Potential                0.056          66.35
+ - Fock build               0.001           0.96
+ - Diagonalize              0.034          40.63
+ - Density                  0.003           3.98
+ - Charges                  0.003           4.09
+cupy_eigh                   0.013           3.22
+------------------------------------------------
+Sum                         0.405         103.03
+Total                       0.393         100.00
+Energy Sum: -352.493896484375
+
+Running on cpu with 17 atoms, 5 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           1.05
+ - DispersionD3             0.005          58.91
+ - Halogen                  0.002          29.79
+ - Repulsion                0.001          10.84
+Integrals                   0.267          34.44
+ - Overlap                  0.263          98.35
+ - Core Hamiltonian         0.004           1.65
+SCF                         0.500          64.41
+ - Interaction Cache        0.001           0.25
+ - Potential                0.475          95.15
+ - Fock build               0.004           0.79
+ - Diagonalize              0.444          88.91
+ - Density                  0.007           1.40
+ - Charges                  0.006           1.22
+torch_eigh                  0.328          42.22
+------------------------------------------------
+Sum                         1.102         142.11
+Total                       0.776         100.00
+Energy Sum: -352.4815979003906
+
+#################### Molecule alkane_6_carbons: 20 atoms, 6 C atoms ####################
+
+Running on cuda:0 with 20 atoms, 6 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           3.48
+ - Halogen                  0.004          42.77
+ - Repulsion                0.001           7.49
+ - DispersionD3             0.004          49.27
+Integrals                   0.151          63.46
+ - Overlap                  0.149          98.94
+ - Core Hamiltonian         0.002           1.05
+SCF                         0.078          32.73
+ - Interaction Cache        0.001           0.90
+ - Potential                0.053          68.62
+ - Fock build               0.001           0.84
+ - Diagonalize              0.034          44.26
+ - Density                  0.003           3.86
+ - Charges                  0.003           3.88
+cupy_eigh                   0.015           6.39
+------------------------------------------------
+Sum                         0.252         106.05
+Total                       0.238         100.00
+Energy Sum: -192.20059204101562
+
+Running on cpu with 20 atoms, 6 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.005           1.44
+ - Repulsion                0.001          12.36
+ - Halogen                  0.001          23.75
+ - DispersionD3             0.003          63.37
+Integrals                   0.153          41.94
+ - Overlap                  0.151          98.59
+ - Core Hamiltonian         0.002           1.40
+SCF                         0.205          56.39
+ - Interaction Cache        0.001           0.48
+ - Potential                0.193          94.00
+ - Fock build               0.002           0.85
+ - Diagonalize              0.177          86.15
+ - Density                  0.004           1.80
+ - Charges                  0.003           1.65
+torch_eigh                  0.129          35.29
+------------------------------------------------
+Sum                         0.492         135.07
+Total                       0.364         100.00
+Energy Sum: -192.19094848632812
+
+Running on cuda:0 with 20 atoms, 6 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.010           2.58
+ - Repulsion                0.001           6.17
+ - Halogen                  0.007          65.15
+ - DispersionD3             0.003          28.33
+Integrals                   0.301          74.15
+ - Overlap                  0.299          99.45
+ - Core Hamiltonian         0.002           0.55
+SCF                         0.094          23.08
+ - Interaction Cache        0.001           0.76
+ - Potential                0.064          67.94
+ - Fock build               0.001           0.81
+ - Diagonalize              0.041          44.07
+ - Density                  0.004           3.75
+ - Charges                  0.004           3.78
+cupy_eigh                   0.018           4.44
+------------------------------------------------
+Sum                         0.423         104.24
+Total                       0.406         100.00
+Energy Sum: -384.40032958984375
+
+Running on cpu with 20 atoms, 6 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.009           0.93
+ - DispersionD3             0.005          60.61
+ - Repulsion                0.001          10.77
+ - Halogen                  0.002          28.12
+Integrals                   0.350          37.46
+ - Overlap                  0.345          98.82
+ - Core Hamiltonian         0.004           1.17
+SCF                         0.574          61.51
+ - Interaction Cache        0.001           0.23
+ - Potential                0.550          95.90
+ - Fock build               0.004           0.70
+ - Diagonalize              0.520          90.60
+ - Density                  0.007           1.25
+ - Charges                  0.006           0.99
+torch_eigh                  0.393          42.10
+------------------------------------------------
+Sum                         1.325         142.00
+Total                       0.933         100.00
+Energy Sum: -384.381591796875
+
+#################### Molecule alkane_7_carbons: 23 atoms, 7 C atoms ####################
+
+Running on cuda:0 with 23 atoms, 7 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           2.82
+ - Repulsion                0.001           9.20
+ - Halogen                  0.004          49.60
+ - DispersionD3             0.003          40.63
+Integrals                   0.170          67.68
+ - Overlap                  0.169          99.09
+ - Core Hamiltonian         0.002           0.91
+SCF                         0.073          29.18
+ - Interaction Cache        0.001           0.94
+ - Potential                0.051          70.10
+ - Fock build               0.001           0.81
+ - Diagonalize              0.034          46.54
+ - Density                  0.003           3.65
+ - Charges                  0.003           3.76
+cupy_eigh                   0.016           6.29
+------------------------------------------------
+Sum                         0.267         105.98
+Total                       0.252         100.00
+Energy Sum: -198.84835815429688
+
+Running on cpu with 23 atoms, 7 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.005           1.16
+ - Repulsion                0.001          12.41
+ - Halogen                  0.001          23.79
+ - DispersionD3             0.003          63.23
+Integrals                   0.173          38.28
+ - Overlap                  0.171          98.63
+ - Core Hamiltonian         0.002           1.36
+SCF                         0.273          60.36
+ - Interaction Cache        0.001           0.37
+ - Potential                0.258          94.45
+ - Fock build               0.002           0.75
+ - Diagonalize              0.238          87.12
+ - Density                  0.005           1.81
+ - Charges                  0.004           1.47
+torch_eigh                  0.171          37.83
+------------------------------------------------
+Sum                         0.623         137.64
+Total                       0.453         100.00
+Energy Sum: -198.8350067138672
+
+Running on cuda:0 with 23 atoms, 7 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           1.89
+ - Repulsion                0.001           6.00
+ - Halogen                  0.007          64.48
+ - DispersionD3             0.003          29.16
+Integrals                   0.339          59.90
+ - Overlap                  0.337          99.49
+ - Core Hamiltonian         0.002           0.51
+SCF                         0.216          38.08
+ - Interaction Cache        0.001           0.33
+ - Potential                0.136          63.31
+ - Fock build               0.002           0.73
+ - Diagonalize              0.091          42.15
+ - Density                  0.007           3.32
+ - Charges                  0.007           3.38
+cupy_eigh                   0.042           7.39
+------------------------------------------------
+Sum                         0.607         107.25
+Total                       0.566         100.00
+Energy Sum: -397.6953125
+
+Running on cpu with 23 atoms, 7 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.010           0.57
+ - Repulsion                0.001           9.06
+ - Halogen                  0.002          23.87
+ - DispersionD3             0.007          66.72
+Integrals                   0.348          19.28
+ - Overlap                  0.343          98.57
+ - Core Hamiltonian         0.005           1.43
+SCF                         1.445          80.11
+ - Interaction Cache        0.001           0.10
+ - Potential                1.376          95.23
+ - Fock build               0.008           0.57
+ - Diagonalize              1.303          90.19
+ - Density                  0.016           1.09
+ - Charges                  0.015           1.01
+torch_eigh                  0.967          53.63
+------------------------------------------------
+Sum                         2.770         153.58
+Total                       1.803         100.00
+Energy Sum: -397.6702575683594
+
+#################### Molecule alkane_8_carbons: 26 atoms, 8 C atoms ####################
+
+Running on cuda:0 with 26 atoms, 8 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.97
+ - Repulsion                0.001           9.07
+ - Halogen                  0.003          49.98
+ - DispersionD3             0.003          40.42
+Integrals                   0.191          26.67
+ - Overlap                  0.190          99.18
+ - Core Hamiltonian         0.002           0.82
+SCF                         0.518          72.25
+ - Interaction Cache        0.001           0.13
+ - Potential                0.303          58.41
+ - Fock build               0.003           0.56
+ - Diagonalize              0.217          41.87
+ - Density                  0.013           2.60
+ - Charges                  0.014           2.66
+cupy_eigh                   0.100          13.99
+------------------------------------------------
+Sum                         0.817         113.88
+Total                       0.717         100.00
+Energy Sum: -216.91680908203125
+
+Running on cpu with 26 atoms, 8 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.006           0.93
+ - Repulsion                0.001          13.03
+ - Halogen                  0.001          20.96
+ - DispersionD3             0.004          65.51
+Integrals                   0.233          36.15
+ - Overlap                  0.230          98.75
+ - Core Hamiltonian         0.003           1.25
+SCF                         0.405          62.78
+ - Interaction Cache        0.001           0.32
+ - Potential                0.385          95.13
+ - Fock build               0.003           0.76
+ - Diagonalize              0.359          88.68
+ - Density                  0.007           1.61
+ - Charges                  0.005           1.26
+torch_eigh                  0.247          38.24
+------------------------------------------------
+Sum                         0.891         138.11
+Total                       0.645         100.00
+Energy Sum: -216.8974151611328
+
+Running on cuda:0 with 26 atoms, 8 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.010           1.97
+ - DispersionD3             0.003          28.58
+ - Repulsion                0.001           5.59
+ - Halogen                  0.007          65.42
+Integrals                   0.382          71.48
+ - Overlap                  0.380          99.55
+ - Core Hamiltonian         0.002           0.45
+SCF                         0.141          26.40
+ - Interaction Cache        0.001           0.50
+ - Potential                0.100          71.17
+ - Fock build               0.001           0.69
+ - Diagonalize              0.072          50.92
+ - Density                  0.004           3.19
+ - Charges                  0.005           3.21
+cupy_eigh                   0.032           6.02
+------------------------------------------------
+Sum                         0.565         105.87
+Total                       0.534         100.00
+Energy Sum: -433.83294677734375
+
+Running on cpu with 26 atoms, 8 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.40
+ - DispersionD3             0.009          70.20
+ - Halogen                  0.003          20.64
+ - Repulsion                0.001           8.82
+Integrals                   0.390          12.58
+ - Overlap                  0.384          98.39
+ - Core Hamiltonian         0.006           1.61
+SCF                         2.696          86.98
+ - Interaction Cache        0.002           0.08
+ - Potential                2.561          94.97
+ - Fock build               0.036           1.32
+ - Diagonalize              2.422          89.82
+ - Density                  0.030           1.11
+ - Charges                  0.023           0.87
+torch_eigh                  1.663          53.64
+------------------------------------------------
+Sum                         4.762         153.61
+Total                       3.100         100.00
+Energy Sum: -433.7948913574219
+
+#################### Molecule alkane_9_carbons: 29 atoms, 9 C atoms ####################
+
+Running on cuda:0 with 29 atoms, 9 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           2.06
+ - Repulsion                0.001           9.05
+ - Halogen                  0.004          49.69
+ - DispersionD3             0.003          40.71
+Integrals                   0.213          62.42
+ - Overlap                  0.212          99.25
+ - Core Hamiltonian         0.002           0.74
+SCF                         0.121          35.28
+ - Interaction Cache        0.001           0.59
+ - Potential                0.089          73.95
+ - Fock build               0.001           0.67
+ - Diagonalize              0.066          54.56
+ - Density                  0.004           3.07
+ - Charges                  0.004           3.06
+cupy_eigh                   0.032           9.35
+------------------------------------------------
+Sum                         0.373         109.11
+Total                       0.342         100.00
+Energy Sum: -227.5373992919922
+
+Running on cpu with 29 atoms, 9 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           1.26
+ - Repulsion                0.001          10.99
+ - Halogen                  0.001          14.99
+ - DispersionD3             0.006          73.64
+Integrals                   0.257          38.65
+ - Overlap                  0.254          98.77
+ - Core Hamiltonian         0.003           1.23
+SCF                         0.399          59.95
+ - Interaction Cache        0.001           0.33
+ - Potential                0.382          95.71
+ - Fock build               0.004           0.91
+ - Diagonalize              0.357          89.46
+ - Density                  0.007           1.65
+ - Charges                  0.005           1.21
+torch_eigh                  0.248          37.31
+------------------------------------------------
+Sum                         0.913         137.18
+Total                       0.666         100.00
+Energy Sum: -227.5137939453125
+
+Running on cuda:0 with 29 atoms, 9 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           1.45
+ - Repulsion                0.001           6.36
+ - DispersionD3             0.003          28.05
+ - Halogen                  0.007          65.13
+Integrals                   0.423          57.53
+ - Overlap                  0.421          99.58
+ - Core Hamiltonian         0.002           0.41
+SCF                         0.301          40.92
+ - Interaction Cache        0.001           0.24
+ - Potential                0.202          67.13
+ - Fock build               0.002           0.63
+ - Diagonalize              0.149          49.51
+ - Density                  0.008           2.75
+ - Charges                  0.008           2.82
+cupy_eigh                   0.070           9.57
+------------------------------------------------
+Sum                         0.805         109.46
+Total                       0.736         100.00
+Energy Sum: -455.07550048828125
+
+Running on cpu with 29 atoms, 9 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.014           0.81
+ - DispersionD3             0.010          73.27
+ - Repulsion                0.001           7.83
+ - Halogen                  0.003          18.54
+Integrals                   0.439          25.31
+ - Overlap                  0.431          98.04
+ - Core Hamiltonian         0.009           1.96
+SCF                         1.282          73.82
+ - Interaction Cache        0.002           0.14
+ - Potential                1.241          96.79
+ - Fock build               0.017           1.36
+ - Diagonalize              1.174          91.60
+ - Density                  0.015           1.20
+ - Charges                  0.012           0.93
+torch_eigh                  0.821          47.27
+------------------------------------------------
+Sum                         2.556         147.21
+Total                       1.736         100.00
+Energy Sum: -455.028076171875
+
+#################### Molecule alkane_10_carbons: 32 atoms, 10 C atoms ####################
+
+Running on cuda:0 with 32 atoms, 10 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.86
+ - Repulsion                0.001           9.16
+ - DispersionD3             0.003          40.02
+ - Halogen                  0.004          50.11
+Integrals                   0.235          28.32
+ - Overlap                  0.233          99.22
+ - Core Hamiltonian         0.002           0.78
+SCF                         0.586          70.72
+ - Interaction Cache        0.001           0.13
+ - Potential                0.362          61.71
+ - Fock build               0.003           0.51
+ - Diagonalize              0.263          44.79
+ - Density                  0.014           2.38
+ - Charges                  0.014           2.39
+cupy_eigh                   0.136          16.42
+------------------------------------------------
+Sum                         0.964         116.31
+Total                       0.829         100.00
+Energy Sum: -245.1940460205078
+
+Running on cpu with 32 atoms, 10 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.48
+ - DispersionD3             0.004          65.84
+ - Repulsion                0.001          14.33
+ - Halogen                  0.001          19.29
+Integrals                   0.279          20.26
+ - Overlap                  0.275          98.63
+ - Core Hamiltonian         0.004           1.36
+SCF                         1.091          79.20
+ - Interaction Cache        0.002           0.15
+ - Potential                1.042          95.50
+ - Fock build               0.009           0.82
+ - Diagonalize              0.972          89.08
+ - Density                  0.018           1.68
+ - Charges                  0.012           1.12
+torch_eigh                  0.678          49.18
+------------------------------------------------
+Sum                         2.055         149.11
+Total                       1.378         100.00
+Energy Sum: -245.1625518798828
+
+Running on cuda:0 with 32 atoms, 10 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.98
+ - Repulsion                0.001           6.16
+ - Halogen                  0.007          64.86
+ - DispersionD3             0.003          28.60
+Integrals                   0.467          43.35
+ - Overlap                  0.465          99.62
+ - Core Hamiltonian         0.002           0.37
+SCF                         0.599          55.59
+ - Interaction Cache        0.001           0.12
+ - Potential                0.373          62.26
+ - Fock build               0.003           0.55
+ - Diagonalize              0.273          45.58
+ - Density                  0.014           2.31
+ - Charges                  0.014           2.35
+cupy_eigh                   0.138          12.76
+------------------------------------------------
+Sum                         1.214         112.69
+Total                       1.078         100.00
+Energy Sum: -490.3882751464844
+
+Running on cpu with 32 atoms, 10 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.013           0.31
+ - Halogen                  0.002          19.35
+ - Repulsion                0.001           9.19
+ - DispersionD3             0.009          71.09
+Integrals                   0.481          11.58
+ - Overlap                  0.473          98.48
+ - Core Hamiltonian         0.007           1.51
+SCF                         3.655          88.08
+ - Interaction Cache        0.002           0.06
+ - Potential                3.496          95.66
+ - Fock build               0.044           1.20
+ - Diagonalize              3.302          90.36
+ - Density                  0.043           1.19
+ - Charges                  0.033           0.90
+torch_eigh                  2.295          55.32
+------------------------------------------------
+Sum                         6.444         155.29
+Total                       4.149         100.00
+Energy Sum: -490.3251037597656
+
+#################### Molecule alkane_11_carbons: 35 atoms, 11 C atoms ####################
+
+Running on cuda:0 with 35 atoms, 11 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           1.40
+ - DispersionD3             0.003          41.24
+ - Halogen                  0.004          49.77
+ - Repulsion                0.001           8.44
+Integrals                   0.254          50.03
+ - Overlap                  0.252          99.34
+ - Core Hamiltonian         0.002           0.66
+SCF                         0.246          48.40
+ - Interaction Cache        0.001           0.28
+ - Potential                0.155          63.19
+ - Fock build               0.001           0.48
+ - Diagonalize              0.120          48.87
+ - Density                  0.005           2.22
+ - Charges                  0.006           2.27
+cupy_eigh                   0.066          13.01
+------------------------------------------------
+Sum                         0.573         112.84
+Total                       0.508         100.00
+Energy Sum: -259.8951721191406
+
+Running on cpu with 35 atoms, 11 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.43
+ - DispersionD3             0.005          69.32
+ - Repulsion                0.001          12.86
+ - Halogen                  0.001          17.29
+Integrals                   0.265          15.01
+ - Overlap                  0.261          98.43
+ - Core Hamiltonian         0.004           1.56
+SCF                         1.491          84.51
+ - Interaction Cache        0.002           0.13
+ - Potential                1.424          95.48
+ - Fock build               0.012           0.79
+ - Diagonalize              1.342          89.96
+ - Density                  0.024           1.58
+ - Charges                  0.016           1.06
+torch_eigh                  0.898          50.88
+------------------------------------------------
+Sum                         2.662         150.83
+Total                       1.765         100.00
+Energy Sum: -259.859130859375
+
+Running on cuda:0 with 35 atoms, 11 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.99
+ - Halogen                  0.007          64.62
+ - Repulsion                0.001           5.91
+ - DispersionD3             0.003          29.10
+Integrals                   0.512          47.11
+ - Overlap                  0.510          99.65
+ - Core Hamiltonian         0.002           0.35
+SCF                         0.563          51.83
+ - Interaction Cache        0.001           0.13
+ - Potential                0.362          64.28
+ - Fock build               0.003           0.62
+ - Diagonalize              0.279          49.51
+ - Density                  0.013           2.28
+ - Charges                  0.013           2.32
+cupy_eigh                   0.150          13.76
+------------------------------------------------
+Sum                         1.236         113.68
+Total                       1.087         100.00
+Energy Sum: -519.7918090820312
+
+Running on cpu with 35 atoms, 11 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.017           0.94
+ - DispersionD3             0.013          75.75
+ - Repulsion                0.001           8.37
+ - Halogen                  0.003          15.53
+Integrals                   0.523          29.22
+ - Overlap                  0.516          98.58
+ - Core Hamiltonian         0.007           1.41
+SCF                         1.250          69.78
+ - Interaction Cache        0.002           0.18
+ - Potential                1.217          97.34
+ - Fock build               0.016           1.30
+ - Diagonalize              1.155          92.41
+ - Density                  0.015           1.23
+ - Charges                  0.011           0.91
+torch_eigh                  0.755          42.15
+------------------------------------------------
+Sum                         2.545         142.08
+Total                       1.791         100.00
+Energy Sum: -519.7180786132812
+
+#################### Molecule alkane_12_carbons: 38 atoms, 12 C atoms ####################
+
+Running on cuda:0 with 38 atoms, 12 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           1.06
+ - DispersionD3             0.003          42.58
+ - Halogen                  0.004          48.86
+ - Repulsion                0.001           8.05
+Integrals                   0.318          43.29
+ - Overlap                  0.316          99.45
+ - Core Hamiltonian         0.002           0.54
+SCF                         0.408          55.54
+ - Interaction Cache        0.001           0.17
+ - Potential                0.349          85.53
+ - Fock build               0.001           0.32
+ - Diagonalize              0.310          76.14
+ - Density                  0.007           1.60
+ - Charges                  0.006           1.48
+cupy_eigh                   0.252          34.35
+------------------------------------------------
+Sum                         0.985         134.23
+Total                       0.734         100.00
+Energy Sum: -269.4029541015625
+
+Running on cpu with 38 atoms, 12 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.32
+ - Repulsion                0.001          12.52
+ - Halogen                  0.001          15.35
+ - DispersionD3             0.006          71.64
+Integrals                   0.287          11.11
+ - Overlap                  0.283          98.54
+ - Core Hamiltonian         0.004           1.46
+SCF                         2.285          88.54
+ - Interaction Cache        0.002           0.07
+ - Potential                2.172          95.06
+ - Fock build               0.019           0.84
+ - Diagonalize              2.046          89.57
+ - Density                  0.037           1.63
+ - Charges                  0.024           1.04
+torch_eigh                  1.393          53.98
+------------------------------------------------
+Sum                         3.973         153.95
+Total                       2.581         100.00
+Energy Sum: -269.28857421875
+
+Running on cuda:0 with 38 atoms, 12 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.60
+ - DispersionD3             0.003          30.64
+ - Halogen                  0.007          63.41
+ - Repulsion                0.001           5.59
+Integrals                   0.548          30.31
+ - Overlap                  0.546          99.67
+ - Core Hamiltonian         0.002           0.32
+SCF                         1.248          69.04
+ - Interaction Cache        0.001           0.06
+ - Potential                1.064          85.22
+ - Fock build               0.004           0.30
+ - Diagonalize              0.984          78.84
+ - Density                  0.012           0.98
+ - Charges                  0.012           0.99
+cupy_eigh                   0.852          47.10
+------------------------------------------------
+Sum                         2.659         147.06
+Total                       1.808         100.00
+Energy Sum: -538.8043823242188
+
+Running on cpu with 38 atoms, 12 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.020           0.37
+ - DispersionD3             0.015          75.03
+ - Repulsion                0.001           7.34
+ - Halogen                  0.003          17.34
+Integrals                   0.607          11.33
+ - Overlap                  0.598          98.56
+ - Core Hamiltonian         0.009           1.44
+SCF                         4.725          88.27
+ - Interaction Cache        0.003           0.05
+ - Potential                4.546          96.21
+ - Fock build               0.057           1.21
+ - Diagonalize              4.317          91.37
+ - Density                  0.059           1.25
+ - Charges                  0.044           0.93
+torch_eigh                  2.878          53.77
+------------------------------------------------
+Sum                         8.230         153.74
+Total                       5.353         100.00
+Energy Sum: -538.5770874023438
+
+#################### Molecule alkane_13_carbons: 41 atoms, 13 C atoms ####################
+
+Running on cuda:0 with 41 atoms, 13 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.52
+ - DispersionD3             0.003          42.29
+ - Repulsion                0.001           8.42
+ - Halogen                  0.003          48.70
+Integrals                   0.297          21.78
+ - Overlap                  0.295          99.41
+ - Core Hamiltonian         0.002           0.58
+SCF                         1.057          77.64
+ - Interaction Cache        0.001           0.07
+ - Potential                0.832          78.71
+ - Fock build               0.003           0.31
+ - Diagonalize              0.741          70.10
+ - Density                  0.014           1.36
+ - Charges                  0.014           1.34
+cupy_eigh                   0.599          43.98
+------------------------------------------------
+Sum                         1.959         143.92
+Total                       1.361         100.00
+Energy Sum: -283.9457702636719
+
+Running on cpu with 41 atoms, 13 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.009           0.28
+ - Halogen                  0.002          19.75
+ - DispersionD3             0.006          66.54
+ - Repulsion                0.001          13.15
+Integrals                   0.309          10.08
+ - Overlap                  0.304          98.32
+ - Core Hamiltonian         0.005           1.68
+SCF                         2.749          89.60
+ - Interaction Cache        0.002           0.07
+ - Potential                2.630          95.67
+ - Fock build               0.018           0.67
+ - Diagonalize              2.499          90.89
+ - Density                  0.040           1.47
+ - Charges                  0.025           0.91
+torch_eigh                  1.754          57.15
+------------------------------------------------
+Sum                         4.821         157.12
+Total                       3.068         100.00
+Energy Sum: -283.80914306640625
+
+Running on cuda:0 with 41 atoms, 13 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.50
+ - DispersionD3             0.003          29.75
+ - Halogen                  0.007          64.03
+ - Repulsion                0.001           5.86
+Integrals                   0.648          30.43
+ - Overlap                  0.646          99.72
+ - Core Hamiltonian         0.002           0.28
+SCF                         1.469          69.03
+ - Interaction Cache        0.001           0.05
+ - Potential                1.241          84.46
+ - Fock build               0.005           0.35
+ - Diagonalize              1.148          78.12
+ - Density                  0.014           0.96
+ - Charges                  0.014           0.97
+cupy_eigh                   0.990          46.51
+------------------------------------------------
+Sum                         3.118         146.47
+Total                       2.129         100.00
+Energy Sum: -567.889892578125
+
+Running on cpu with 41 atoms, 13 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.020           0.31
+ - Halogen                  0.002          12.15
+ - Repulsion                0.001           7.11
+ - DispersionD3             0.016          80.49
+Integrals                   0.624           9.64
+ - Overlap                  0.615          98.55
+ - Core Hamiltonian         0.009           1.44
+SCF                         5.826          90.03
+ - Interaction Cache        0.003           0.05
+ - Potential                5.629          96.62
+ - Fock build               0.074           1.27
+ - Diagonalize              5.360          92.01
+ - Density                  0.068           1.16
+ - Charges                  0.052           0.89
+torch_eigh                  3.662          56.59
+------------------------------------------------
+Sum                        10.131         156.57
+Total                       6.471         100.00
+Energy Sum: -567.618408203125
+
+#################### Molecule alkane_14_carbons: 44 atoms, 14 C atoms ####################
+
+Running on cuda:0 with 44 atoms, 14 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.89
+ - Repulsion                0.001           9.16
+ - Halogen                  0.004          50.29
+ - DispersionD3             0.003          40.01
+Integrals                   0.322          40.13
+ - Overlap                  0.320          99.45
+ - Core Hamiltonian         0.002           0.54
+SCF                         0.472          58.87
+ - Interaction Cache        0.001           0.15
+ - Potential                0.403          85.26
+ - Fock build               0.002           0.35
+ - Diagonalize              0.360          76.27
+ - Density                  0.007           1.39
+ - Charges                  0.007           1.41
+cupy_eigh                   0.291          36.24
+------------------------------------------------
+Sum                         1.092         136.14
+Total                       0.802         100.00
+Energy Sum: -301.48162841796875
+
+Running on cpu with 44 atoms, 14 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.24
+ - Halogen                  0.001          15.84
+ - Repulsion                0.001          13.40
+ - DispersionD3             0.006          70.26
+Integrals                   0.380          11.16
+ - Overlap                  0.375          98.55
+ - Core Hamiltonian         0.005           1.44
+SCF                         3.016          88.57
+ - Interaction Cache        0.002           0.07
+ - Potential                2.907          96.38
+ - Fock build               0.023           0.77
+ - Diagonalize              2.758          91.45
+ - Density                  0.045           1.48
+ - Charges                  0.031           1.04
+torch_eigh                  1.923          56.46
+------------------------------------------------
+Sum                         5.327         156.43
+Total                       3.405         100.00
+Energy Sum: -301.3273620605469
+
+Running on cuda:0 with 44 atoms, 14 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.57
+ - Repulsion                0.001           6.06
+ - DispersionD3             0.003          30.14
+ - Halogen                  0.007          63.40
+Integrals                   0.646          34.13
+ - Overlap                  0.644          99.71
+ - Core Hamiltonian         0.002           0.29
+SCF                         1.234          65.26
+ - Interaction Cache        0.001           0.06
+ - Potential                1.084          87.79
+ - Fock build               0.005           0.37
+ - Diagonalize              1.011          81.94
+ - Density                  0.011           0.89
+ - Charges                  0.011           0.90
+cupy_eigh                   0.881          46.59
+------------------------------------------------
+Sum                         2.772         146.55
+Total                       1.892         100.00
+Energy Sum: -602.960693359375
+
+Running on cpu with 44 atoms, 14 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.022           0.27
+ - Halogen                  0.002          11.50
+ - DispersionD3             0.018          81.16
+ - Repulsion                0.002           7.09
+Integrals                   0.657           8.27
+ - Overlap                  0.647          98.48
+ - Core Hamiltonian         0.010           1.52
+SCF                         7.263          91.44
+ - Interaction Cache        0.003           0.04
+ - Potential                7.067          97.30
+ - Fock build               0.098           1.35
+ - Diagonalize              6.737          92.76
+ - Density                  0.083           1.14
+ - Charges                  0.067           0.93
+torch_eigh                  4.524          56.95
+------------------------------------------------
+Sum                        12.466         156.94
+Total                       7.943         100.00
+Energy Sum: -602.6544189453125
+
+#################### Molecule alkane_15_carbons: 47 atoms, 15 C atoms ####################
+
+Running on cuda:0 with 47 atoms, 15 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.48
+ - Repulsion                0.001           9.62
+ - DispersionD3             0.003          38.87
+ - Halogen                  0.003          50.84
+Integrals                   0.377          26.20
+ - Overlap                  0.375          99.54
+ - Core Hamiltonian         0.002           0.46
+SCF                         1.053          73.26
+ - Interaction Cache        0.001           0.07
+ - Potential                0.831          78.94
+ - Fock build               0.004           0.36
+ - Diagonalize              0.743          70.60
+ - Density                  0.014           1.29
+ - Charges                  0.014           1.31
+cupy_eigh                   0.595          41.39
+------------------------------------------------
+Sum                         2.032         141.33
+Total                       1.437         100.00
+Energy Sum: -313.15478515625
+
+Running on cpu with 47 atoms, 15 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.39
+ - Repulsion                0.001          11.43
+ - DispersionD3             0.009          76.39
+ - Halogen                  0.001          11.78
+Integrals                   0.350          11.68
+ - Overlap                  0.344          98.14
+ - Core Hamiltonian         0.006           1.85
+SCF                         2.635          87.89
+ - Interaction Cache        0.003           0.10
+ - Potential                2.553          96.88
+ - Fock build               0.019           0.72
+ - Diagonalize              2.437          92.46
+ - Density                  0.037           1.40
+ - Charges                  0.023           0.87
+torch_eigh                  1.687          56.28
+------------------------------------------------
+Sum                         4.685         156.24
+Total                       2.998         100.00
+Energy Sum: -312.9798889160156
+
+Running on cuda:0 with 47 atoms, 15 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.48
+ - DispersionD3             0.003          30.20
+ - Repulsion                0.001           6.17
+ - Halogen                  0.007          63.09
+Integrals                   0.676          29.38
+ - Overlap                  0.674          99.73
+ - Core Hamiltonian         0.002           0.27
+SCF                         1.613          70.11
+ - Interaction Cache        0.001           0.04
+ - Potential                1.390          86.18
+ - Fock build               0.007           0.44
+ - Diagonalize              1.298          80.46
+ - Density                  0.014           0.86
+ - Charges                  0.014           0.86
+cupy_eigh                   1.124          48.83
+------------------------------------------------
+Sum                         3.424         148.79
+Total                       2.301         100.00
+Energy Sum: -626.3087768554688
+
+Running on cpu with 47 atoms, 15 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.024           0.27
+ - Repulsion                0.001           6.26
+ - Halogen                  0.002          10.12
+ - DispersionD3             0.020          83.38
+Integrals                   0.729           8.28
+ - Overlap                  0.717          98.37
+ - Core Hamiltonian         0.012           1.63
+SCF                         8.053          91.44
+ - Interaction Cache        0.003           0.04
+ - Potential                7.849          97.46
+ - Fock build               0.111           1.38
+ - Diagonalize              7.500          93.13
+ - Density                  0.088           1.09
+ - Charges                  0.074           0.92
+torch_eigh                  5.045          57.28
+------------------------------------------------
+Sum                        13.851         157.26
+Total                       8.808         100.00
+Energy Sum: -625.958984375
+
+#################### Molecule alkane_16_carbons: 50 atoms, 16 C atoms ####################
+
+Running on cuda:0 with 50 atoms, 16 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.40
+ - Halogen                  0.004          50.22
+ - Repulsion                0.001           8.86
+ - DispersionD3             0.003          40.13
+Integrals                   0.366          21.06
+ - Overlap                  0.364          99.50
+ - Core Hamiltonian         0.002           0.49
+SCF                         1.364          78.49
+ - Interaction Cache        0.001           0.05
+ - Potential                1.142          83.72
+ - Fock build               0.004           0.31
+ - Diagonalize              1.040          76.29
+ - Density                  0.015           1.10
+ - Charges                  0.014           1.03
+cupy_eigh                   0.869          50.04
+------------------------------------------------
+Sum                         2.606         149.99
+Total                       1.738         100.00
+Energy Sum: -325.7125244140625
+
+Running on cpu with 50 atoms, 16 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.009           0.14
+ - Halogen                  0.001          13.70
+ - Repulsion                0.001          13.07
+ - DispersionD3             0.007          72.69
+Integrals                   0.370           5.58
+ - Overlap                  0.364          98.33
+ - Core Hamiltonian         0.006           1.67
+SCF                         6.250          94.27
+ - Interaction Cache        0.002           0.04
+ - Potential                6.096          97.54
+ - Fock build               0.058           0.92
+ - Diagonalize              5.867          93.87
+ - Density                  0.063           1.00
+ - Charges                  0.040           0.64
+torch_eigh                  2.933          44.24
+------------------------------------------------
+Sum                         9.562         144.22
+Total                       6.630         100.00
+Energy Sum: -325.5118713378906
+
+Running on cuda:0 with 50 atoms, 16 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.39
+ - Halogen                  0.007          63.65
+ - DispersionD3             0.003          30.19
+ - Repulsion                0.001           5.79
+Integrals                   0.755          27.20
+ - Overlap                  0.754          99.76
+ - Core Hamiltonian         0.002           0.24
+SCF                         2.010          72.38
+ - Interaction Cache        0.001           0.04
+ - Potential                1.787          88.89
+ - Fock build               0.008           0.40
+ - Diagonalize              1.680          83.56
+ - Density                  0.017           0.86
+ - Charges                  0.014           0.69
+cupy_eigh                   1.472          52.98
+------------------------------------------------
+Sum                         4.248         152.95
+Total                       2.777         100.00
+Energy Sum: -651.4249877929688
+
+Running on cpu with 50 atoms, 16 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.027           0.21
+ - Halogen                  0.002           9.10
+ - Repulsion                0.002           6.02
+ - DispersionD3             0.023          84.68
+Integrals                   0.742           5.86
+ - Overlap                  0.728          98.07
+ - Core Hamiltonian         0.014           1.93
+SCF                        11.890          93.91
+ - Interaction Cache        0.003           0.03
+ - Potential               11.634          97.85
+ - Fock build               0.117           0.99
+ - Diagonalize             11.230          94.44
+ - Density                  0.100           0.84
+ - Charges                  0.092           0.77
+torch_eigh                  5.666          44.75
+------------------------------------------------
+Sum                        18.325         144.74
+Total                      12.661         100.00
+Energy Sum: -651.0242919921875
+
+#################### Molecule alkane_17_carbons: 53 atoms, 17 C atoms ####################
+
+Running on cuda:0 with 53 atoms, 17 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.39
+ - DispersionD3             0.003          40.57
+ - Repulsion                0.001           8.75
+ - Halogen                  0.003          50.08
+Integrals                   0.378          21.50
+ - Overlap                  0.376          99.54
+ - Core Hamiltonian         0.002           0.45
+SCF                         1.372          78.06
+ - Interaction Cache        0.001           0.05
+ - Potential                1.150          83.82
+ - Fock build               0.005           0.35
+ - Diagonalize              1.047          76.31
+ - Density                  0.015           1.11
+ - Charges                  0.014           1.02
+cupy_eigh                   0.871          49.53
+------------------------------------------------
+Sum                         2.627         149.48
+Total                       1.758         100.00
+Energy Sum: -346.44140625
+
+Running on cpu with 53 atoms, 17 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.010           0.14
+ - Repulsion                0.001          11.92
+ - DispersionD3             0.007          73.84
+ - Halogen                  0.001          13.77
+Integrals                   0.395           5.41
+ - Overlap                  0.388          98.32
+ - Core Hamiltonian         0.007           1.68
+SCF                         6.890          94.44
+ - Interaction Cache        0.002           0.03
+ - Potential                6.730          97.68
+ - Fock build               0.069           1.01
+ - Diagonalize              6.469          93.89
+ - Density                  0.074           1.08
+ - Charges                  0.043           0.62
+torch_eigh                  3.367          46.15
+------------------------------------------------
+Sum                        10.661         146.13
+Total                       7.295         100.00
+Energy Sum: -346.21063232421875
+
+Running on cuda:0 with 53 atoms, 17 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.38
+ - Repulsion                0.001           6.33
+ - Halogen                  0.007          63.02
+ - DispersionD3             0.003          30.24
+Integrals                   0.805          28.48
+ - Overlap                  0.803          99.77
+ - Core Hamiltonian         0.002           0.23
+SCF                         2.010          71.11
+ - Interaction Cache        0.001           0.03
+ - Potential                1.787          88.90
+ - Fock build               0.009           0.45
+ - Diagonalize              1.677          83.46
+ - Density                  0.018           0.88
+ - Charges                  0.014           0.69
+cupy_eigh                   1.459          51.64
+------------------------------------------------
+Sum                         4.285         151.61
+Total                       2.826         100.00
+Energy Sum: -692.8824462890625
+
+Running on cpu with 53 atoms, 17 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.034           0.25
+ - Halogen                  0.002           7.10
+ - DispersionD3             0.029          85.88
+ - Repulsion                0.002           6.85
+Integrals                   0.792           5.69
+ - Overlap                  0.779          98.37
+ - Core Hamiltonian         0.013           1.63
+SCF                        13.090          94.05
+ - Interaction Cache        0.003           0.03
+ - Potential               12.864          98.28
+ - Fock build               0.159           1.22
+ - Diagonalize             12.396          94.70
+ - Density                  0.120           0.91
+ - Charges                  0.088           0.67
+torch_eigh                  6.551          47.07
+------------------------------------------------
+Sum                        20.467         147.06
+Total                      13.917         100.00
+Energy Sum: -692.421875
+
+#################### Molecule alkane_18_carbons: 56 atoms, 18 C atoms ####################
+
+Running on cuda:0 with 56 atoms, 18 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.43
+ - Repulsion                0.001           8.76
+ - Halogen                  0.004          54.25
+ - DispersionD3             0.003          36.47
+Integrals                   0.409          21.98
+ - Overlap                  0.407          99.57
+ - Core Hamiltonian         0.002           0.43
+SCF                         1.444          77.55
+ - Interaction Cache        0.001           0.05
+ - Potential                1.215          84.18
+ - Fock build               0.005           0.37
+ - Diagonalize              1.111          76.95
+ - Density                  0.016           1.09
+ - Charges                  0.015           1.01
+cupy_eigh                   0.920          49.41
+------------------------------------------------
+Sum                         2.781         149.37
+Total                       1.862         100.00
+Energy Sum: -342.432861328125
+
+Running on cpu with 56 atoms, 18 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.015           0.18
+ - Repulsion                0.001           8.72
+ - Halogen                  0.001           9.53
+ - DispersionD3             0.012          81.43
+Integrals                   0.456           5.37
+ - Overlap                  0.449          98.29
+ - Core Hamiltonian         0.008           1.71
+SCF                         8.031          94.44
+ - Interaction Cache        0.003           0.04
+ - Potential                7.861          97.88
+ - Fock build               0.075           0.93
+ - Diagonalize              7.572          94.29
+ - Density                  0.081           1.01
+ - Charges                  0.053           0.67
+torch_eigh                  3.813          44.85
+------------------------------------------------
+Sum                        12.316         144.83
+Total                       8.503         100.00
+Energy Sum: -342.1610107421875
+
+Running on cuda:0 with 56 atoms, 18 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.36
+ - DispersionD3             0.003          30.56
+ - Halogen                  0.007          62.96
+ - Repulsion                0.001           6.13
+Integrals                   0.818          26.90
+ - Overlap                  0.816          99.77
+ - Core Hamiltonian         0.002           0.23
+SCF                         2.211          72.72
+ - Interaction Cache        0.001           0.03
+ - Potential                1.987          89.88
+ - Fock build               0.010           0.46
+ - Diagonalize              1.877          84.91
+ - Density                  0.018           0.81
+ - Charges                  0.014           0.64
+cupy_eigh                   1.639          53.93
+------------------------------------------------
+Sum                         4.678         153.91
+Total                       3.040         100.00
+Energy Sum: -684.866943359375
+
+Running on cpu with 56 atoms, 18 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.034           0.21
+ - Halogen                  0.003           9.83
+ - DispersionD3             0.029          84.37
+ - Repulsion                0.002           5.60
+Integrals                   0.893           5.45
+ - Overlap                  0.878          98.36
+ - Core Hamiltonian         0.015           1.64
+SCF                        15.466          94.34
+ - Interaction Cache        0.004           0.03
+ - Potential               15.237          98.52
+ - Fock build               0.154           0.99
+ - Diagonalize             14.734          95.27
+ - Density                  0.135           0.87
+ - Charges                  0.116           0.75
+torch_eigh                  7.442          45.39
+------------------------------------------------
+Sum                        23.835         145.39
+Total                      16.395         100.00
+Energy Sum: -684.3218994140625
+
+#################### Molecule alkane_19_carbons: 59 atoms, 19 C atoms ####################
+
+Running on cuda:0 with 59 atoms, 19 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.014           0.75
+ - Halogen                  0.004          24.84
+ - Repulsion                0.001           4.47
+ - DispersionD3             0.010          70.40
+Integrals                   0.435          22.64
+ - Overlap                  0.433          99.59
+ - Core Hamiltonian         0.002           0.41
+SCF                         1.472          76.57
+ - Interaction Cache        0.001           0.05
+ - Potential                1.244          84.48
+ - Fock build               0.006           0.41
+ - Diagonalize              1.136          77.18
+ - Density                  0.016           1.08
+ - Charges                  0.015           0.99
+cupy_eigh                   0.936          48.71
+------------------------------------------------
+Sum                         2.858         148.66
+Total                       1.922         100.00
+Energy Sum: -354.2974853515625
+
+Running on cpu with 59 atoms, 19 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.020           0.31
+ - DispersionD3             0.017          84.91
+ - Halogen                  0.001           7.09
+ - Repulsion                0.002           7.74
+Integrals                   0.447           6.76
+ - Overlap                  0.439          98.25
+ - Core Hamiltonian         0.008           1.75
+SCF                         6.144          92.91
+ - Interaction Cache        0.003           0.04
+ - Potential                5.968          97.13
+ - Fock build               0.080           1.30
+ - Diagonalize              5.661          92.13
+ - Density                  0.087           1.42
+ - Charges                  0.059           0.96
+torch_eigh                  4.167          63.02
+------------------------------------------------
+Sum                        10.779         163.00
+Total                       6.613         100.00
+Energy Sum: -353.9951477050781
+
+Running on cuda:0 with 59 atoms, 19 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.35
+ - Halogen                  0.007          62.51
+ - Repulsion                0.001           6.37
+ - DispersionD3             0.003          30.77
+Integrals                   0.911          28.74
+ - Overlap                  0.909          99.78
+ - Core Hamiltonian         0.002           0.22
+SCF                         2.248          70.88
+ - Interaction Cache        0.001           0.03
+ - Potential                2.017          89.71
+ - Fock build               0.011           0.50
+ - Diagonalize              1.901          84.58
+ - Density                  0.019           0.83
+ - Charges                  0.015           0.65
+cupy_eigh                   1.652          52.09
+------------------------------------------------
+Sum                         4.822         152.06
+Total                       3.171         100.00
+Energy Sum: -708.594970703125
+
+Running on cpu with 59 atoms, 19 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.034           0.27
+ - Halogen                  0.003           7.41
+ - DispersionD3             0.029          86.58
+ - Repulsion                0.002           5.82
+Integrals                   0.947           7.39
+ - Overlap                  0.929          98.12
+ - Core Hamiltonian         0.018           1.88
+SCF                        11.832          92.34
+ - Interaction Cache        0.004           0.03
+ - Potential               11.587          97.93
+ - Fock build               0.172           1.46
+ - Diagonalize             11.026          93.19
+ - Density                  0.147           1.24
+ - Charges                  0.124           1.05
+torch_eigh                  8.159          63.68
+------------------------------------------------
+Sum                        20.972         163.67
+Total                      12.814         100.00
+Energy Sum: -707.9902954101562
+
+#################### Molecule alkane_20_carbons: 62 atoms, 20 C atoms ####################
+
+Running on cuda:0 with 62 atoms, 20 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.34
+ - Repulsion                0.001           8.99
+ - DispersionD3             0.003          40.68
+ - Halogen                  0.004          49.65
+Integrals                   0.454          21.49
+ - Overlap                  0.452          99.60
+ - Core Hamiltonian         0.002           0.39
+SCF                         1.651          78.14
+ - Interaction Cache        0.001           0.04
+ - Potential                1.427          86.41
+ - Fock build               0.006           0.37
+ - Diagonalize              1.333          80.73
+ - Density                  0.016           0.95
+ - Charges                  0.014           0.86
+cupy_eigh                   1.119          52.94
+------------------------------------------------
+Sum                         3.231         152.90
+Total                       2.113         100.00
+Energy Sum: -393.22979736328125
+
+Running on cpu with 62 atoms, 20 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.021           0.30
+ - Halogen                  0.001           5.98
+ - Repulsion                0.001           6.28
+ - DispersionD3             0.019          87.50
+Integrals                   0.469           6.54
+ - Overlap                  0.460          98.19
+ - Core Hamiltonian         0.008           1.81
+SCF                         6.679          93.15
+ - Interaction Cache        0.003           0.04
+ - Potential                6.498          97.29
+ - Fock build               0.086           1.29
+ - Diagonalize              6.178          92.49
+ - Density                  0.096           1.43
+ - Charges                  0.072           1.08
+torch_eigh                  4.541          63.33
+------------------------------------------------
+Sum                        11.711         163.31
+Total                       7.171         100.00
+Energy Sum: -392.89874267578125
+
+Running on cuda:0 with 62 atoms, 20 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.32
+ - Repulsion                0.001           6.19
+ - Halogen                  0.007          60.76
+ - DispersionD3             0.004          32.69
+Integrals                   0.950          26.88
+ - Overlap                  0.948          99.79
+ - Core Hamiltonian         0.002           0.21
+SCF                         2.572          72.78
+ - Interaction Cache        0.001           0.03
+ - Potential                2.349          91.35
+ - Fock build               0.011           0.42
+ - Diagonalize              2.247          87.37
+ - Density                  0.019           0.74
+ - Charges                  0.015           0.60
+cupy_eigh                   1.975          55.88
+------------------------------------------------
+Sum                         5.507         155.86
+Total                       3.534         100.00
+Energy Sum: -786.4573364257812
+
+Running on cpu with 62 atoms, 20 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.036           0.26
+ - Halogen                  0.002           6.83
+ - Repulsion                0.002           4.81
+ - DispersionD3             0.032          88.19
+Integrals                   0.973           7.05
+ - Overlap                  0.949          97.54
+ - Core Hamiltonian         0.024           2.46
+SCF                        12.794          92.68
+ - Interaction Cache        0.005           0.04
+ - Potential               12.543          98.04
+ - Fock build               0.196           1.53
+ - Diagonalize             11.971          93.57
+ - Density                  0.168           1.32
+ - Charges                  0.119           0.93
+torch_eigh                  8.867          64.23
+------------------------------------------------
+Sum                        22.670         164.22
+Total                      13.804         100.00
+Energy Sum: -785.7972412109375
+
+#################### Molecule alkane_21_carbons: 65 atoms, 21 C atoms ####################
+
+Running on cuda:0 with 65 atoms, 21 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.023           1.05
+ - Halogen                  0.004          15.53
+ - DispersionD3             0.018          81.49
+ - Repulsion                0.001           2.79
+Integrals                   0.470          21.85
+ - Overlap                  0.468          99.62
+ - Core Hamiltonian         0.002           0.38
+SCF                         1.658          77.06
+ - Interaction Cache        0.001           0.04
+ - Potential                1.436          86.59
+ - Fock build               0.007           0.40
+ - Diagonalize              1.342          80.92
+ - Density                  0.016           0.96
+ - Charges                  0.014           0.85
+cupy_eigh                   1.121          52.11
+------------------------------------------------
+Sum                         3.273         152.07
+Total                       2.152         100.00
+Energy Sum: -396.9579772949219
+
+Running on cpu with 65 atoms, 21 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.025           0.31
+ - Repulsion                0.002           7.01
+ - Halogen                  0.001           5.14
+ - DispersionD3             0.022          87.65
+Integrals                   0.483           6.18
+ - Overlap                  0.475          98.29
+ - Core Hamiltonian         0.008           1.71
+SCF                         7.314          93.49
+ - Interaction Cache        0.003           0.04
+ - Potential                7.130          97.49
+ - Fock build               0.101           1.39
+ - Diagonalize              6.779          92.69
+ - Density                  0.109           1.49
+ - Charges                  0.071           0.97
+torch_eigh                  4.928          62.99
+------------------------------------------------
+Sum                        12.749         162.98
+Total                       7.823         100.00
+Energy Sum: -396.6082763671875
+
+Running on cuda:0 with 65 atoms, 21 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.31
+ - Halogen                  0.007          62.67
+ - Repulsion                0.001           6.10
+ - DispersionD3             0.003          30.88
+Integrals                   0.977          27.22
+ - Overlap                  0.975          99.79
+ - Core Hamiltonian         0.002           0.21
+SCF                         2.600          72.45
+ - Interaction Cache        0.001           0.03
+ - Potential                2.376          91.38
+ - Fock build               0.012           0.45
+ - Diagonalize              2.270          87.33
+ - Density                  0.019           0.73
+ - Charges                  0.017           0.65
+cupy_eigh                   1.983          55.26
+------------------------------------------------
+Sum                         5.571         155.24
+Total                       3.588         100.00
+Energy Sum: -793.916259765625
+
+Running on cpu with 65 atoms, 21 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.039           0.26
+ - Repulsion                0.002           4.69
+ - DispersionD3             0.034          88.43
+ - Halogen                  0.003           6.75
+Integrals                   1.014           6.71
+ - Overlap                  0.988          97.49
+ - Core Hamiltonian         0.025           2.51
+SCF                        14.062          93.03
+ - Interaction Cache        0.005           0.03
+ - Potential               13.807          98.18
+ - Fock build               0.224           1.60
+ - Diagonalize             13.101          93.16
+ - Density                  0.217           1.54
+ - Charges                  0.170           1.21
+torch_eigh                  9.590          63.44
+------------------------------------------------
+Sum                        24.704         163.43
+Total                      15.116         100.00
+Energy Sum: -793.2164916992188
+
+#################### Molecule alkane_22_carbons: 68 atoms, 22 C atoms ####################
+
+Running on cuda:0 with 68 atoms, 22 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.31
+ - Halogen                  0.003          49.65
+ - DispersionD3             0.003          41.74
+ - Repulsion                0.001           8.10
+Integrals                   0.489          22.08
+ - Overlap                  0.487          99.63
+ - Core Hamiltonian         0.002           0.37
+SCF                         1.719          77.57
+ - Interaction Cache        0.001           0.04
+ - Potential                1.496          87.03
+ - Fock build               0.008           0.46
+ - Diagonalize              1.389          80.81
+ - Density                  0.016           0.93
+ - Charges                  0.014           0.84
+cupy_eigh                   1.157          52.23
+------------------------------------------------
+Sum                         3.372         152.20
+Total                       2.215         100.00
+Energy Sum: -406.7709655761719
+
+Running on cpu with 68 atoms, 22 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.015           0.18
+ - Repulsion                0.002           9.86
+ - Halogen                  0.002          11.01
+ - DispersionD3             0.012          78.74
+Integrals                   0.508           6.03
+ - Overlap                  0.499          98.21
+ - Core Hamiltonian         0.009           1.79
+SCF                         7.904          93.77
+ - Interaction Cache        0.003           0.04
+ - Potential                7.718          97.64
+ - Fock build               0.110           1.39
+ - Diagonalize              7.331          92.75
+ - Density                  0.115           1.45
+ - Charges                  0.079           0.99
+torch_eigh                  5.378          63.80
+------------------------------------------------
+Sum                        13.806         163.79
+Total                       8.429         100.00
+Energy Sum: -406.3519592285156
+
+Running on cuda:0 with 68 atoms, 22 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.29
+ - Repulsion                0.001           6.39
+ - Halogen                  0.007          61.72
+ - DispersionD3             0.003          31.55
+Integrals                   1.026          27.00
+ - Overlap                  1.024          99.79
+ - Core Hamiltonian         0.002           0.21
+SCF                         2.762          72.69
+ - Interaction Cache        0.001           0.03
+ - Potential                2.536          91.83
+ - Fock build               0.014           0.51
+ - Diagonalize              2.414          87.43
+ - Density                  0.019           0.69
+ - Charges                  0.019           0.69
+cupy_eigh                   2.109          55.52
+------------------------------------------------
+Sum                         5.908         155.50
+Total                       3.799         100.00
+Energy Sum: -813.5430908203125
+
+Running on cpu with 68 atoms, 22 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.042           0.25
+ - Halogen                  0.002           5.89
+ - DispersionD3             0.037          88.70
+ - Repulsion                0.002           5.27
+Integrals                   1.055           6.39
+ - Overlap                  1.031          97.67
+ - Core Hamiltonian         0.025           2.33
+SCF                        15.416          93.35
+ - Interaction Cache        0.005           0.03
+ - Potential               15.148          98.26
+ - Fock build               0.235           1.52
+ - Diagonalize             14.347          93.07
+ - Density                  0.219           1.42
+ - Charges                  0.175           1.13
+torch_eigh                 10.486          63.49
+------------------------------------------------
+Sum                        26.999         163.49
+Total                      16.515         100.00
+Energy Sum: -812.7041625976562
+
+#################### Molecule alkane_23_carbons: 71 atoms, 23 C atoms ####################
+
+Running on cuda:0 with 71 atoms, 23 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.31
+ - DispersionD3             0.003          41.97
+ - Repulsion                0.001           8.27
+ - Halogen                  0.003          49.18
+Integrals                   0.511          22.72
+ - Overlap                  0.509          99.64
+ - Core Hamiltonian         0.002           0.36
+SCF                         1.729          76.93
+ - Interaction Cache        0.001           0.04
+ - Potential                1.507          87.18
+ - Fock build               0.009           0.50
+ - Diagonalize              1.401          81.00
+ - Density                  0.016           0.92
+ - Charges                  0.014           0.83
+cupy_eigh                   1.162          51.68
+------------------------------------------------
+Sum                         3.408         151.64
+Total                       2.248         100.00
+Energy Sum: -415.1102294921875
+
+Running on cpu with 71 atoms, 23 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.027           0.29
+ - DispersionD3             0.024          87.55
+ - Repulsion                0.002           7.11
+ - Halogen                  0.001           5.14
+Integrals                   0.527           5.69
+ - Overlap                  0.517          98.19
+ - Core Hamiltonian         0.010           1.80
+SCF                         8.707          94.00
+ - Interaction Cache        0.003           0.04
+ - Potential                8.515          97.80
+ - Fock build               0.138           1.59
+ - Diagonalize              7.993          91.80
+ - Density                  0.138           1.59
+ - Charges                  0.097           1.12
+torch_eigh                  5.779          62.39
+------------------------------------------------
+Sum                        15.040         162.37
+Total                       9.263         100.00
+Energy Sum: -414.6573181152344
+
+Running on cuda:0 with 71 atoms, 23 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.29
+ - Repulsion                0.001           6.18
+ - Halogen                  0.007          61.02
+ - DispersionD3             0.004          32.38
+Integrals                   1.055          27.20
+ - Overlap                  1.052          99.79
+ - Core Hamiltonian         0.002           0.21
+SCF                         2.810          72.49
+ - Interaction Cache        0.001           0.03
+ - Potential                2.588          92.08
+ - Fock build               0.015           0.55
+ - Diagonalize              2.466          87.73
+ - Density                  0.019           0.68
+ - Charges                  0.020           0.70
+cupy_eigh                   2.146          55.36
+------------------------------------------------
+Sum                         6.022         155.34
+Total                       3.877         100.00
+Energy Sum: -830.2183227539062
+
+Running on cpu with 71 atoms, 23 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.046           0.25
+ - Repulsion                0.002           4.64
+ - DispersionD3             0.041          89.54
+ - Halogen                  0.003           5.69
+Integrals                   1.087           5.94
+ - Overlap                  1.059          97.48
+ - Core Hamiltonian         0.027           2.52
+SCF                        17.171          93.81
+ - Interaction Cache        0.006           0.03
+ - Potential               16.896          98.39
+ - Fock build               0.298           1.74
+ - Diagonalize             15.776          91.87
+ - Density                  0.270           1.57
+ - Charges                  0.233           1.36
+torch_eigh                 11.127          60.79
+------------------------------------------------
+Sum                        29.431         160.78
+Total                      18.305         100.00
+Energy Sum: -829.314453125
+
+#################### Molecule alkane_24_carbons: 74 atoms, 24 C atoms ####################
+
+Running on cuda:0 with 74 atoms, 24 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.28
+ - Halogen                  0.003          48.44
+ - DispersionD3             0.003          42.86
+ - Repulsion                0.001           8.18
+Integrals                   0.532          20.69
+ - Overlap                  0.531          99.65
+ - Core Hamiltonian         0.002           0.35
+SCF                         2.033          79.00
+ - Interaction Cache        0.001           0.03
+ - Potential                1.812          89.11
+ - Fock build               0.009           0.46
+ - Diagonalize              1.704          83.80
+ - Density                  0.016           0.79
+ - Charges                  0.014           0.71
+cupy_eigh                   1.429          55.51
+------------------------------------------------
+Sum                         4.002         155.48
+Total                       2.574         100.00
+Energy Sum: -442.74481201171875
+
+Running on cpu with 74 atoms, 24 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.031           0.32
+ - DispersionD3             0.027          88.48
+ - Halogen                  0.001           4.57
+ - Repulsion                0.002           6.73
+Integrals                   0.589           6.06
+ - Overlap                  0.579          98.21
+ - Core Hamiltonian         0.011           1.79
+SCF                         9.106          93.61
+ - Interaction Cache        0.003           0.04
+ - Potential                8.908          97.82
+ - Fock build               0.131           1.44
+ - Diagonalize              8.446          92.75
+ - Density                  0.143           1.57
+ - Charges                  0.094           1.03
+torch_eigh                  6.137          63.09
+------------------------------------------------
+Sum                        15.863         163.08
+Total                       9.728         100.00
+Energy Sum: -442.2476806640625
+
+Running on cuda:0 with 74 atoms, 24 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.25
+ - DispersionD3             0.004          33.14
+ - Repulsion                0.001           5.70
+ - Halogen                  0.007          60.74
+Integrals                   1.061          24.15
+ - Overlap                  1.059          99.79
+ - Core Hamiltonian         0.002           0.21
+SCF                         3.320          75.58
+ - Interaction Cache        0.001           0.02
+ - Potential                3.098          93.29
+ - Fock build               0.017           0.51
+ - Diagonalize              2.972          89.51
+ - Density                  0.020           0.59
+ - Charges                  0.021           0.63
+cupy_eigh                   2.604          59.28
+------------------------------------------------
+Sum                         6.997         159.26
+Total                       4.393         100.00
+Energy Sum: -885.4884643554688
+
+Running on cpu with 74 atoms, 24 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.049           0.25
+ - DispersionD3             0.043          88.48
+ - Halogen                  0.003           5.32
+ - Repulsion                0.003           6.08
+Integrals                   1.127           5.86
+ - Overlap                  1.098          97.39
+ - Core Hamiltonian         0.029           2.60
+SCF                        18.043          93.87
+ - Interaction Cache        0.006           0.03
+ - Potential               17.761          98.43
+ - Fock build               0.302           1.67
+ - Diagonalize             16.696          92.53
+ - Density                  0.271           1.50
+ - Charges                  0.212           1.17
+torch_eigh                 12.156          63.24
+------------------------------------------------
+Sum                        31.375         163.24
+Total                      19.221         100.00
+Energy Sum: -884.4957275390625
+
+#################### Molecule alkane_25_carbons: 77 atoms, 25 C atoms ####################
+
+Running on cuda:0 with 77 atoms, 25 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.27
+ - Halogen                  0.003          48.37
+ - Repulsion                0.001           9.07
+ - DispersionD3             0.003          42.02
+Integrals                   0.555          20.91
+ - Overlap                  0.553          99.65
+ - Core Hamiltonian         0.002           0.35
+SCF                         2.089          78.78
+ - Interaction Cache        0.001           0.03
+ - Potential                1.865          89.29
+ - Fock build               0.010           0.48
+ - Diagonalize              1.754          83.98
+ - Density                  0.016           0.78
+ - Charges                  0.015           0.71
+cupy_eigh                   1.470          55.45
+------------------------------------------------
+Sum                         4.121         155.42
+Total                       2.651         100.00
+Energy Sum: -445.7976379394531
+
+Running on cpu with 77 atoms, 25 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.017           0.16
+ - DispersionD3             0.014          81.04
+ - Halogen                  0.001           8.15
+ - Repulsion                0.002          10.45
+Integrals                   0.613           5.74
+ - Overlap                  0.601          98.09
+ - Core Hamiltonian         0.012           1.91
+SCF                        10.043          94.08
+ - Interaction Cache        0.004           0.04
+ - Potential                9.840          97.97
+ - Fock build               0.164           1.64
+ - Diagonalize              9.301          92.61
+ - Density                  0.168           1.67
+ - Charges                  0.114           1.14
+torch_eigh                  6.717          62.93
+------------------------------------------------
+Sum                        17.391         162.92
+Total                      10.675         100.00
+Energy Sum: -445.2381591796875
+
+Running on cuda:0 with 77 atoms, 25 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.011           0.24
+ - Repulsion                0.001           6.08
+ - DispersionD3             0.004          31.95
+ - Halogen                  0.007          61.59
+Integrals                   1.175          25.32
+ - Overlap                  1.173          99.80
+ - Core Hamiltonian         0.002           0.20
+SCF                         3.455          74.43
+ - Interaction Cache        0.001           0.02
+ - Potential                3.230          93.47
+ - Fock build               0.018           0.53
+ - Diagonalize              3.100          89.70
+ - Density                  0.020           0.58
+ - Charges                  0.022           0.63
+cupy_eigh                   2.711          58.39
+------------------------------------------------
+Sum                         7.353         158.37
+Total                       4.643         100.00
+Energy Sum: -891.5960693359375
+
+Running on cpu with 77 atoms, 25 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.040           0.20
+ - Halogen                  0.003           6.25
+ - DispersionD3             0.035          86.83
+ - Repulsion                0.003           6.76
+Integrals                   1.145           5.56
+ - Overlap                  1.113          97.26
+ - Core Hamiltonian         0.031           2.74
+SCF                        19.399          94.24
+ - Interaction Cache        0.008           0.04
+ - Potential               19.108          98.50
+ - Fock build               0.346           1.78
+ - Diagonalize             18.113          93.37
+ - Density                  0.296           1.53
+ - Charges                  0.225           1.16
+torch_eigh                 13.216          64.20
+------------------------------------------------
+Sum                        33.800         164.19
+Total                      20.586         100.00
+Energy Sum: -890.4765014648438
+
+#################### Molecule alkane_26_carbons: 80 atoms, 26 C atoms ####################
+
+Running on cuda:0 with 80 atoms, 26 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.24
+ - DispersionD3             0.003          42.61
+ - Repulsion                0.001           8.75
+ - Halogen                  0.004          48.03
+Integrals                   0.634          21.00
+ - Overlap                  0.632          99.68
+ - Core Hamiltonian         0.002           0.32
+SCF                         2.375          78.73
+ - Interaction Cache        0.001           0.03
+ - Potential                2.147          90.38
+ - Fock build               0.011           0.45
+ - Diagonalize              2.033          85.60
+ - Density                  0.017           0.70
+ - Charges                  0.016           0.65
+cupy_eigh                   1.736          57.54
+------------------------------------------------
+Sum                         4.752         157.51
+Total                       3.017         100.00
+Energy Sum: -466.63775634765625
+
+Running on cpu with 80 atoms, 26 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.024           0.22
+ - Halogen                  0.001           5.42
+ - DispersionD3             0.021          85.91
+ - Repulsion                0.002           8.41
+Integrals                   0.616           5.50
+ - Overlap                  0.604          98.05
+ - Core Hamiltonian         0.012           1.95
+SCF                        10.568          94.27
+ - Interaction Cache        0.004           0.04
+ - Potential               10.366          98.09
+ - Fock build               0.165           1.56
+ - Diagonalize              9.815          92.88
+ - Density                  0.173           1.64
+ - Charges                  0.113           1.07
+torch_eigh                  7.150          63.78
+------------------------------------------------
+Sum                        18.358         163.77
+Total                      11.210         100.00
+Energy Sum: -466.056884765625
+
+Running on cuda:0 with 80 atoms, 26 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.24
+ - Repulsion                0.001           6.32
+ - Halogen                  0.008          62.85
+ - DispersionD3             0.004          30.43
+Integrals                   1.224          24.81
+ - Overlap                  1.222          99.80
+ - Core Hamiltonian         0.002           0.20
+SCF                         3.697          74.93
+ - Interaction Cache        0.001           0.02
+ - Potential                3.467          93.79
+ - Fock build               0.020           0.54
+ - Diagonalize              3.331          90.11
+ - Density                  0.021           0.58
+ - Charges                  0.024           0.65
+cupy_eigh                   2.921          59.20
+------------------------------------------------
+Sum                         7.854         159.18
+Total                       4.934         100.00
+Energy Sum: -933.277099609375
+
+Running on cpu with 80 atoms, 26 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.060           0.27
+ - Halogen                  0.003           4.22
+ - Repulsion                0.003           5.68
+ - DispersionD3             0.054          90.00
+Integrals                   1.270           5.70
+ - Overlap                  1.229          96.82
+ - Core Hamiltonian         0.040           3.18
+SCF                        20.929          94.02
+ - Interaction Cache        0.007           0.04
+ - Potential               20.618          98.51
+ - Fock build               0.385           1.84
+ - Diagonalize             19.453          92.95
+ - Density                  0.324           1.55
+ - Charges                  0.239           1.14
+torch_eigh                 14.066          63.19
+------------------------------------------------
+Sum                        36.325         163.18
+Total                      22.261         100.00
+Energy Sum: -932.1143798828125
+
+#################### Molecule alkane_27_carbons: 83 atoms, 27 C atoms ####################
+
+Running on cuda:0 with 83 atoms, 27 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.025           0.83
+ - DispersionD3             0.021          82.93
+ - Repulsion                0.001           2.89
+ - Halogen                  0.004          13.99
+Integrals                   0.620          20.30
+ - Overlap                  0.618          99.68
+ - Core Hamiltonian         0.002           0.32
+SCF                         2.409          78.83
+ - Interaction Cache        0.001           0.03
+ - Potential                2.180          90.50
+ - Fock build               0.010           0.42
+ - Diagonalize              2.057          85.40
+ - Density                  0.017           0.70
+ - Charges                  0.015           0.62
+cupy_eigh                   1.751          57.32
+------------------------------------------------
+Sum                         4.806         157.29
+Total                       3.055         100.00
+Energy Sum: -470.8405456542969
+
+Running on cpu with 83 atoms, 27 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.034           0.29
+ - Halogen                  0.001           3.89
+ - Repulsion                0.002           5.30
+ - DispersionD3             0.031          90.64
+Integrals                   0.684           5.71
+ - Overlap                  0.671          98.19
+ - Core Hamiltonian         0.012           1.81
+SCF                        11.259          93.99
+ - Interaction Cache        0.004           0.04
+ - Potential               11.052          98.17
+ - Fock build               0.167           1.48
+ - Diagonalize             10.423          92.57
+ - Density                  0.186           1.65
+ - Charges                  0.121           1.08
+torch_eigh                  7.430          62.03
+------------------------------------------------
+Sum                        19.407         162.02
+Total                      11.978         100.00
+Energy Sum: -470.21527099609375
+
+Running on cuda:0 with 83 atoms, 27 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.23
+ - Halogen                  0.007          60.86
+ - DispersionD3             0.004          33.02
+ - Repulsion                0.001           5.78
+Integrals                   1.234          24.26
+ - Overlap                  1.232          99.79
+ - Core Hamiltonian         0.003           0.21
+SCF                         3.840          75.50
+ - Interaction Cache        0.001           0.02
+ - Potential                3.610          94.00
+ - Fock build               0.021           0.55
+ - Diagonalize              3.408          88.73
+ - Density                  0.078           2.03
+ - Charges                  0.022           0.57
+cupy_eigh                   2.979          58.56
+------------------------------------------------
+Sum                         8.065         158.54
+Total                       5.087         100.00
+Energy Sum: -941.6860961914062
+
+Running on cpu with 83 atoms, 27 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.061           0.26
+ - DispersionD3             0.055          90.06
+ - Repulsion                0.003           5.38
+ - Halogen                  0.003           4.44
+Integrals                   1.258           5.35
+ - Overlap                  1.212          96.35
+ - Core Hamiltonian         0.046           3.65
+SCF                        22.193          94.38
+ - Interaction Cache        0.009           0.04
+ - Potential               21.880          98.59
+ - Fock build               0.424           1.91
+ - Diagonalize             20.551          92.60
+ - Density                  0.356           1.61
+ - Charges                  0.266           1.20
+torch_eigh                 14.636          62.24
+------------------------------------------------
+Sum                        38.149         162.23
+Total                      23.515         100.00
+Energy Sum: -940.430908203125
+
+#################### Molecule alkane_28_carbons: 86 atoms, 28 C atoms ####################
+
+Running on cuda:0 with 86 atoms, 28 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.007           0.21
+ - Halogen                  0.003          47.59
+ - DispersionD3             0.003          43.37
+ - Repulsion                0.001           8.53
+Integrals                   0.667          19.58
+ - Overlap                  0.665          99.70
+ - Core Hamiltonian         0.002           0.30
+SCF                         2.731          80.19
+ - Interaction Cache        0.001           0.03
+ - Potential                2.508          91.85
+ - Fock build               0.011           0.40
+ - Diagonalize              2.396          87.74
+ - Density                  0.017           0.61
+ - Charges                  0.015           0.55
+cupy_eigh                   2.080          61.07
+------------------------------------------------
+Sum                         5.485         161.04
+Total                       3.406         100.00
+Energy Sum: -471.60272216796875
+
+Running on cpu with 86 atoms, 28 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.036           0.28
+ - DispersionD3             0.033          90.04
+ - Repulsion                0.002           5.91
+ - Halogen                  0.001           3.90
+Integrals                   0.650           5.07
+ - Overlap                  0.635          97.65
+ - Core Hamiltonian         0.015           2.35
+SCF                        12.131          94.63
+ - Interaction Cache        0.005           0.05
+ - Potential               11.911          98.18
+ - Fock build               0.209           1.72
+ - Diagonalize             11.237          92.63
+ - Density                  0.211           1.74
+ - Charges                  0.150           1.24
+torch_eigh                  8.139          63.49
+------------------------------------------------
+Sum                        20.957         163.48
+Total                      12.819         100.00
+Energy Sum: -470.90704345703125
+
+Running on cuda:0 with 86 atoms, 28 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.21
+ - Halogen                  0.007          60.46
+ - DispersionD3             0.004          33.66
+ - Repulsion                0.001           5.53
+Integrals                   1.329          23.41
+ - Overlap                  1.326          99.81
+ - Core Hamiltonian         0.003           0.19
+SCF                         4.334          76.37
+ - Interaction Cache        0.001           0.02
+ - Potential                4.103          94.68
+ - Fock build               0.024           0.55
+ - Diagonalize              3.963          91.43
+ - Density                  0.023           0.52
+ - Charges                  0.023           0.53
+cupy_eigh                   3.510          61.85
+------------------------------------------------
+Sum                         9.185         161.83
+Total                       5.675         100.00
+Energy Sum: -943.2057495117188
+
+Running on cpu with 86 atoms, 28 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.065           0.26
+ - DispersionD3             0.058          89.87
+ - Repulsion                0.004           5.85
+ - Halogen                  0.003           4.16
+Integrals                   1.371           5.53
+ - Overlap                  1.324          96.58
+ - Core Hamiltonian         0.047           3.42
+SCF                        23.356          94.20
+ - Interaction Cache        0.008           0.04
+ - Potential               23.031          98.61
+ - Fock build               0.455           1.95
+ - Diagonalize             21.700          92.91
+ - Density                  0.376           1.61
+ - Charges                  0.271           1.16
+torch_eigh                 15.612          62.97
+------------------------------------------------
+Sum                        40.404         162.96
+Total                      24.794         100.00
+Energy Sum: -941.815185546875
+
+#################### Molecule alkane_29_carbons: 89 atoms, 29 C atoms ####################
+
+Running on cuda:0 with 89 atoms, 29 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.024           0.69
+ - Halogen                  0.004          15.07
+ - DispersionD3             0.020          81.47
+ - Repulsion                0.001           3.26
+Integrals                   0.677          19.54
+ - Overlap                  0.675          99.69
+ - Core Hamiltonian         0.002           0.31
+SCF                         2.762          79.74
+ - Interaction Cache        0.001           0.03
+ - Potential                2.535          91.75
+ - Fock build               0.012           0.42
+ - Diagonalize              2.419          87.56
+ - Density                  0.017           0.63
+ - Charges                  0.016           0.58
+cupy_eigh                   2.090          60.34
+------------------------------------------------
+Sum                         5.554         160.32
+Total                       3.464         100.00
+Energy Sum: -484.8391418457031
+
+Running on cpu with 89 atoms, 29 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.029           0.21
+ - Halogen                  0.001           4.58
+ - Repulsion                0.002           6.82
+ - DispersionD3             0.026          88.42
+Integrals                   0.721           5.33
+ - Overlap                  0.706          97.88
+ - Core Hamiltonian         0.015           2.12
+SCF                        12.765          94.44
+ - Interaction Cache        0.004           0.03
+ - Potential               12.545          98.28
+ - Fock build               0.195           1.53
+ - Diagonalize             11.850          92.83
+ - Density                  0.236           1.85
+ - Charges                  0.150           1.18
+torch_eigh                  8.376          61.97
+------------------------------------------------
+Sum                        21.891         161.96
+Total                      13.516         100.00
+Energy Sum: -484.1073913574219
+
+Running on cuda:0 with 89 atoms, 29 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.21
+ - Halogen                  0.008          60.79
+ - DispersionD3             0.004          33.51
+ - Repulsion                0.001           5.37
+Integrals                   1.379          23.81
+ - Overlap                  1.377          99.81
+ - Core Hamiltonian         0.003           0.19
+SCF                         4.400          75.96
+ - Interaction Cache        0.001           0.02
+ - Potential                4.170          94.76
+ - Fock build               0.026           0.60
+ - Diagonalize              4.024          91.46
+ - Density                  0.023           0.52
+ - Charges                  0.025           0.57
+cupy_eigh                   3.552          61.31
+------------------------------------------------
+Sum                         9.343         161.30
+Total                       5.792         100.00
+Energy Sum: -969.6756591796875
+
+Running on cpu with 89 atoms, 29 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.071           0.27
+ - Repulsion                0.003           4.71
+ - DispersionD3             0.065          91.39
+ - Halogen                  0.003           3.79
+Integrals                   1.419           5.36
+ - Overlap                  1.370          96.50
+ - Core Hamiltonian         0.050           3.50
+SCF                        24.993          94.37
+ - Interaction Cache        0.009           0.04
+ - Potential               24.657          98.65
+ - Fock build               0.481           1.92
+ - Diagonalize             23.252          93.03
+ - Density                  0.429           1.72
+ - Charges                  0.313           1.25
+torch_eigh                 16.306          61.57
+------------------------------------------------
+Sum                        42.790         161.56
+Total                      26.485         100.00
+Energy Sum: -968.214599609375
+
+#################### Molecule alkane_30_carbons: 92 atoms, 30 C atoms ####################
+
+Running on cuda:0 with 92 atoms, 30 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.23
+ - Halogen                  0.004          51.12
+ - DispersionD3             0.003          40.15
+ - Repulsion                0.001           8.26
+Integrals                   0.687          19.37
+ - Overlap                  0.685          99.70
+ - Core Hamiltonian         0.002           0.30
+SCF                         2.853          80.38
+ - Interaction Cache        0.001           0.03
+ - Potential                2.624          91.99
+ - Fock build               0.012           0.43
+ - Diagonalize              2.507          87.88
+ - Density                  0.017           0.61
+ - Charges                  0.017           0.60
+cupy_eigh                   2.164          60.98
+------------------------------------------------
+Sum                         5.712         160.95
+Total                       3.549         100.00
+Energy Sum: -516.2857055664062
+
+Running on cpu with 92 atoms, 30 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.022           0.15
+ - Repulsion                0.002           9.53
+ - Halogen                  0.001           5.96
+ - DispersionD3             0.018          84.26
+Integrals                   0.749           5.22
+ - Overlap                  0.733          97.88
+ - Core Hamiltonian         0.016           2.12
+SCF                        13.567          94.61
+ - Interaction Cache        0.005           0.03
+ - Potential               13.346          98.37
+ - Fock build               0.235           1.73
+ - Diagonalize             12.615          92.98
+ - Density                  0.242           1.79
+ - Charges                  0.153           1.13
+torch_eigh                  8.937          62.32
+------------------------------------------------
+Sum                        23.274         162.31
+Total                      14.339         100.00
+Energy Sum: -515.5142211914062
+
+Running on cuda:0 with 92 atoms, 30 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.20
+ - Halogen                  0.007          59.04
+ - DispersionD3             0.004          35.06
+ - Repulsion                0.001           5.56
+Integrals                   1.429          23.79
+ - Overlap                  1.427          99.81
+ - Core Hamiltonian         0.003           0.19
+SCF                         4.567          76.00
+ - Interaction Cache        0.001           0.02
+ - Potential                4.338          95.00
+ - Fock build               0.029           0.64
+ - Diagonalize              4.188          91.71
+ - Density                  0.023           0.51
+ - Charges                  0.027           0.59
+cupy_eigh                   3.691          61.43
+------------------------------------------------
+Sum                         9.700         161.41
+Total                       6.009         100.00
+Energy Sum: -1032.56005859375
+
+Running on cpu with 92 atoms, 30 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.054           0.19
+ - Halogen                  0.003           4.75
+ - Repulsion                0.005           8.69
+ - DispersionD3             0.047          86.38
+Integrals                   1.445           5.02
+ - Overlap                  1.400          96.89
+ - Core Hamiltonian         0.045           3.11
+SCF                        27.283          94.78
+ - Interaction Cache        0.010           0.04
+ - Potential               26.939          98.74
+ - Fock build               0.560           2.05
+ - Diagonalize             25.112          92.04
+ - Density                  0.484           1.78
+ - Charges                  0.333           1.22
+torch_eigh                 17.740          61.63
+------------------------------------------------
+Sum                        46.522         161.62
+Total                      28.784         100.00
+Energy Sum: -1031.028564453125
+
+#################### Molecule alkane_31_carbons: 95 atoms, 31 C atoms ####################
+
+Running on cuda:0 with 95 atoms, 31 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.21
+ - Repulsion                0.001           9.63
+ - Halogen                  0.004          47.02
+ - DispersionD3             0.003          42.79
+Integrals                   0.722          20.03
+ - Overlap                  0.720          99.70
+ - Core Hamiltonian         0.002           0.30
+SCF                         2.876          79.74
+ - Interaction Cache        0.001           0.03
+ - Potential                2.648          92.09
+ - Fock build               0.013           0.45
+ - Diagonalize              2.521          87.64
+ - Density                  0.018           0.61
+ - Charges                  0.016           0.56
+cupy_eigh                   2.166          60.06
+------------------------------------------------
+Sum                         5.772         160.03
+Total                       3.607         100.00
+Energy Sum: -524.0491943359375
+
+Running on cpu with 95 atoms, 31 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.023           0.15
+ - Halogen                  0.001           5.68
+ - Repulsion                0.002           9.20
+ - DispersionD3             0.020          84.89
+Integrals                   0.790           5.15
+ - Overlap                  0.770          97.49
+ - Core Hamiltonian         0.020           2.51
+SCF                        14.513          94.69
+ - Interaction Cache        0.005           0.03
+ - Potential               14.282          98.40
+ - Fock build               0.227           1.56
+ - Diagonalize             13.506          93.06
+ - Density                  0.268           1.85
+ - Charges                  0.163           1.12
+torch_eigh                  9.504          62.00
+------------------------------------------------
+Sum                        24.830         161.99
+Total                      15.328         100.00
+Energy Sum: -523.2802734375
+
+Running on cuda:0 with 95 atoms, 31 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.19
+ - Repulsion                0.001           6.06
+ - DispersionD3             0.004          34.50
+ - Halogen                  0.007          59.06
+Integrals                   1.461          23.99
+ - Overlap                  1.458          99.80
+ - Core Hamiltonian         0.003           0.19
+SCF                         4.617          75.80
+ - Interaction Cache        0.001           0.02
+ - Potential                4.388          95.04
+ - Fock build               0.032           0.69
+ - Diagonalize              4.224          91.50
+ - Density                  0.024           0.51
+ - Charges                  0.027           0.58
+cupy_eigh                   3.703          60.80
+------------------------------------------------
+Sum                         9.792         160.78
+Total                       6.090         100.00
+Energy Sum: -1048.1043701171875
+
+Running on cpu with 95 atoms, 31 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.047           0.15
+ - DispersionD3             0.039          83.85
+ - Halogen                  0.003           5.88
+ - Repulsion                0.005          10.08
+Integrals                   1.507           4.94
+ - Overlap                  1.453          96.42
+ - Core Hamiltonian         0.054           3.58
+SCF                        28.936          94.90
+ - Interaction Cache        0.010           0.04
+ - Potential               28.587          98.79
+ - Fock build               0.595           2.06
+ - Diagonalize             26.814          92.67
+ - Density                  0.521           1.80
+ - Charges                  0.353           1.22
+torch_eigh                 18.782          61.60
+------------------------------------------------
+Sum                        49.271         161.59
+Total                      30.491         100.00
+Energy Sum: -1046.560791015625
+
+#################### Molecule alkane_32_carbons: 98 atoms, 32 C atoms ####################
+
+Running on cuda:0 with 98 atoms, 32 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.19
+ - DispersionD3             0.003          44.27
+ - Halogen                  0.004          46.40
+ - Repulsion                0.001           8.73
+Integrals                   0.750          18.24
+ - Overlap                  0.748          99.70
+ - Core Hamiltonian         0.002           0.30
+SCF                         3.353          81.55
+ - Interaction Cache        0.001           0.02
+ - Potential                3.123          93.16
+ - Fock build               0.014           0.41
+ - Diagonalize              2.999          89.45
+ - Density                  0.024           0.70
+ - Charges                  0.017           0.50
+cupy_eigh                   2.592          63.04
+------------------------------------------------
+Sum                         6.702         163.02
+Total                       4.111         100.00
+Energy Sum: -537.8017578125
+
+Running on cpu with 98 atoms, 32 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.024           0.15
+ - Halogen                  0.001           5.51
+ - Repulsion                0.002           8.60
+ - DispersionD3             0.021          85.64
+Integrals                   0.803           4.98
+ - Overlap                  0.785          97.74
+ - Core Hamiltonian         0.018           2.26
+SCF                        15.295          94.86
+ - Interaction Cache        0.005           0.03
+ - Potential               15.055          98.43
+ - Fock build               0.269           1.76
+ - Diagonalize             14.227          93.02
+ - Density                  0.287           1.88
+ - Charges                  0.173           1.13
+torch_eigh                  9.885          61.31
+------------------------------------------------
+Sum                        26.007         161.30
+Total                      16.124         100.00
+Energy Sum: -536.9679565429688
+
+Running on cuda:0 with 98 atoms, 32 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.16
+ - DispersionD3             0.004          34.53
+ - Halogen                  0.007          59.56
+ - Repulsion                0.001           5.56
+Integrals                   1.515          20.98
+ - Overlap                  1.512          99.80
+ - Core Hamiltonian         0.003           0.20
+SCF                         5.692          78.85
+ - Interaction Cache        0.001           0.02
+ - Potential                5.463          95.96
+ - Fock build               0.034           0.61
+ - Diagonalize              5.295          93.02
+ - Density                  0.034           0.60
+ - Charges                  0.028           0.50
+cupy_eigh                   4.685          64.89
+------------------------------------------------
+Sum                        11.904         164.88
+Total                       7.220         100.00
+Energy Sum: -1075.59716796875
+
+Running on cpu with 98 atoms, 32 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.048           0.12
+ - Repulsion                0.004           7.96
+ - DispersionD3             0.041          86.10
+ - Halogen                  0.003           5.75
+Integrals                   1.571           4.01
+ - Overlap                  1.511          96.16
+ - Core Hamiltonian         0.060           3.84
+SCF                        37.522          95.86
+ - Interaction Cache        0.013           0.03
+ - Potential               36.562          97.44
+ - Fock build               1.378           3.67
+ - Diagonalize             33.127          88.29
+ - Density                  0.848           2.26
+ - Charges                  0.610           1.63
+torch_eigh                 19.411          49.59
+------------------------------------------------
+Sum                        58.552         149.58
+Total                      39.144         100.00
+Energy Sum: -1073.935302734375
+
+#################### Molecule alkane_33_carbons: 101 atoms, 33 C atoms ####################
+
+Running on cuda:0 with 101 atoms, 33 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.18
+ - DispersionD3             0.003          43.76
+ - Repulsion                0.001           9.05
+ - Halogen                  0.004          46.63
+Integrals                   0.753          18.13
+ - Overlap                  0.751          99.71
+ - Core Hamiltonian         0.002           0.29
+SCF                         3.395          81.67
+ - Interaction Cache        0.001           0.02
+ - Potential                3.172          93.44
+ - Fock build               0.015           0.43
+ - Diagonalize              3.048          89.77
+ - Density                  0.024           0.70
+ - Charges                  0.017           0.51
+cupy_eigh                   2.632          63.31
+------------------------------------------------
+Sum                         6.788         163.29
+Total                       4.157         100.00
+Energy Sum: -567.9339599609375
+
+Running on cpu with 101 atoms, 33 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.026           0.15
+ - Halogen                  0.001           4.97
+ - Repulsion                0.003          10.60
+ - DispersionD3             0.022          84.21
+Integrals                   0.808           4.73
+ - Overlap                  0.789          97.62
+ - Core Hamiltonian         0.019           2.37
+SCF                        16.238          95.10
+ - Interaction Cache        0.005           0.03
+ - Potential               15.994          98.50
+ - Fock build               0.282           1.74
+ - Diagonalize             14.995          92.35
+ - Density                  0.311           1.92
+ - Charges                  0.201           1.24
+torch_eigh                 10.361          60.68
+------------------------------------------------
+Sum                        27.433         160.67
+Total                      17.073         100.00
+Energy Sum: -567.06396484375
+
+Running on cuda:0 with 101 atoms, 33 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.16
+ - Halogen                  0.008          61.57
+ - Repulsion                0.001           5.63
+ - DispersionD3             0.004          32.46
+Integrals                   1.572          19.76
+ - Overlap                  1.569          99.80
+ - Core Hamiltonian         0.003           0.19
+SCF                         6.368          80.07
+ - Interaction Cache        0.001           0.01
+ - Potential                6.137          96.37
+ - Fock build               0.037           0.58
+ - Diagonalize              5.963          93.64
+ - Density                  0.035           0.55
+ - Charges                  0.031           0.49
+cupy_eigh                   5.325          66.95
+------------------------------------------------
+Sum                        13.278         166.94
+Total                       7.954         100.00
+Energy Sum: -1135.866455078125
+
+Running on cpu with 101 atoms, 33 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.068           0.17
+ - Halogen                  0.003           3.92
+ - Repulsion                0.005           7.14
+ - DispersionD3             0.061          88.80
+Integrals                   1.627           4.02
+ - Overlap                  1.560          95.87
+ - Core Hamiltonian         0.067           4.13
+SCF                        38.748          95.80
+ - Interaction Cache        0.014           0.04
+ - Potential               37.763          97.46
+ - Fock build               1.354           3.50
+ - Diagonalize             34.319          88.57
+ - Density                  0.799           2.06
+ - Charges                  0.656           1.69
+torch_eigh                 20.340          50.29
+------------------------------------------------
+Sum                        60.783         150.28
+Total                      40.447         100.00
+Energy Sum: -1134.1275634765625
+
+#################### Molecule alkane_34_carbons: 104 atoms, 34 C atoms ####################
+
+Running on cuda:0 with 104 atoms, 34 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.17
+ - Halogen                  0.004          47.14
+ - Repulsion                0.001           9.21
+ - DispersionD3             0.003          43.11
+Integrals                   0.841          19.09
+ - Overlap                  0.839          99.73
+ - Core Hamiltonian         0.002           0.27
+SCF                         3.558          80.72
+ - Interaction Cache        0.001           0.02
+ - Potential                3.329          93.55
+ - Fock build               0.016           0.44
+ - Diagonalize              3.199          89.91
+ - Density                  0.025           0.69
+ - Charges                  0.019           0.52
+cupy_eigh                   2.758          62.57
+------------------------------------------------
+Sum                         7.165         162.55
+Total                       4.408         100.00
+Energy Sum: -588.6788330078125
+
+Running on cpu with 104 atoms, 34 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.027           0.15
+ - DispersionD3             0.023          84.32
+ - Halogen                  0.001           5.44
+ - Repulsion                0.003           9.98
+Integrals                   0.817           4.53
+ - Overlap                  0.796          97.45
+ - Core Hamiltonian         0.021           2.55
+SCF                        17.192          95.31
+ - Interaction Cache        0.005           0.03
+ - Potential               16.937          98.51
+ - Fock build               0.297           1.73
+ - Diagonalize             15.865          92.28
+ - Density                  0.329           1.91
+ - Charges                  0.198           1.15
+torch_eigh                 10.960          60.76
+------------------------------------------------
+Sum                        28.996         160.75
+Total                      18.037         100.00
+Energy Sum: -587.7374267578125
+
+Running on cuda:0 with 104 atoms, 34 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.14
+ - Halogen                  0.007          59.25
+ - Repulsion                0.001           5.82
+ - DispersionD3             0.004          34.59
+Integrals                   1.604          18.33
+ - Overlap                  1.600          99.80
+ - Core Hamiltonian         0.003           0.20
+SCF                         7.132          81.52
+ - Interaction Cache        0.001           0.01
+ - Potential                6.900          96.75
+ - Fock build               0.039           0.54
+ - Diagonalize              6.717          94.18
+ - Density                  0.037           0.52
+ - Charges                  0.036           0.51
+cupy_eigh                   6.041          69.05
+------------------------------------------------
+Sum                        14.788         169.04
+Total                       8.748         100.00
+Energy Sum: -1177.3538818359375
+
+Running on cpu with 104 atoms, 34 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.075           0.18
+ - Halogen                  0.003           3.57
+ - DispersionD3             0.066          88.03
+ - Repulsion                0.006           8.25
+Integrals                   1.718           4.11
+ - Overlap                  1.646          95.81
+ - Core Hamiltonian         0.072           4.19
+SCF                        39.968          95.70
+ - Interaction Cache        0.014           0.04
+ - Potential               38.983          97.54
+ - Fock build               1.273           3.19
+ - Diagonalize             35.883          89.78
+ - Density                  0.748           1.87
+ - Charges                  0.408           1.02
+torch_eigh                 21.763          52.11
+------------------------------------------------
+Sum                        63.524         152.10
+Total                      41.765         100.00
+Energy Sum: -1175.474853515625
+
+#################### Molecule alkane_35_carbons: 107 atoms, 35 C atoms ####################
+
+Running on cuda:0 with 107 atoms, 35 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.18
+ - Repulsion                0.001           9.25
+ - DispersionD3             0.004          44.75
+ - Halogen                  0.004          45.42
+Integrals                   0.813          18.40
+ - Overlap                  0.810          99.71
+ - Core Hamiltonian         0.002           0.29
+SCF                         3.595          81.40
+ - Interaction Cache        0.001           0.02
+ - Potential                3.367          93.66
+ - Fock build               0.017           0.48
+ - Diagonalize              3.235          90.00
+ - Density                  0.025           0.69
+ - Charges                  0.019           0.53
+cupy_eigh                   2.781          62.97
+------------------------------------------------
+Sum                         7.197         162.95
+Total                       4.417         100.00
+Energy Sum: -594.8260498046875
+
+Running on cpu with 107 atoms, 35 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.035           0.18
+ - Repulsion                0.003           9.28
+ - Halogen                  0.001           3.96
+ - DispersionD3             0.030          86.56
+Integrals                   0.885           4.65
+ - Overlap                  0.859          97.12
+ - Core Hamiltonian         0.025           2.87
+SCF                        18.111          95.16
+ - Interaction Cache        0.006           0.03
+ - Potential               17.855          98.59
+ - Fock build               0.347           1.91
+ - Diagonalize             16.664          92.01
+ - Density                  0.389           2.15
+ - Charges                  0.225           1.24
+torch_eigh                 11.353          59.65
+------------------------------------------------
+Sum                        30.384         159.64
+Total                      19.033         100.00
+Energy Sum: -593.819580078125
+
+Running on cuda:0 with 107 atoms, 35 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.13
+ - DispersionD3             0.004          36.24
+ - Halogen                  0.007          57.77
+ - Repulsion                0.001           5.64
+Integrals                   1.667          17.67
+ - Overlap                  1.664          99.80
+ - Core Hamiltonian         0.003           0.20
+SCF                         7.755          82.19
+ - Interaction Cache        0.001           0.01
+ - Potential                7.523          97.01
+ - Fock build               0.041           0.53
+ - Diagonalize              7.331          94.54
+ - Density                  0.041           0.52
+ - Charges                  0.038           0.49
+cupy_eigh                   6.618          70.15
+------------------------------------------------
+Sum                        16.052         170.14
+Total                       9.435         100.00
+Energy Sum: -1189.6351318359375
+
+Running on cpu with 107 atoms, 35 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.099           0.22
+ - Repulsion                0.005           5.14
+ - Halogen                  0.003           2.80
+ - DispersionD3             0.091          91.96
+Integrals                   1.713           3.88
+ - Overlap                  1.641          95.79
+ - Core Hamiltonian         0.072           4.20
+SCF                        42.337          95.89
+ - Interaction Cache        0.013           0.03
+ - Potential               41.386          97.76
+ - Fock build               1.382           3.26
+ - Diagonalize             37.745          89.15
+ - Density                  0.838           1.98
+ - Charges                  0.718           1.70
+torch_eigh                 22.357          50.64
+------------------------------------------------
+Sum                        66.505         150.63
+Total                      44.152         100.00
+Energy Sum: -1187.6400146484375
+
+#################### Molecule alkane_36_carbons: 110 atoms, 36 C atoms ####################
+
+Running on cuda:0 with 110 atoms, 36 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.16
+ - Repulsion                0.001           9.17
+ - Halogen                  0.004          45.47
+ - DispersionD3             0.003          44.81
+Integrals                   0.883          17.71
+ - Overlap                  0.881          99.73
+ - Core Hamiltonian         0.002           0.27
+SCF                         4.096          82.12
+ - Interaction Cache        0.001           0.02
+ - Potential                3.867          94.41
+ - Fock build               0.019           0.46
+ - Diagonalize              3.733          91.13
+ - Density                  0.025           0.62
+ - Charges                  0.019           0.47
+cupy_eigh                   3.252          65.19
+------------------------------------------------
+Sum                         8.240         165.17
+Total                       4.989         100.00
+Energy Sum: -575.7652587890625
+
+Running on cpu with 110 atoms, 36 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.031           0.16
+ - Repulsion                0.003          10.24
+ - DispersionD3             0.027          84.86
+ - Halogen                  0.001           4.66
+Integrals                   0.906           4.57
+ - Overlap                  0.883          97.45
+ - Core Hamiltonian         0.023           2.54
+SCF                        18.894          95.26
+ - Interaction Cache        0.006           0.03
+ - Potential               18.630          98.60
+ - Fock build               0.341           1.80
+ - Diagonalize             17.570          92.99
+ - Density                  0.388           2.05
+ - Charges                  0.223           1.18
+torch_eigh                 11.988          60.44
+------------------------------------------------
+Sum                        31.819         160.43
+Total                      19.833         100.00
+Energy Sum: -574.6371459960938
+
+Running on cuda:0 with 110 atoms, 36 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.11
+ - Repulsion                0.001           5.91
+ - DispersionD3             0.004          35.85
+ - Halogen                  0.007          57.86
+Integrals                   1.719          16.08
+ - Overlap                  1.716          99.79
+ - Core Hamiltonian         0.004           0.21
+SCF                         8.962          83.80
+ - Interaction Cache        0.001           0.01
+ - Potential                8.730          97.41
+ - Fock build               0.044           0.49
+ - Diagonalize              8.530          95.18
+ - Density                  0.044           0.49
+ - Charges                  0.042           0.46
+cupy_eigh                   7.766          72.61
+------------------------------------------------
+Sum                        18.459         172.60
+Total                      10.694         100.00
+Energy Sum: -1151.534912109375
+
+Running on cpu with 110 atoms, 36 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.102           0.21
+ - Repulsion                0.005           4.91
+ - Halogen                  0.003           2.72
+ - DispersionD3             0.094          92.27
+Integrals                   1.837           3.79
+ - Overlap                  1.749          95.22
+ - Core Hamiltonian         0.088           4.77
+SCF                        46.554          95.99
+ - Interaction Cache        0.016           0.03
+ - Potential               45.728          98.23
+ - Fock build               1.796           3.86
+ - Diagonalize             41.192          88.48
+ - Density                  1.163           2.50
+ - Charges                  0.818           1.76
+torch_eigh                 23.635          48.73
+------------------------------------------------
+Sum                        72.128         148.72
+Total                      48.498         100.00
+Energy Sum: -1149.2744140625
+
+#################### Molecule alkane_37_carbons: 113 atoms, 37 C atoms ####################
+
+Running on cuda:0 with 113 atoms, 37 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.15
+ - Halogen                  0.003          45.32
+ - Repulsion                0.001           8.73
+ - DispersionD3             0.003          45.42
+Integrals                   0.844          16.99
+ - Overlap                  0.841          99.71
+ - Core Hamiltonian         0.002           0.28
+SCF                         4.114          82.84
+ - Interaction Cache        0.001           0.02
+ - Potential                3.891          94.58
+ - Fock build               0.020           0.49
+ - Diagonalize              3.747          91.08
+ - Density                  0.026           0.63
+ - Charges                  0.020           0.48
+cupy_eigh                   3.254          65.51
+------------------------------------------------
+Sum                         8.220         165.49
+Total                       4.967         100.00
+Energy Sum: -597.9696655273438
+
+Running on cpu with 113 atoms, 37 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.045           0.21
+ - Halogen                  0.001           2.97
+ - Repulsion                0.003           6.53
+ - DispersionD3             0.040          90.32
+Integrals                   0.906           4.31
+ - Overlap                  0.879          97.03
+ - Core Hamiltonian         0.027           2.97
+SCF                        20.049          95.47
+ - Interaction Cache        0.007           0.04
+ - Potential               19.782          98.67
+ - Fock build               0.390           1.94
+ - Diagonalize             18.530          92.42
+ - Density                  0.422           2.11
+ - Charges                  0.249           1.24
+torch_eigh                 12.466          59.36
+------------------------------------------------
+Sum                        33.466         159.35
+Total                      21.001         100.00
+Energy Sum: -596.8013305664062
+
+Running on cuda:0 with 113 atoms, 37 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.013           0.11
+ - DispersionD3             0.005          38.37
+ - Repulsion                0.001           5.52
+ - Halogen                  0.007          55.71
+Integrals                   1.816          16.37
+ - Overlap                  1.812          99.79
+ - Core Hamiltonian         0.004           0.21
+SCF                         9.265          83.51
+ - Interaction Cache        0.001           0.01
+ - Potential                9.032          97.49
+ - Fock build               0.046           0.50
+ - Diagonalize              8.814          95.13
+ - Density                  0.045           0.49
+ - Charges                  0.045           0.49
+cupy_eigh                   8.015          72.24
+------------------------------------------------
+Sum                        19.107         172.23
+Total                      11.094         100.00
+Energy Sum: -1195.9326171875
+
+Running on cpu with 113 atoms, 37 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.113           0.23
+ - Repulsion                0.006           5.34
+ - DispersionD3             0.103          91.37
+ - Halogen                  0.004           3.20
+Integrals                   1.823           3.77
+ - Overlap                  1.733          95.06
+ - Core Hamiltonian         0.090           4.94
+SCF                        46.373          95.98
+ - Interaction Cache        0.019           0.04
+ - Potential               45.547          98.22
+ - Fock build               1.529           3.30
+ - Diagonalize             41.714          89.95
+ - Density                  1.000           2.16
+ - Charges                  0.518           1.12
+torch_eigh                 24.407          50.52
+------------------------------------------------
+Sum                        72.716         150.51
+Total                      48.314         100.00
+Energy Sum: -1193.6024169921875
+
+#################### Molecule alkane_38_carbons: 116 atoms, 38 C atoms ####################
+
+Running on cuda:0 with 116 atoms, 38 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.009           0.16
+ - Halogen                  0.004          49.23
+ - Repulsion                0.001           7.97
+ - DispersionD3             0.004          42.32
+Integrals                   0.914          17.25
+ - Overlap                  0.912          99.73
+ - Core Hamiltonian         0.002           0.27
+SCF                         4.375          82.57
+ - Interaction Cache        0.001           0.02
+ - Potential                4.147          94.78
+ - Fock build               0.022           0.50
+ - Diagonalize              3.996          91.34
+ - Density                  0.027           0.61
+ - Charges                  0.021           0.48
+cupy_eigh                   3.483          65.74
+------------------------------------------------
+Sum                         8.781         165.72
+Total                       5.299         100.00
+Energy Sum: -638.1467895507812
+
+Running on cpu with 116 atoms, 38 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.051           0.22
+ - Repulsion                0.003           6.56
+ - Halogen                  0.002           3.69
+ - DispersionD3             0.045          89.57
+Integrals                   0.966           4.29
+ - Overlap                  0.936          96.92
+ - Core Hamiltonian         0.030           3.08
+SCF                        21.511          95.48
+ - Interaction Cache        0.009           0.04
+ - Potential               21.239          98.74
+ - Fock build               0.436           2.03
+ - Diagonalize             19.815          92.12
+ - Density                  0.467           2.17
+ - Charges                  0.307           1.43
+torch_eigh                 13.284          58.97
+------------------------------------------------
+Sum                        35.811         158.96
+Total                      22.529         100.00
+Energy Sum: -636.927001953125
+
+Running on cuda:0 with 116 atoms, 38 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.10
+ - Halogen                  0.007          56.92
+ - DispersionD3             0.005          37.35
+ - Repulsion                0.001           5.41
+Integrals                   1.845          15.58
+ - Overlap                  1.841          99.79
+ - Core Hamiltonian         0.004           0.21
+SCF                         9.982          84.30
+ - Interaction Cache        0.001           0.01
+ - Potential                9.752          97.69
+ - Fock build               0.049           0.49
+ - Diagonalize              9.527          95.44
+ - Density                  0.048           0.48
+ - Charges                  0.048           0.48
+cupy_eigh                   8.691          73.40
+------------------------------------------------
+Sum                        20.530         173.39
+Total                      11.841         100.00
+Energy Sum: -1276.29150390625
+
+Running on cpu with 116 atoms, 38 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.117           0.23
+ - DispersionD3             0.106          90.51
+ - Repulsion                0.008           7.13
+ - Halogen                  0.003           2.28
+Integrals                   1.848           3.56
+ - Overlap                  1.749          94.66
+ - Core Hamiltonian         0.099           5.34
+SCF                        49.938          96.20
+ - Interaction Cache        0.017           0.03
+ - Potential               49.108          98.34
+ - Fock build               1.647           3.30
+ - Diagonalize             44.699          89.51
+ - Density                  1.005           2.01
+ - Charges                  0.901           1.80
+torch_eigh                 26.230          50.53
+------------------------------------------------
+Sum                        78.134         150.52
+Total                      51.909         100.00
+Energy Sum: -1273.8543701171875
+
+#################### Molecule alkane_39_carbons: 119 atoms, 39 C atoms ####################
+
+Running on cuda:0 with 119 atoms, 39 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.15
+ - DispersionD3             0.004          46.71
+ - Repulsion                0.001           8.31
+ - Halogen                  0.004          44.27
+Integrals                   0.960          17.78
+ - Overlap                  0.957          99.74
+ - Core Hamiltonian         0.003           0.26
+SCF                         4.429          82.05
+ - Interaction Cache        0.001           0.02
+ - Potential                4.200          94.82
+ - Fock build               0.023           0.52
+ - Diagonalize              4.046          91.35
+ - Density                  0.027           0.62
+ - Charges                  0.022           0.49
+cupy_eigh                   3.518          65.16
+------------------------------------------------
+Sum                         8.915         165.14
+Total                       5.398         100.00
+Energy Sum: -645.3469848632812
+
+Running on cpu with 119 atoms, 39 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.052           0.23
+ - Repulsion                0.004           8.45
+ - DispersionD3             0.046          88.55
+ - Halogen                  0.001           2.83
+Integrals                   0.979           4.24
+ - Overlap                  0.949          96.97
+ - Core Hamiltonian         0.030           3.02
+SCF                        22.037          95.52
+ - Interaction Cache        0.008           0.03
+ - Potential               21.755          98.72
+ - Fock build               0.428           1.94
+ - Diagonalize             20.340          92.30
+ - Density                  0.509           2.31
+ - Charges                  0.277           1.26
+torch_eigh                 13.739          59.55
+------------------------------------------------
+Sum                        36.807         159.54
+Total                      23.070         100.00
+Energy Sum: -644.0504760742188
+
+Running on cuda:0 with 119 atoms, 39 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.012           0.10
+ - DispersionD3             0.005          38.08
+ - Repulsion                0.001           5.48
+ - Halogen                  0.007          56.06
+Integrals                   1.891          15.53
+ - Overlap                  1.887          99.78
+ - Core Hamiltonian         0.004           0.22
+SCF                        10.270          84.36
+ - Interaction Cache        0.001           0.01
+ - Potential               10.037          97.73
+ - Fock build               0.052           0.50
+ - Diagonalize              9.805          95.47
+ - Density                  0.049           0.48
+ - Charges                  0.048           0.47
+cupy_eigh                   8.929          73.34
+------------------------------------------------
+Sum                        21.103         173.33
+Total                      12.175         100.00
+Energy Sum: -1290.686767578125
+
+Running on cpu with 119 atoms, 39 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.128           0.23
+ - Halogen                  0.004           2.91
+ - Repulsion                0.008           6.41
+ - DispersionD3             0.116          90.59
+Integrals                   1.929           3.48
+ - Overlap                  1.824          94.56
+ - Core Hamiltonian         0.105           5.44
+SCF                        53.306          96.28
+ - Interaction Cache        0.022           0.04
+ - Potential               52.474          98.44
+ - Fock build               2.010           3.77
+ - Diagonalize             47.215          88.57
+ - Density                  1.432           2.69
+ - Charges                  0.953           1.79
+torch_eigh                 27.229          49.18
+------------------------------------------------
+Sum                        82.591         149.17
+Total                      55.368         100.00
+Energy Sum: -1288.1014404296875
+
+#################### Molecule alkane_40_carbons: 122 atoms, 40 C atoms ####################
+
+Running on cuda:0 with 122 atoms, 40 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.14
+ - Halogen                  0.004          44.45
+ - DispersionD3             0.004          47.07
+ - Repulsion                0.001           7.97
+Integrals                   0.984          16.58
+ - Overlap                  0.981          99.74
+ - Core Hamiltonian         0.003           0.26
+SCF                         4.943          83.27
+ - Interaction Cache        0.001           0.02
+ - Potential                4.713          95.35
+ - Fock build               0.025           0.50
+ - Diagonalize              4.556          92.17
+ - Density                  0.029           0.58
+ - Charges                  0.023           0.46
+cupy_eigh                   3.981          67.06
+------------------------------------------------
+Sum                         9.916         167.05
+Total                       5.936         100.00
+Energy Sum: -659.0369873046875
+
+Running on cpu with 122 atoms, 40 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.037           0.15
+ - Repulsion                0.004           9.77
+ - DispersionD3             0.032          86.02
+ - Halogen                  0.001           3.96
+Integrals                   1.007           4.09
+ - Overlap                  0.975          96.80
+ - Core Hamiltonian         0.032           3.20
+SCF                        23.572          95.75
+ - Interaction Cache        0.008           0.03
+ - Potential               23.288          98.79
+ - Fock build               0.461           1.96
+ - Diagonalize             21.882          92.83
+ - Density                  0.509           2.16
+ - Charges                  0.301           1.28
+torch_eigh                 14.782          60.05
+------------------------------------------------
+Sum                        39.398         160.04
+Total                      24.618         100.00
+Energy Sum: -657.629150390625
+
+Running on cuda:0 with 122 atoms, 40 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.013           0.09
+ - DispersionD3             0.005          38.82
+ - Repulsion                0.001           5.39
+ - Halogen                  0.007          55.40
+Integrals                   1.959          14.32
+ - Overlap                  1.955          99.78
+ - Core Hamiltonian         0.004           0.22
+SCF                        11.712          85.58
+ - Interaction Cache        0.001           0.01
+ - Potential               11.475          97.98
+ - Fock build               0.055           0.47
+ - Diagonalize             11.234          95.92
+ - Density                  0.050           0.42
+ - Charges                  0.051           0.43
+cupy_eigh                  10.282          75.14
+------------------------------------------------
+Sum                        23.966         175.13
+Total                      13.685         100.00
+Energy Sum: -1318.083251953125
+
+Running on cpu with 122 atoms, 40 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.130           0.23
+ - Halogen                  0.003           2.09
+ - DispersionD3             0.119          91.69
+ - Repulsion                0.008           6.13
+Integrals                   2.019           3.52
+ - Overlap                  1.908          94.51
+ - Core Hamiltonian         0.111           5.49
+SCF                        55.207          96.24
+ - Interaction Cache        0.020           0.04
+ - Potential               54.572          98.85
+ - Fock build               1.921           3.48
+ - Diagonalize             49.443          89.56
+ - Density                  1.156           2.09
+ - Charges                  1.074           1.95
+torch_eigh                 28.582          49.83
+------------------------------------------------
+Sum                        85.937         149.82
+Total                      57.361         100.00
+Energy Sum: -1315.2581787109375
+
+#################### Molecule alkane_41_carbons: 125 atoms, 41 C atoms ####################
+
+Running on cuda:0 with 125 atoms, 41 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.008           0.14
+ - DispersionD3             0.004          47.25
+ - Repulsion                0.001           8.19
+ - Halogen                  0.004          43.93
+Integrals                   1.002          16.71
+ - Overlap                  0.999          99.74
+ - Core Hamiltonian         0.003           0.26
+SCF                         4.986          83.14
+ - Interaction Cache        0.001           0.02
+ - Potential                4.757          95.40
+ - Fock build               0.027           0.53
+ - Diagonalize              4.607          92.40
+ - Density                  0.029           0.58
+ - Charges                  0.024           0.48
+cupy_eigh                   4.016          66.96
+------------------------------------------------
+Sum                        10.012         166.94
+Total                       5.997         100.00
+Energy Sum: -666.843994140625
+
+Running on cpu with 125 atoms, 41 C atoms, and 64 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.054           0.21
+ - Repulsion                0.003           6.14
+ - DispersionD3             0.049          90.97
+ - Halogen                  0.001           2.71
+Integrals                   1.049           4.07
+ - Overlap                  1.006          95.88
+ - Core Hamiltonian         0.043           4.12
+SCF                        24.654          95.71
+ - Interaction Cache        0.008           0.03
+ - Potential               24.368          98.84
+ - Fock build               0.513           2.08
+ - Diagonalize             22.671          91.96
+ - Density                  0.570           2.31
+ - Charges                  0.319           1.29
+torch_eigh                 14.875          57.75
+------------------------------------------------
+Sum                        40.632         157.74
+Total                      25.759         100.00
+Energy Sum: -665.387451171875
+
+Running on cuda:0 with 125 atoms, 41 C atoms, and 128 batches.
+
+
+Timings
+-------
+
+Objective                Time (s)        % Total
+------------------------------------------------
+Classicals                  0.013           0.09
+ - DispersionD3             0.005          39.29
+ - Repulsion                0.001           5.54
+ - Halogen                  0.007          54.81
+Integrals                   2.018          14.38
+ - Overlap                  2.013          99.77
+ - Core Hamiltonian         0.005           0.22
+SCF                        11.999          85.52
+ - Interaction Cache        0.001           0.01
+ - Potential               11.770          98.09
+ - Fock build               0.057           0.48
+ - Diagonalize             11.540          96.17
+ - Density                  0.049           0.41
+ - Charges                  0.053           0.44
+cupy_eigh                  10.550          75.19
+------------------------------------------------
+Sum                        24.580         175.19
+Total                      14.031         100.00
+Energy Sum: -1333.6915283203125
+
+Running on cpu with 125 atoms, 41 C atoms, and 128 batches.
