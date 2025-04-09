@@ -265,7 +265,7 @@ def plot_time_vs_n_atoms_at_batch_size(results, batch_size, keyword="Total", dpi
             plt.fill_between(xs, c_vals, g_vals, color="forestgreen", alpha=0.3)
             mid_x = 0.5 * (start + end)
             max_y = max(max(c_vals), max(g_vals))
-            offset = 0.005 * max_y  # 5% vertical offset
+            offset = 0.5  # 5% vertical offset
             plt.text(
                 mid_x,
                 max_y + offset,
@@ -274,13 +274,13 @@ def plot_time_vs_n_atoms_at_batch_size(results, batch_size, keyword="Total", dpi
                 va="bottom",
                 fontsize=10,
                 color="forestgreen",
-                bbox=dict(facecolor="white", alpha=0.6, edgecolor="none"),
+                bbox=dict(facecolor="white", alpha=1, edgecolor="k"),
                 
             )
 
     plt.xlabel("Number of Atoms")
     plt.ylabel("Computation Time (s)")
-    plt.title(f"Time vs Atom Count @ Batch Size = {batch_size} ({keyword})")
+    plt.title(f"Dxtb time vs Atom Count @ Batch Size = {batch_size} ({keyword})")
     plt.legend()
     plt.grid(True, linestyle="--", linewidth=0.5)
     plt.tight_layout()
