@@ -28,7 +28,6 @@ from tad_mctc.storch.linalg import eighb
 import cupy as cp
 
 from dxtb._src.typing import Any, Tensor
-from dxtb import timer
 
 __all__ = ["eigh", "eighb", "qr"]
 
@@ -52,17 +51,13 @@ def eigh(matrix: Tensor, *args: Any, **kwargs: Any) -> tuple[Tensor, Tensor]:
         # Create a fresh DLPack capsule
         dlpack_tensor = torch.utils.dlpack.to_dlpack(matrix)
         cupy_matrix = cp.fromDlpack(dlpack_tensor)
-        timer.start("cupy_eigh")
         w, v = cp.linalg.eigh(cupy_matrix, *args, **kwargs)
-        timer.stop("cupy_eigh")   
         return (
             torch.utils.dlpack.from_dlpack(w.toDlpack()),
             torch.utils.dlpack.from_dlpack(v.toDlpack())
         )
     else:
-        timer.start("torch_eigh")
         w, v = torch.linalg.eigh(matrix, *args, **kwargs)
-        timer.stop("torch_eigh")
         return w, v
         # return torch.linalg.eigh(matrix, *args, **kwargs)
 
