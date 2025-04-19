@@ -559,7 +559,7 @@ class Basis(TensorLike):
                         _pos = torch.masked_select(pos, m).reshape((-1, 3))
                     else:
                         # pylint: disable=import-outside-toplevel
-                        from tad_mctc.batch import deflate
+                        from dxtb._src.utils import deflate_opt as deflate
 
                         _pos = deflate(pos, value=float("nan"))
                 elif self.ihelp.batch_mode == 2:

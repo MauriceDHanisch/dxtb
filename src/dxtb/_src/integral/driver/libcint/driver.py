@@ -65,7 +65,7 @@ class BaseIntDriverLibcint(LibcintImplementation, IntDriver):
             # integrals do not work with a batched IndexHelper
             if self.ihelp.batch_mode == 1:
                 # pylint: disable=import-outside-toplevel
-                from tad_mctc.batch import deflate
+                from dxtb._src.utils import deflate_opt as deflate
 
                 _ihelp = [
                     IndexHelper.from_numbers(deflate(number), self.par)
