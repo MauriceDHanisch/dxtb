@@ -172,7 +172,45 @@ class Integrals(IntegralContainer):
             if positions.device != torch.device("cpu"):
                 positions = positions.to(device=torch.device("cpu"))
 
-        self.mgr.setup_driver(positions, **kwargs)
+        import pickle
+        from dxtb import timer
+        DRV_LOADED = False
+        timer.start("load_drv")
+        with open("drv.pkl", "rb") as f:
+            drv = pickle.load(f)
+        timer.stop("load_drv")
+        if drv is None:
+            timer.start("setup_drv")
+            self.mgr.setup_driver(positions, **kwargs)
+            timer.stop("setup_drv")
+            timer.start("dump_drv")
+            with open("drv.pkl", "wb") as f:
+                pickle.dump(self.mgr.driver.drv, f)
+            timer.stop("dump_drv")
+        else:
+            timer.start("setting drv")
+            self.mgr.driver.drv = drv
+            self.mgr.driver._positions = 1
+            DRV_LOADED = True
+            timer.stop("setting drv")
+
+
+        if DRV_LOADED is True:
+            if self.mgr.driver.ihelp.batch_mode != 2: 
+                raise RuntimeError(
+                    "Batch mode different from 2 is not supported currently."
+                )
+                # TODO: add support for batch mode 1 (-> don't iterate list), batch mode 2 (-> use optimized deflate)
+            timer.start("replacing drv._allpos_params")
+            # print("self.pos\n", positions)
+            for i in range(len(self.mgr.driver.drv)):
+                # print(f"\n drv[{i}]._allpos_params\n", self.mgr.driver.drv[i]._allpos_params)
+                self.mgr.driver.drv[i]._allpos_params = positions[i, :, :]
+            timer.stop("replacing drv._allpos_params")
+        
+        
+        
+        # self.mgr.setup_driver(positions, **kwargs)
         logger.debug("Overlap integral: Start building matrix.")
 
         if self.overlap is None:
