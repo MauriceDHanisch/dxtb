@@ -261,15 +261,21 @@ class LowRankMatrix:
         self.reduce_method = {"restart": 0, "simple": 1}[reduce_method]
 
     def mv(self, v):
-        res = self.alpha * v
-        for i in range(len(self.dns)):
-            res += self.cns[i] * torch.dot(self.dns[i], v)
+        res = self.alpha * v     
+        if self.dns:
+            C = torch.stack(self.cns)         # (r, n)
+            D = torch.stack(self.dns)         # (r, n)
+            s = torch.einsum("ri,i->r", D, v) # (r,)
+            res += torch.einsum("r,ri->i", s, C)
         return res
 
     def rmv(self, v):
         res = self.alpha * v
-        for i in range(len(self.dns)):
-            res += self.dns[i] * torch.dot(self.cns[i], v)
+        if self.cns:
+            C = torch.stack(self.cns)         # (r, n)
+            D = torch.stack(self.dns)         # (r, n)
+            s = torch.einsum("ri,i->r", C, v) # (r,)
+            res += torch.einsum("r,ri->i", s, D)
         return res
 
     def append(self, c, d):
