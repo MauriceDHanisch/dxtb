@@ -81,6 +81,7 @@ class EnergyCalculator(BaseCalculator):
         positions: Tensor,
         chrg: Tensor | float | int = defaults.CHRG,
         spin: Tensor | float | int | None = defaults.SPIN,
+        scf_charges_guess: Tensor | None = None,
         **kwargs: Any,
     ):
         """
@@ -283,6 +284,7 @@ class EnergyCalculator(BaseCalculator):
             self.opts.scf,
             intmats,
             self.integrals.hcore.refocc,
+            scf_charges_guess,
         )
 
         timer.stop("SCF")

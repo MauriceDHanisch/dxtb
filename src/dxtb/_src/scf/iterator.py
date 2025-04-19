@@ -60,6 +60,7 @@ def solve(
     config: ConfigSCF,
     integrals: IntegralMatrices,
     refocc: Tensor,
+    charges_guess: Tensor | None = None,
     *args: Any,
     **kwargs: Any,
 ) -> SCFResult:
@@ -93,7 +94,12 @@ def solve(
         Orbital-resolved partial charges vector.
     """
     n0, occupation = get_refocc(refocc, chrg, spin, ihelp)
-    charges = get_guess(numbers, positions, chrg, ihelp, config.guess)
+    
+    if config.scf_mode == labels.SCF_MODE_RECONNECT:
+        assert charges_guess is not None, "Reconnect mode requires a charges guess."
+        charges = charges_guess
+    else:
+        charges = get_guess(numbers, positions, chrg, ihelp, config.guess)
 
     if not isinstance(config.scf_mode, int):
         raise ValueError(
@@ -101,7 +107,7 @@ def solve(
             "happen if you explicitly change the configuration object."
         )
 
-    if config.scf_mode == labels.SCF_MODE_IMPLICIT:
+    if config.scf_mode in [labels.SCF_MODE_IMPLICIT, labels.SCF_MODE_RECONNECT]:
         # pylint: disable=import-outside-toplevel
         from .pure import scf_wrapper
 
