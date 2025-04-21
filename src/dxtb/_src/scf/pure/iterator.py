@@ -80,6 +80,25 @@ def scf_pure(
 
         return converged_to_charges(guess, data, cfg)
     
+    if cfg.scf_mode == labels.SCF_MODE_RECONNECTXT:
+        
+        cfg.fwd_options["maxiter"] = 1
+
+        guess = guess.detach()
+        q_converged = xto.equilibrium(
+            fcn=fcn,
+            y0=guess,
+            params=[data, cfg, interactions],
+            bck_options={**cfg.bck_options},
+            **cfg.fwd_options,
+        )
+        if cfg.scp_mode == labels.SCP_MODE_CHARGE:
+            mixer = Simple({**cfg.fwd_options, "damp": 1e-4})
+            q_new = fcn(q_converged, data, cfg, interactions)
+            q_converged = mixer.iter(q_new, q_converged)
+
+        return converged_to_charges(q_converged, data, cfg)
+    
     guess = guess.detach()
 
     q_converged = xto.equilibrium(

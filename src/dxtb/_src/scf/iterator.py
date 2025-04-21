@@ -95,7 +95,8 @@ def solve(
     """
     n0, occupation = get_refocc(refocc, chrg, spin, ihelp)
     
-    if config.scf_mode == labels.SCF_MODE_RECONNECT:
+    # if config.scf_mode == labels.SCF_MODE_RECONNECT:
+    if config.scf_mode in [labels.SCF_MODE_RECONNECT, labels.SCF_MODE_RECONNECTXT]:
         assert charges_guess is not None, "Reconnect mode requires a charges guess."
         charges = charges_guess
     else:
@@ -107,7 +108,7 @@ def solve(
             "happen if you explicitly change the configuration object."
         )
 
-    if config.scf_mode in [labels.SCF_MODE_IMPLICIT, labels.SCF_MODE_RECONNECT]:
+    if config.scf_mode in [labels.SCF_MODE_IMPLICIT, labels.SCF_MODE_RECONNECT, labels.SCF_MODE_RECONNECTXT]:
         # pylint: disable=import-outside-toplevel
         from .pure import scf_wrapper
 

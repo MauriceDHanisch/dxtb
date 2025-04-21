@@ -37,6 +37,8 @@ __all__ = [
     "SCF_MODE_EXPERIMENTAL_STRS",
     "SCF_MODE_RECONNECT",
     "SCF_MODE_RECONNECT_STRS",
+    "SCF_MODE_RECONNECTXT",
+    "SCF_MODE_RECONNECTXT_STRS",
     "SCF_MODE_MAP",
     "SCP_MODE_FOCK",
     "SCP_MODE_FOCK_STRS",
@@ -114,6 +116,12 @@ SCF_MODE_RECONNECT = 4
 
 SCF_MODE_RECONNECT_STRS = ("reconnect", "reconnect-implicit")
 """String codes for SCF with reconnection of the graph."""
+
+SCF_MODE_RECONNECTXT = 5
+"""Integer code for SCF with reconnection of the graph (old version)."""
+
+SCF_MODE_RECONNECTXT_STRS = ("reconnect-xt", "reconnectxt")
+"""String codes for SCF with reconnection of the graph through XT."""
 
 SCF_MODE_MAP = [
     "Full Tracking (unrolling)",
