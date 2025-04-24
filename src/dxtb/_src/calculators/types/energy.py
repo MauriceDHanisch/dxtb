@@ -163,7 +163,7 @@ class EnergyCalculator(BaseCalculator):
         # overlap integral (always required, even without Hückel Hamiltonian)
         OutputHandler.write_stdout_nf(" - Overlap           ... ", v=3)
         timer.start("Overlap", parent_uid="Integrals")
-        self.integrals.build_overlap(positions)
+        self.integrals.build_overlap(positions, **kwargs)
         timer.stop("Overlap")
         OutputHandler.write_stdout("done", v=3)
 
