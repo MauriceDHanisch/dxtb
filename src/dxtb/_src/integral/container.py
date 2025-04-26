@@ -177,7 +177,7 @@ class Integrals(IntegralContainer):
             self.mgr.setup_driver(positions, **kwargs)
         else:
             self.mgr.driver.drv = drv
-            self.mgr.driver._positions = "Not None" #TODO: find a better way to do this
+            self.mgr.driver._positions = positions
             
             # Replace positions for gradient tracking
             if self.mgr.driver.ihelp.batch_mode == 2:
