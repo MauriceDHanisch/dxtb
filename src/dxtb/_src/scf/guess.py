@@ -175,8 +175,9 @@ def spread_charges_atomic_to_orbital(
     tot_chrg_new = orb_charges.sum(-1)
     if torch.any(torch.abs(tot_chrg_new - tot_chrg_old) > torch.sqrt(eps)):
         raise RuntimeError(
-            "Total charge changed during spreading from atomic to orbital "
-            f"charges ({tot_chrg_old:.6f} -> {tot_chrg_new:.6f})."
+            "Total charge changed during spreading from atomic to orbital. "
+            # f"charges ({tot_chrg_old.sum():.6f} -> {tot_chrg_new.sum():.6f})."
+            f"Max diff tot_chrg_new - tot_chrg_old: {torch.max(torch.abs(tot_chrg_new - tot_chrg_old)):.6f}."
         )
 
     return orb_charges
