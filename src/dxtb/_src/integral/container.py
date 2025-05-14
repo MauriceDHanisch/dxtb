@@ -179,14 +179,17 @@ class Integrals(IntegralContainer):
             self.mgr.driver.drv = drv
             self.mgr.driver._positions = positions
             
-            # Replace positions for gradient tracking
-            if self.mgr.driver.ihelp.batch_mode == 2:
-                for i in range(len(self.mgr.driver.drv)):
-                    self.mgr.driver.drv[i]._allpos_params = positions[i, :, :]
-            else:
-                raise RuntimeError(
-                    "Only batch mode 2 is supported for precomputed drv."
-                )
+            # # Replace positions for gradient tracking
+            # if self.mgr.driver.ihelp.batch_mode == 2:
+            #     for i in range(len(self.mgr.driver.drv)):
+            #         self.mgr.driver.drv[i]._allpos_params = positions[i, :, :]
+            # else:
+            #     raise RuntimeError(
+            #         "Only batch mode 2 is supported for precomputed drv."
+            #     )
+            # TODO: fix the batch_mode 1 case for padded positions
+            for i in range(len(self.mgr.driver.drv)):
+                self.mgr.driver.drv[i]._allpos_params = positions[i, :, :]
 
 
         logger.debug("Overlap integral: Start building matrix.")
