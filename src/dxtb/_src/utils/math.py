@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import torch
 from tad_mctc.storch.linalg import eighb
+import cupy as cp
 
 from dxtb._src.typing import Any, Tensor
 
@@ -44,8 +45,22 @@ def eigh(matrix: Tensor, *args: Any, **kwargs: Any) -> tuple[Tensor, Tensor]:
     -------
     tuple[Tensor, Tensor]
         Eigenvalues and eigenvectors of the input matrix.
-    """
-    return torch.linalg.eigh(matrix, *args, **kwargs)
+    """    
+    # Cases where syevj_batched is faster than syevj or syevd on GPU
+    case1 = matrix.dtype == torch.float32 and matrix.size(-1) < 512
+    case2 = matrix.dtype == torch.float64 and matrix.size(-1) < 256
+    if matrix.is_cuda and (case1 or case2):
+        # Create a fresh DLPack capsule
+        dlpack_tensor = torch.utils.dlpack.to_dlpack(matrix)
+        cupy_matrix = cp.fromDlpack(dlpack_tensor)
+        w, v = cp.linalg.eigh(cupy_matrix, *args, **kwargs)
+        return (
+            torch.utils.dlpack.from_dlpack(w.toDlpack()),
+            torch.utils.dlpack.from_dlpack(v.toDlpack())
+        )
+    else:
+        w, v = torch.linalg.eigh(matrix, *args, **kwargs)
+        return w, v
 
 
 def qr(matrix: Tensor, *args: Any, **kwargs: Any) -> tuple[Tensor, Tensor]:
